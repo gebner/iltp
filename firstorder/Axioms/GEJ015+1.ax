@@ -1,0 +1,23 @@
+%--------------------------------------------------------------------------
+% File     : GEJ015+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Rule of construction: connecting line of points A and B
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+%! [A,B] : ((point(A) & point(B) & dipt(point(A),point(B))) => line(ln(point(A),point(B)))
+%! [A,B] : ((point(A) & point(B) & dipt(point(A),point(B))) => line(point(A),point(B))) 
+! [A,B] : ((point(A) & point(B) & dipt(A,B)) => line(ln(A,B)))
+)).
+
+%--------------------------------------------------------------------------

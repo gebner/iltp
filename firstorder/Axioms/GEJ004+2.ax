@@ -1,0 +1,35 @@
+%--------------------------------------------------------------------------
+% File     : GEJ004+2 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : compatibility of equality with apartness and convergence
+% Version  : [D97],[D98] axioms : Especial.
+% English  : Shortened axioms
+
+% Refs     : [D97] Li Dafa. Replacing the Axioms for Connecting Lines and
+%                  Intersection Points by Two Single Axioms. AAR Newsletter 
+%                  No. 37, 1997.
+%          : [D98] Li Dafa. A Shorter and Intuitive Axiom to Replaxe the 
+%                  Third Axiom of Compatibility of Equality with Apartness 
+%                  and Convergence.  AAR Newsletter No. 39, 1998. 
+%          : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [D97], [D98]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [X,Y,Z] : (apt(X,Y) => (dipt(X,Z) | apt(Z,Y)))
+)).
+
+fof(a2,axiom,(
+! [X,Y,Z] : (apt(X,Y) => (diln(Y,Z) | apt(X,Z)))
+)).
+
+fof(a3,axiom,(
+! [X,Y] : (con(X,Y) => diln(X,Y))
+)).
+
+%--------------------------------------------------------------------------

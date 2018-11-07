@@ -1,0 +1,749 @@
+%============================================================================
+%----This outputs TPTP Problem Set clauses in a format acceptable to
+%----the DFG: common exchange format.
+%----
+%----Written by Michael Christen, May, 1996.
+%----Updated by Geoff Sutcliffe, June, 1996.
+%----Updated by Michael Christen, July, 1996.
+%----Hacked by Weidenbach, et al., 1996/1997.
+%----Vaguely dehacked by Geoff Sutcliffe, 1997.
+%----Updated (FOF included) by Michael Christen, April, 1997.
+%============================================================================
+%----------------------------------------------------------------------------
+%----List of predefined symbols (may not be a function or predicate symbol)
+%----Names from tptp-clauses colliding with this symbols will be redefined
+%----by appending '_f' for functions and '_p' for predicates.
+dfg_predefined([
+    '3TAP'/_, 'KIV'/_, 'LEM'/_, 'PROTEIN'/_, 'SATURATE'/_, 'SETHEO'/_,
+    'SPASS'/_, 'and'/_, 'author'/_, 'axioms'/_, 'begin_problem'/_,
+    'clause'/_, 'cnf'/_, 'conjectures'/_, 'date'/_, 'description'/_,
+    'dnf'/_, 'end_of_list'/_, 'end_problem'/_, 'equiv'/_, 'exists'/_,
+    'false'/_, 'forall'/_, 'formula'/_, 'functions'/_, 'hypothesis'/_,
+    'implied'/_, 'implies'/_, 'list_of_clauses'/_, 'list_of_declarations'/_,
+    'list_of_descriptions'/_, 'list_of_formulae'/_,
+    'list_of_general_settings'/_, 'list_of_proof'/_, 'list_of_settings'/_,
+%----Need to () not because op(900,fy,(not)) and op(400,yfx,(/)).
+    'list_of_symbols'/_, 'logic'/_, 'name'/_, ('not')/_, 'operators'/_,
+    'or'/_, 'predicate'/_, 'predicates'/_, 'quantifiers'/_, 'resolution'/_,
+    'sorts'/_, 'status'/_, 'subsort'/_, 'true'/_, 'version'/_]).
+%----------------------------------------------------------------------------
+%----Write identifier; check for collision with reserved predefined symbols
+write_identifier(Ident,Prefix) :-
+    dfg_predefined(Predefined),
+    tptp2X_member(Ident/_, Predefined),
+    !,
+    name(Ident,IdentName),
+    tptp2X_append(Prefix,IdentName,NewIdentName),
+    name(NewIdent,NewIdentName),
+    write(NewIdent).
+
+write_identifier(Ident,_) :-
+    write(Ident).
+%----------------------------------------------------------------------------
+%----Identify the hypothesis clauses
+%----Case where there is at least one
+output_dfg_clause_settings(Clauses):-
+    findall(HypothesisName,
+        tptp2X_member(dfg_clause(HypothesisName,hypothesis,_,_),Clauses),
+%----Check there is at least one name
+        [HypothesisName|RestOfHypothesisNames]),
+    !,
+    write('list_of_general_settings.'),
+    nl,
+    write('hypothesis'),
+    write([HypothesisName|RestOfHypothesisNames]),
+    write('.'),
+    nl,
+    write('end_of_list.'),
+    nl,
+    nl.
+
+%----Case of no hypothesis clauses
+output_dfg_clause_settings(_).
+%----------------------------------------------------------------------------
+output_dfg_formula_settings(Formulae):-
+    findall(HypothesisName,
+        
+tptp2X_member(fof(HypothesisName,hypothesis,_),Formulae),
+%----Check there is at least one name
+        [HypothesisName|RestOfHypothesisNames]),
+    !,
+    write('list_of_general_settings.'),
+    nl,
+    write('hypothesis'),
+    write([HypothesisName|RestOfHypothesisNames]),
+    write('.'),
+    nl,
+    write('end_of_list.'),
+    nl,
+    nl.
+
+%----Case of no hypothesis formulae
+output_dfg_formula_settings(_).
+%----------------------------------------------------------------------------
+translate_dfg_symbol(Symbol,Arity,NewSymbol,TranslationTable) :-
+    tptp2X_member((Symbol/Arity,NewSymbol),TranslationTable),
+    !.
+
+translate_dfg_symbol(Symbol,_,Symbol,_).
+%----------------------------------------------------------------------------
+translate_dfg_term(Term,NewTerm,TranslationTable) :-
+    functor(Term,Op,Arity),
+    translate_dfg_symbol(Op,Arity,ReplOp,TranslationTable),
+    functor(NewTerm,ReplOp,Arity),
+    translate_dfg_terms(Arity,Term,NewTerm,TranslationTable).
+%----------------------------------------------------------------------------
+translate_dfg_terms(0,_,_,_).
+
+translate_dfg_terms(Pos,Term,NewTerm,TranslationTable) :-
+    arg(Pos,Term,Argument),
+    translate_dfg_term(Argument,NewArgument,TranslationTable),
+    arg(Pos,NewTerm,NewArgument),
+    Pos1 is Pos - 1,
+    translate_dfg_terms(Pos1,Term,NewTerm,TranslationTable).
+%----------------------------------------------------------------------------
+write_dfg_list_by_hand([One]):-
+    !,
+    write_dfg_term(One).
+
+write_dfg_list_by_hand([One,Two|Rest]):-
+    write_dfg_term(One),
+    write(','),
+    write_dfg_list_by_hand([Two|Rest]).
+%----------------------------------------------------------------------------
+write_dfg_term(Variable):-
+    looks_like_a_variable(Variable),
+    !,
+    write(Variable).
+
+write_dfg_term($(false)):-
+    !,
+    write(false).
+
+write_dfg_term($(true)):-
+    !,
+    write(true).
+
+write_dfg_term($(Reserved)):-
+    !,
+    write('$'),
+    write(Reserved).
+
+write_dfg_term(Atom):-
+    atomic(Atom),
+    !,
+    write(Atom).
+
+write_dfg_term(Term):-
+    Term =.. [Functor|Arguments],
+    write(Functor),
+    write('('),
+    write_dfg_list_by_hand(Arguments),
+    write(')').
+%----------------------------------------------------------------------------
+%----Output a term with respect to the translation table
+output_dfg_term(Term,TranslationTable) :-
+    translate_dfg_term(Term,NewTerm,TranslationTable),
+    write_dfg_term(NewTerm).
+%----------------------------------------------------------------------------
+write_indent(Indent):-
+    output_indent(Indent,0).
+%----------------------------------------------------------------------------
+%----Output a formula, symbols are already translated
+%----Unary Formula
+output_a_dfg_formula(UnaryFormula,Indent):-
+    tptp_unary_formula(UnaryFormula,'~',Formula),
+    !,
+    Indent1 is Indent+1,
+    write_indent(Indent),
+    write('not('),
+    nl,
+    output_a_dfg_formula(Formula,Indent1),
+    write(')').
+
+%----Transform <~> = XOR
+output_a_dfg_formula((P <~> Q),Indent):-
+    !,
+    output_a_dfg_formula(((P & ~Q) ; (~P & Q)),Indent).
+
+%----Transform ~& = NAND
+output_a_dfg_formula((P ~& Q),Indent):-
+    !,
+    output_a_dfg_formula((~(P & Q)),Indent).
+
+%----Transform ~| = NOR
+output_a_dfg_formula((P '~|' Q),Indent):-
+    !,
+    output_a_dfg_formula((~ (P ; Q)),Indent).
+
+%----Binary Formula
+output_a_dfg_formula(BinaryFormula,Indent):-
+    tptp_binary_formula(BinaryFormula,BinaryConnective,LHS,RHS),
+    !,
+    tptp2X_member((BinaryConnective)-(DFGConnective),
+[('|')-(or), ('&')-(and),('=>')-(implies),('<=')-(implied),('<=>')-(equiv)]),
+    Indent1 is Indent+1,
+    write_indent(Indent),
+    write(DFGConnective), 
+    write('('),
+    nl,
+    output_a_dfg_formula(LHS,Indent1),
+    write(','),
+    nl,
+    output_a_dfg_formula(RHS,Indent1),
+    write(')').
+
+%----Quantified
+output_a_dfg_formula(QuantifiedFormula,Indent):-
+    tptp_quantified_formula(QuantifiedFormula,Quantifier,Variables,Formula),
+    !,
+    tptp2X_member((Quantifier)-(DFGQuantifier),[('!')-(forall),('?')-(exists)]),
+    Indent1 is Indent+1,
+    write_indent(Indent),
+    write(DFGQuantifier), 
+    write('('),
+    write(Variables),
+    write(','),
+    nl,
+    output_a_dfg_formula(Formula,Indent1),
+    write(')').
+
+%----Atomic formulae
+output_a_dfg_formula(Atom,Indent):-
+    write_indent(Indent),
+    write_dfg_term(Atom).
+%----------------------------------------------------------------------------
+output_dfg_symbols([],_).
+
+output_dfg_symbols([Symbol/Arity],TranslationTable):-
+    !,
+    write('('),
+    translate_dfg_symbol(Symbol,Arity,NewSymbol,TranslationTable),
+    write(NewSymbol),
+    write(','),
+    write(Arity),
+    write(')').
+
+output_dfg_symbols([Symbol/Arity|RestOfPairs],TranslationTable):-
+    write('('),
+    translate_dfg_symbol(Symbol,Arity,NewSymbol,TranslationTable),
+    write(NewSymbol),
+    write(','),
+    write(Arity),
+    write('), '),
+    output_dfg_symbols(RestOfPairs,TranslationTable).
+%----------------------------------------------------------------------------
+output_dfg_symbol_list(_,[],_):-
+    !.
+
+output_dfg_symbol_list(Type,Symbols,TranslationTable):-
+    write(Type),
+    write('['),
+    output_dfg_symbols(Symbols,TranslationTable),
+    write('].'),
+    nl.
+%----------------------------------------------------------------------------
+output_dfg_declaration_list(_Predicates,_Functions,_TranslationTable).
+%----------------------------------------------------------------------------
+%----Output the atoms, separated and terminated as indicated.
+output_dfg_literals([],_,_).
+
+output_dfg_literals([OneLiteral],Prefix,TranslationTable):-
+    !,
+    write(Prefix),
+    output_dfg_term(OneLiteral,TranslationTable).
+
+output_dfg_literals([Literal|RestOfLiterals],Prefix,TranslationTable):-
+    write(Prefix),
+    output_dfg_term(Literal,TranslationTable),
+    write(','),
+    nl,
+    output_dfg_literals(RestOfLiterals,'    ',TranslationTable).
+%----------------------------------------------------------------------------
+output_dfg_literals_list([],_,_):-
+    !,
+    write(false).
+
+output_dfg_literals_list(OrderedSignedLiterals,Prefix,TranslationTable):-
+    output_dfg_literals(OrderedSignedLiterals,Prefix,TranslationTable).
+
+%----------------------------------------------------------------------------
+%----Separate the literals into Antecedent and Succedent
+dfg_separate_signs([],[],[]).
+
+dfg_separate_signs([--Atom|RestOfLiterals],['$not$'(Atom)|RestOfAntecedent],
+Succedent):-
+    dfg_separate_signs(RestOfLiterals,RestOfAntecedent,Succedent).
+
+dfg_separate_signs([++Atom|RestOfLiterals],Antecedent,[Atom|
+RestOfSuccedent]):-
+    dfg_separate_signs(RestOfLiterals,Antecedent,RestOfSuccedent).
+%----------------------------------------------------------------------------
+output_dfg_cnf_clause_body(Literals,TranslationTable):-
+    dfg_separate_signs(Literals,Antecedent,Succedent),
+    tptp2X_append(Antecedent,Succedent,OrderedSignedLiterals),
+    write('or( '),
+    output_dfg_literals_list(OrderedSignedLiterals,'',TranslationTable),
+    write(')').
+%----------------------------------------------------------------------------
+output_dfg_clauses([],_).
+
+%----No variables
+output_dfg_clauses([dfg_clause(Name,Type,[],Literals)|RestOfClause],
+TranslationTable):-
+    !,
+    write('clause('),
+    (Type = axiom ->
+        true
+    ;   (   write('  %('),
+            write(Type),
+            write(')'))),
+    nl,
+    output_dfg_cnf_clause_body(Literals,TranslationTable),
+    write(','),
+    nl,
+    write_identifier(Name,"dfg_"),
+    write(' ).'),
+    nl,
+    nl,
+    output_dfg_clauses(RestOfClause,TranslationTable).
+
+%----With variables
+output_dfg_clauses([dfg_clause(Name,Type,Variables,Literals)|RestOfClause],
+
+TranslationTable):-
+    write('clause('),
+    (Type = axiom ->
+        true
+    ;   (   write('  %('),
+            write(Type),
+            write(')'))),
+    nl,
+    write('forall('),
+    write(Variables),
+    write(','),
+    nl,
+    output_dfg_cnf_clause_body(Literals,TranslationTable),
+    write('),'),
+    nl,
+    write_identifier(Name,"dfg_"),
+    write(' ).'),
+    nl,
+    nl,
+    output_dfg_clauses(RestOfClause,TranslationTable).
+%----------------------------------------------------------------------------
+output_dfg_formulae([],_).
+
+output_dfg_formulae([fof(Name,Type,Form)|RestOfClause],TranslationTable):-
+    !,
+    write('formula('),
+    (Type = axiom ->
+        true
+    ;   (   write('  %('),
+            write(Type),
+            write(')'))),
+    nl,
+    translate_dfg_term(Form,NewForm,TranslationTable),
+    output_a_dfg_formula(NewForm,1),
+    write(','),
+    nl,
+    write_identifier(Name,"dfg_"),
+    write(' ).'),
+    nl,
+    nl,
+    output_dfg_formulae(RestOfClause,TranslationTable).
+%----------------------------------------------------------------------------
+output_dfg_clause_list(Type,Clauses,TranslationTable):-
+    write(list_of_clauses(Type,cnf)),
+    write('.'),
+    nl,
+    nl,
+    output_dfg_clauses(Clauses,TranslationTable),
+    write('end_of_list.'),
+    nl,
+    nl.
+%----------------------------------------------------------------------------
+%----Output negated formula warning only if conjecture and negated
+output_dfg_negated_conjecture_warning(conjectures,[_|_]):-
+    !,
+    write('%----NOTE WELL: conjecture has been negated'),
+    nl.
+
+output_dfg_negated_conjecture_warning(_,_).
+%----------------------------------------------------------------------------
+output_dfg_formula_list(Type,Formulae,TranslationTable):-
+    output_dfg_negated_conjecture_warning(Type,Formulae),
+    write(list_of_formulae(Type)),
+    write('.'),
+    nl,
+    nl,
+    output_dfg_formulae(Formulae,TranslationTable),
+    write('end_of_list.'),
+    nl,
+    nl.
+%----------------------------------------------------------------------------
+%----Seperate out the axioms from hypotheses and conjectures
+dfg_clause_separate_axioms([],[],[]).
+
+%----Lemmas and definitions get converted to axioms
+dfg_clause_separate_axioms([dfg_clause(N,Status,V,L)|RestOfClauses],
+[dfg_clause(N,axiom,V,L)|RestOfAxioms],Others):-
+    tptp2X_member(Status,[initial,axiom,lemma,definition]),
+    !,
+    dfg_clause_separate_axioms(RestOfClauses,RestOfAxioms,Others).
+
+dfg_clause_separate_axioms([dfg_clause(N,Status,V,L)|RestOfClauses],
+Axioms,[dfg_clause(N,Status,V,L)|RestOfOthers]):-
+    dfg_clause_separate_axioms(RestOfClauses,Axioms,RestOfOthers).
+%----------------------------------------------------------------------------
+dfg_formula_separate_axioms([],[],[]).
+
+dfg_formula_separate_axioms([fof(N,Status,F)|RestOfFormulae],
+[fof(N,axiom,F)|RestOfAxioms],Others):-
+    tptp2X_member(Status,[initial,axiom,lemma,definition]),
+    !,
+    dfg_formula_separate_axioms(RestOfFormulae,RestOfAxioms,Others).
+
+dfg_formula_separate_axioms([fof(N,hypothesis,F)|RestOfFormulae],
+[fof(N,hypothesis,F)|RestOfAxioms],Others):-
+    !,
+    dfg_formula_separate_axioms(RestOfFormulae,RestOfAxioms,Others).
+
+dfg_formula_separate_axioms([fof(N,conjecture,F)|RestOfFormulae],
+Axioms,[fof(N,conjecture,F)|RestOfOthers]):-
+    !,
+    dfg_formula_separate_axioms(RestOfFormulae,Axioms,RestOfOthers).
+
+dfg_formula_separate_axioms([fof(_,Type,_)|RestOfFormulae],
+Axioms,Others):-
+    write('ERROR: Formula type '),
+    write(Type),
+    write(' unknown'),
+    nl,
+    dfg_formula_separate_axioms(RestOfFormulae,Axioms,Others).
+%----------------------------------------------------------------------------
+output_dfg_clause_logical_part(DFGClauses,Predicates,Functions,
+TranslationTable):-
+    write('list_of_symbols.'),
+    nl,
+    output_dfg_symbol_list(functions,Functions,TranslationTable),
+    output_dfg_symbol_list(predicates,Predicates,TranslationTable),
+    write('end_of_list.'),
+    nl,
+    nl,
+    output_dfg_declaration_list(Predicates,Functions,TranslationTable),
+    dfg_clause_separate_axioms(DFGClauses,Axioms,Others),
+    output_dfg_clause_list(axioms,Axioms,TranslationTable),
+    output_dfg_clause_list(conjectures,Others,TranslationTable).
+%----------------------------------------------------------------------------
+output_dfg_formula_logical_part(Formulae,Predicates,Functions,
+TranslationTable):-
+    write('list_of_symbols.'),
+    nl,
+    output_dfg_symbol_list(functions,Functions,TranslationTable),
+    output_dfg_symbol_list(predicates,Predicates,TranslationTable),
+    write('end_of_list.'),
+    nl,
+    nl,
+    output_dfg_declaration_list(Predicates,Functions,TranslationTable),
+    dfg_formula_separate_axioms(Formulae,Axioms,Others),
+    output_dfg_formula_list(axioms,Axioms,TranslationTable),
+    output_dfg_formula_list(conjectures,Others,TranslationTable).
+%----------------------------------------------------------------------------
+%----Extract header info from TPTP header
+extract_dfg_header_information(FileHeader,DFGStatus,NameList,FileList,
+AuthorList,RefsList):-
+    tptp2X_member('Status'-[Status],FileHeader),
+    tptp2X_member('Names'-NameList,FileHeader),	
+    tptp2X_member('File'-FileList,FileHeader),
+    tptp2X_member('Source'-AuthorList,FileHeader),
+    tptp2X_member('Refs'-RefsList,FileHeader),
+    !,
+%----Seperate status
+    ((   Status == ' Status   : unsatisfiable'
+     ;   Status == ' Status   : theorem') -> 
+        DFGStatus = unsatisfiable
+    ;   (Status == ' Status   : satisfiable' -> 
+            DFGStatus = satisfiable
+        ;   DFGStatus = unknown)).
+
+%----If any member failed, return default nothings
+extract_dfg_header_information(_,unknown,'','','','').
+%----------------------------------------------------------------------------
+output_dfg_description(FileHeader) :-
+    extract_dfg_header_information(FileHeader,DFGStatus,NameList,FileList,
+AuthorList,RefsList),
+%----Output DFG header
+    write('list_of_descriptions.'),
+    nl,
+    write('name({*'),
+    write(FileList),
+    write(','),
+    write(NameList),
+    write('*}).'),
+    nl,
+    write('author({*'),
+    write(AuthorList),
+    write('*}).'),
+    nl,
+    write('status('),
+    write(DFGStatus),
+    write(').'),
+    nl,
+    write('description({*'),
+    write(RefsList),
+    write('*}).'),
+    nl,
+    write('end_of_list.'),
+    nl,
+    nl.
+%----------------------------------------------------------------------------
+%----Output 'a Problem'
+output_dfg_clause_problem(DFGClauses,Predicates,Functions,TranslationTable,
+
+FileHeader):-
+    nl,
+    write('begin_problem(TPTP_Problem).'),
+    nl,
+    nl,
+    output_dfg_description(FileHeader),
+    output_dfg_clause_logical_part(DFGClauses,Predicates,Functions,
+TranslationTable),
+    output_dfg_clause_settings(DFGClauses),
+    write('end_problem.'),
+    nl.
+%----------------------------------------------------------------------------
+%----Output problem in formulae-syntax
+output_dfg_formula_problem(Formulae,Predicates,Functions,TranslationTable,
+FileHeader):-
+    nl,
+    write('begin_problem(TPTP_Problem).'),
+    nl,
+    nl,
+    output_dfg_description(FileHeader),
+    output_dfg_formula_logical_part(Formulae,Predicates,Functions,
+TranslationTable),
+    output_dfg_formula_settings(Formulae),
+    write('end_problem.'),
+    nl.
+%----------------------------------------------------------------------------
+%----Search for the variables occurring in the clause.
+%----If atomic, check if a variable (they're all atoms by here, so look
+%----at the first letter).
+dfg_variable(Variable,Variable):-
+    atom(Variable),
+    !,
+    name(Variable,[FirstASCII|_]),
+    FirstASCII >= 65,
+    FirstASCII =< 90.
+
+%----Numbervars variables look like shit.
+dfg_variable('$VAR'(Index),'$VAR'(Index)):-
+    !.
+
+%----If a list then do head and tail
+dfg_variable([FirstTerm|RestOfTerms],Variable):-
+    !,
+    tptp2X_member(Term,[FirstTerm|RestOfTerms]),
+    dfg_variable(Term,Variable).
+
+%----Otherwise it's a function to pull apart
+dfg_variable(Function,Variable):-
+    Function =.. [_|Arguments],
+    dfg_variable(Arguments,Variable).
+%----------------------------------------------------------------------------
+convert_dfg_clauses([],[]).
+
+convert_dfg_clauses([input_clause(Name,Type,Literals)|RestOfClauses],
+[dfg_clause(Name,Type,ClauseVariables,Literals)|RestOfDFGClauses]):-
+    tptp2X_setof1(Variable,dfg_variable(Literals,Variable),ClauseVariables),
+    convert_dfg_clauses(RestOfClauses,RestOfDFGClauses).
+%----------------------------------------------------------------------------
+%----Extract predicates from clauses
+dfg_clause_predicate(DFGClauses,PredicateSymbol/Arity):-
+    tptp2X_member(input_clause(_,_,Literals),DFGClauses),
+    tptp2X_member(Literal,Literals),
+    Literal =.. [_,Atom],
+%----Avoid $true and $false
+    \+ (Atom = $_),
+    functor(Atom,PredicateSymbol,Arity).
+%----------------------------------------------------------------------------
+%----extract an atom from a formula
+%----Unary Formula
+dfg_fof_atom(UnaryFormula,Atom):-
+    UnaryFormula =.. ['~',Arg],
+    !,
+    dfg_fof_atom(Arg,Atom).
+
+%----Binary Formula
+dfg_fof_atom(BinaryFormula,Atom):-
+    BinaryFormula =.. [Op,LHS,RHS],
+%----|;BUG
+    tptp2X_member(Op,['|', ';', '&', '=>', '<=', '<=>', '<~>', '~|', '~&']),
+    !,
+    (
+        dfg_fof_atom(LHS,Atom)
+    ;
+        dfg_fof_atom(RHS,Atom)
+    ).
+
+%----Universals
+dfg_fof_atom((! _Variables : Formula),Atom):-
+    !,
+    dfg_fof_atom(Formula,Atom).
+
+%----Existentials
+dfg_fof_atom((? _Variables : Formula),Atom):-
+    !,
+    dfg_fof_atom(Formula,Atom).
+
+%----Atomic formulae
+dfg_fof_atom(Atom,Atom):-
+%----Avoid $true and $false
+    \+ (Atom = $_).
+%----------------------------------------------------------------------------
+%----Extract predicates from formulae
+dfg_formula_predicate(Formula,PredicateSymbol/Arity):-
+    tptp2X_member(fof(_,_,FOF),Formula),
+    dfg_fof_atom(FOF,Atom),
+    functor(Atom,PredicateSymbol,Arity).
+%----------------------------------------------------------------------------
+%----Extract a functor, knowing it's below the atom level
+dfg_clause_functor_extract(Atom,Atom/0):-
+    atom(Atom),
+    !,
+%----Check it's not a variable
+    name(Atom,[FirstASCII|_]),
+    FirstASCII >= 97,
+    FirstASCII =< 122.
+
+dfg_clause_functor_extract([FirstTerm|RestOfTerms],Functor):-
+    !,
+    tptp2X_member(Term,[FirstTerm|RestOfTerms]),
+    dfg_clause_functor_extract(Term,Functor).
+
+%----Otherwise it's a function (hoorah) unless it's a $VAR
+dfg_clause_functor_extract(Function,Functor/Arity):-
+    functor(Function,Functor,Arity),
+    Functor \== '$VAR'.
+
+%----Extract functors from the arguments
+dfg_clause_functor_extract(Function,Functor):-
+    Function =.. [_|Terms],
+    dfg_clause_functor_extract(Terms,Functor).
+%----------------------------------------------------------------------------
+%----Extract functors from clauses
+dfg_clause_functor(DFGClauses,Functor):-
+    tptp2X_member(input_clause(_,_,Literals),DFGClauses),
+    tptp2X_member(Literal,Literals),
+    Literal =.. [_,Atom],
+    \+ (Atom = $_),
+    Atom =.. [_|Terms],
+    dfg_clause_functor_extract(Terms,Functor).
+%----------------------------------------------------------------------------
+%----Extract functors from formulae
+dfg_formula_functor(Formula,Functor):-
+    tptp2X_member(fof(_,_,FOF),Formula),
+    dfg_fof_atom(FOF,Atom),
+    Atom =.. [_|Terms],
+    tptp2X_member(ATerm,Terms),
+    dfg_clause_functor_extract(ATerm,Functor).
+%----------------------------------------------------------------------------
+%----Check for duplicate arities
+dfg_consistent(SymbolArityPairs):-
+    tptp2X_select(Symbol/Arity,SymbolArityPairs,OtherPairs),
+    tptp2X_member(Symbol/OtherArity,OtherPairs),
+    \+ (Arity = OtherArity),
+    !,
+    write('ERROR: '),
+    write(Symbol),
+    write(' has two different arities.'),
+    nl,
+    fail.
+
+dfg_consistent(_).
+%----------------------------------------------------------------------------
+%----Output translation generation
+dfg_translation_check([Sym/Arity|SymbolList],ForbiddenList,Suffix,
+[(Sym/Arity,NewSym)|RestTable]) :-
+    tptp2X_member(Sym/Arity,ForbiddenList),
+    !,
+    name(Sym,SymName),
+    tptp2X_append(SymName,Suffix,NewSymName),
+    name(NewSym,NewSymName),
+    dfg_translation_check(SymbolList,ForbiddenList,Suffix,RestTable).
+
+dfg_translation_check([_|SymbolList],ForbiddenList,Suffix,Table) :-
+    dfg_translation_check(SymbolList,ForbiddenList,Suffix,Table).
+
+dfg_translation_check([],_,_,[]).
+%----------------------------------------------------------------------------
+%----Create a output translation table for all symbols
+dfg_translation_table(Predicates,Functors,Transl) :-
+    dfg_predefined(Predefined),
+    tptp2X_append(Predefined,Functors,PF),
+    dfg_translation_check(Predicates,PF,"_p",PredTransl),
+    tptp2X_append(Predefined,Predicates,PP),
+    dfg_translation_check(Functors,PP,"_f",FunctorsTransl),
+    tptp2X_append(PredTransl,FunctorsTransl,Transl).
+%----------------------------------------------------------------------------
+%----Output clause-dfg-syntax
+dfg(dfg,Clauses,FileHeader):-
+    tptp_clauses(Clauses),
+    !,
+%----Extract predicates
+    tptp2X_setof1(Predicate,dfg_clause_predicate(Clauses,Predicate),
+PredicateStructures),
+%----Extract functors
+    tptp2X_setof1(Functor,dfg_clause_functor(Clauses,Functor),
+FunctorStructures),
+%----Convert clauses to contain variable list
+    convert_dfg_clauses(Clauses,DFGClauses),
+%----Check for duplicate arities (none in TPTP!)
+    dfg_consistent(PredicateStructures),
+    dfg_consistent(FunctorStructures),
+%----Build translation table to filter predefined symbols
+    dfg_translation_table(PredicateStructures,FunctorStructures,
+TranslationTable),
+%----Extract equal
+    (tptp2X_select(equal/2,PredicateStructures,PredicateStructures_we) ->
+        true
+    ;   PredicateStructures_we = PredicateStructures),
+    output_dfg_clause_problem(DFGClauses,PredicateStructures_we,
+FunctorStructures,[('$not$'/1,not)|TranslationTable],FileHeader).
+
+%----Output FOF-dfg-syntax
+dfg(dfg,Formulae,FileHeader):-
+    tptp_formulae(Formulae),
+    !,
+%----Extract predicates
+    tptp2X_setof1(Predicate,dfg_formula_predicate(Formulae,Predicate),
+PredicateStructures),
+%----Extract functors
+    tptp2X_setof1(Functor,dfg_formula_functor(Formulae,Functor),
+FunctorStructures),
+%----Check for duplicate arities
+    dfg_consistent(PredicateStructures),
+    dfg_consistent(FunctorStructures),
+%----Build translation table to filter predefined symbols
+    dfg_translation_table(PredicateStructures,FunctorStructures,
+TranslationTable),
+%----Extract equal
+    (tptp2X_select(equal/2,PredicateStructures,PredicateStructures_we) ->
+        true
+    ;   PredicateStructures_we = PredicateStructures),
+    output_dfg_formula_problem(Formulae,PredicateStructures_we,
+FunctorStructures,[('$not$'/1,not)|TranslationTable],FileHeader).
+
+%----unknown format (to be prepared for the future)
+dfg(dfg,_,_):-
+    !,
+    write('%----unknown tptp input format'),
+    nl.
+%----------------------------------------------------------------------------
+%----Provide information about the DFG format
+dfg_format_information('%','.dfg').
+%----------------------------------------------------------------------------
+%----Provide information about the DFG file
+dfg_file_information(format,dfg,'DFG format').
+%----------------------------------------------------------------------------

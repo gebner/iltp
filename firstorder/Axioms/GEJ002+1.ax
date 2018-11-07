@@ -1,0 +1,34 @@
+%--------------------------------------------------------------------------
+% File     : GEJ002+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : connecting lines and intersection points
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [X,Y] : (dipt(X,Y) => ~ apt(X,ln(X,Y)))
+)).
+
+
+fof(a2,axiom,(
+! [X,Y] : (dipt(X,Y) => ~ apt(Y,ln(X,Y)))
+)).
+
+fof(a3,axiom,(
+! [X,Y] : (con(X,Y) => ~ apt(pt(X,Y),X))
+)).
+
+fof(a4,axiom,(
+! [X,Y] : (con(X,Y) => ~ apt(pt(X,Y),Y))
+)).
+
+%--------------------------------------------------------------------------

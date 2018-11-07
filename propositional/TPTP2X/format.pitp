@@ -1,0 +1,164 @@
+% format.pitp
+% does not write comments to the subformulas ("% <formulaname> <axiom/conjecture/hypothesis/conjecture>")
+% in order to make tptp2X to write comments *after* (instead of before) the formula:
+% in tptp2X.main: replace 
+%
+% output_formulae_in_format(FileHeader,IncludeDirectives,OutputFormulae,
+% OutputFormat,FormatName,CommentAtom):-
+% %----Output the file header
+%    output_separator_line(CommentAtom),
+%    output_file_header(FileHeader,CommentAtom),
+%    output_separator_line(CommentAtom),
+%    output_include_directives(IncludeDirectives,CommentAtom,FormatName),
+% %----Put a comment line
+%    output_separator_line(CommentAtom),
+%    !.
+%
+% by
+
+% output_formulae_in_format(FileHeader,IncludeDirectives,OutputFormulae,
+% OutputFormat,FormatName,CommentAtom):-
+%    output_formulae(OutputFormulae,FileHeader,OutputFormat,FormatName),
+%    output_separator_line(CommentAtom),
+%    output_file_header(FileHeader,CommentAtom),
+%   !.
+
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the PITP system.
+%----FOF only
+%----Written by Jens Otten & Thomas Raths, Oct 2005
+%========================================================================
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_pitp_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_pitp_signed_literal(++Atom):-
+    write('~'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in pitp format.
+%----Special case of an empty clause
+output_pitp_literals([]):-
+    write('[]').
+
+output_pitp_literals([OneLiteral]):-
+    !, output_pitp_signed_literal(OneLiteral).
+
+output_pitp_literals([FirstLiteral|RestOfLiterals]):-
+    output_pitp_signed_literal(FirstLiteral),
+    write(' & '),
+    output_pitp_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in pitp format.
+output_pitp_clauses([]).
+
+output_pitp_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    %write('% '), write(Name), write(', '),
+    %write(Status), write('.'), nl,
+    write('['),
+    output_pitp_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (write(' & '));
+         true),
+    output_pitp_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in pitp format.
+output_pitp_formula([]):-
+    !.
+
+output_pitp_formula(Clauses):-
+    write('f(['),
+    output_pitp_clauses(Clauses),
+    write(']).').
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in pitp format.
+output_pitp_fof(~ A):-
+    !, write('( ~ '), output_pitp_fof(A), write(' )').
+output_pitp_fof('|'(A,B) ):- 
+    !, write('( '), output_pitp_fof(A), write(' | '),
+    output_pitp_fof(B), write(' )').
+output_pitp_fof((A;B)):- 
+    !, write('( '), output_pitp_fof(A), write(' | '),
+    output_pitp_fof(B), write(' )').
+output_pitp_fof(A & B):-
+    !, write('( '), output_pitp_fof(A), write(' & '),
+    output_pitp_fof(B), write(' )').
+output_pitp_fof(A => B):-
+    !, write('( '), output_pitp_fof(A), write(' -> '),
+    output_pitp_fof(B), write(' )').
+output_pitp_fof(A <=> B):-
+    !, write('(( '), output_pitp_fof(A), write(' -> '), output_pitp_fof(B), write(' ) & ( '),
+    output_pitp_fof(B), write(' -> '), output_pitp_fof(A), write('))').
+output_pitp_fof($true) :- !, write('(truexxx -> truexxx)').
+output_pitp_fof($false) :- !, write('falsexxx & ~ falsexxx').
+output_pitp_fof(Atom) :- write(Atom).
+
+%----------------------------------------------------------------------
+%----Print out the formulae in pitp format.
+output_pitp_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_pitp_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    %write('% '), write(Name), write(', '),
+    %write(Status), write('.'), nl,
+    %write('('),
+    (Status==conjecture ->
+         output_pitp_fof(Formula);
+         output_pitp_fof(Formula)),
+    %write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (
+         write(' & '));
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (
+              write(' -> '));
+             true)),
+    output_pitp_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_pitp_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_pitp_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----pitp format.
+output_pitp_fo_formula([]):-
+    !.
+
+% parameters
+output_pitp_fo_formula(Formulae):-
+    output_pitp_fo_formulae(Formulae), 
+    nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in pitp format.
+pitp(pitp,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_pitp_formula(Clauses).
+
+%----Print out first-order formula in pitp format.
+pitp(pitp,Formulae,_):- 
+  tptp_formulae(Formulae),
+  output_pitp_fo_formula(Formulae).  
+
+%----------------------------------------------------------------------
+%----Provide information about the pitp format.
+pitp_format_information('%','.pitp').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+pitp_file_information(format,pitp).
+%----------------------------------------------------------------------

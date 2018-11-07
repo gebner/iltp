@@ -1,0 +1,167 @@
+%==============================================================================
+%----Translation of relevance logic to FOL
+%----
+%----Written by Geoff Sutcliffe, October 2004
+%==============================================================================
+%------------------------------------------------------------------------------
+reltran_make_annotated_formulae([],_,_,_,[]).
+
+reltran_make_annotated_formulae([FirstFormula|RestOfFormulae],Type,NameBase,
+Number,[fof(Name,Type,FirstFormula)|RestOfAnnotatedFormulae]):-
+    name(NameBase,NameBaseASCII),
+    name(Number,NumberASCII),
+    tptp2X_append(NameBaseASCII,[95|NumberASCII],NameASCII),
+    name(Name,NameASCII),
+    NextNumber is Number+1,
+    reltran_make_annotated_formulae(RestOfFormulae,Type,NameBase,NextNumber,
+RestOfAnnotatedFormulae).
+%------------------------------------------------------------------------------
+reltran_background_theory([
+
+fof(identity,axiom,( 
+    ! [A1] : reachable(world0,A1,A1)   )),
+
+fof(contraction,axiom,( 
+    ! [A2,B2,C2] : 
+      ( reachable(A2,B2,C2)
+     => ? [D2] : 
+          ( reachable(A2,B2,D2)
+          & reachable(D2,B2,C2) ) )   )),
+
+fof(symmetry,axiom,( 
+    ! [A3,B3,C3] :
+      ( reachable(A3,B3,C3)
+     => reachable(B3,A3,C3) )   )),
+
+%fof(permutation,axiom,( 
+%    ! [W4,X4,Y2,Z2] :
+%      ( ? [W1] :
+%          ( reachable(X4,Y2,W1)
+%          & reachable(W1,Y2,Z2) )
+%     => ? [W2] :
+%          ( reachable(X4,W2,Z2)
+%          & reachable(Y2,Z2,W2) ) )   )),
+fof(permutation,axiom,( 
+     ! [A4,B4,C4,D4] :
+       ( ? [E4] :
+           ( reachable(A4,B4,E4)
+           & reachable(E4,C4,D4) )
+      => ? [F4] :
+           ( reachable(A4,C4,F4)
+           & reachable(F4,B4,D4) ) )  )),
+
+fof(short_cut,axiom,( 
+    ! [A5,B5,C5,D5] :
+      ( ( reachable(world0,A5,B5)
+        & reachable(B5,C5,D5) )
+     => reachable(A5,C5,D5) )   )),
+
+fof(involution,axiom,( 
+    ! [A6] : equal(routley(routley(A6)),A6)   )),
+
+fof(contraposition,axiom,( 
+    ! [A7,B7,C7] :
+      ( reachable(A7,B7,C7)
+     => reachable(A7,routley(C7),routley(B7)) )   )),
+
+fof(pasch,axiom,(
+    ! [A8,B8,C8,D8] :
+      ( ( ? [E8] :
+            ( reachable(A8,B8,E8)
+            & reachable(E8,C8,D8) )
+       => ? [F8] :
+            ( reachable(B8,C8,F8)
+            & reachable(A8,F8,D8) ) ) )   ))
+]).
+%------------------------------------------------------------------------------
+reltran_generate_heredity_conditions([],[]).
+
+reltran_generate_heredity_conditions([FirstProposition|RestOfPropositions],[
+( ! [X,Y] :
+    ( ( PropositionOfX
+      & reachable(world0,X,Y) )
+   => PropositionOfY ) )    |RestOfHeredityConditions]):-
+    PropositionOfX =.. [FirstProposition,X],
+    PropositionOfY =.. [FirstProposition,Y],
+    reltran_generate_heredity_conditions(RestOfPropositions,
+RestOfHeredityConditions).
+%------------------------------------------------------------------------------
+reltran_extract_proposition(Atom,Atom):-
+    atom(Atom).
+
+reltran_extract_proposition(~A,Proposition):-
+    reltran_extract_proposition(A,Proposition).
+
+reltran_extract_proposition(BinaryFormula,Proposition):-
+    BinaryFormula =.. [_,A,_],
+    reltran_extract_proposition(A,Proposition).
+
+reltran_extract_proposition(BinaryFormula,Proposition):-
+    BinaryFormula =.. [_,_,B],
+    reltran_extract_proposition(B,Proposition).
+%------------------------------------------------------------------------------
+reltran_extract_unique_propositions(AnnotatedFormulae,Propositions):-
+    setof(Proposition,(tptp2X_member(fof(_,_,Formula),
+AnnotatedFormulae),reltran_extract_proposition(Formula,Proposition)),
+Propositions).
+%------------------------------------------------------------------------------
+reltran_formula(Atom,World,Translated):-
+    atom(Atom),
+    Translated =.. [Atom,World].
+
+reltran_formula((A & B),World,(ATranslated & BTranslated)):-
+    reltran_formula(A,World,ATranslated),
+    reltran_formula(B,World,BTranslated).
+ 
+reltran_formula((A | B),World,(ATranslated | BTranslated)):-
+    reltran_formula(A,World,ATranslated),
+    reltran_formula(B,World,BTranslated).
+ 
+reltran_formula(~A,World,~Translated):-
+    reltran_formula(A,routley(World),Translated).
+
+reltran_formula((A => B),World,
+( ! [Y,Z] :
+    ( reachable(World,Y,Z)
+   => ( ATranslated
+     => BTranslated ) ) )  ):-
+    reltran_formula(A,Y,ATranslated),
+    reltran_formula(B,Z,BTranslated).
+
+reltran_formula((A <=> B),World,
+( ! [Y,Z] :
+    ( reachable(World,Y,Z)
+   => ( ( ATranslatedY
+      <=> BTranslatedZ )
+      & ( ATranslatedZ
+      <=> BTranslatedY ) ) ) )  ):-
+    reltran_formula(A,Y,ATranslatedY),
+    reltran_formula(B,Z,BTranslatedZ),
+    reltran_formula(A,Z,ATranslatedZ),
+    reltran_formula(B,Y,BTranslatedY).
+%------------------------------------------------------------------------------
+reltran_list_of_annotated_formulae([],[]).
+
+reltran_list_of_annotated_formulae([fof(Name,Type,RFormula)|
+RestOfAnnotatedFormulae],[fof(Name,Type,FormulaTranslated)|
+RestOfTranslatedAnnotatedFormulae]):-
+    reltran_formula(RFormula,world0,FormulaTranslated),
+    reltran_list_of_annotated_formulae(RestOfAnnotatedFormulae,
+RestOfTranslatedAnnotatedFormulae).
+%------------------------------------------------------------------------------
+reltran_and_add_theory(AnnotatedFormulae,AllTranslated):-
+    reltran_background_theory(AnnotatedBackgroundTheory),
+    reltran_extract_unique_propositions(AnnotatedFormulae,Propositions),
+    reltran_generate_heredity_conditions(Propositions,HeredityConditions),
+    reltran_make_annotated_formulae(HeredityConditions,axiom,heredity,1,
+AnnotatedHeredityConditions),
+    reltran_list_of_annotated_formulae(AnnotatedFormulae,
+TranslatedAnnotatedFormulae),
+    tptp2X_append(AnnotatedBackgroundTheory,AnnotatedHeredityConditions,A1),
+    tptp2X_append(A1,TranslatedAnnotatedFormulae,AllTranslated).
+%------------------------------------------------------------------------------
+rfof(RFormulae,Dictionary,rfof,Formulae,Dictionary,'+rt'):-
+    reltran_and_add_theory(RFormulae,Formulae).
+%------------------------------------------------------------------------------
+rfof_file_information(transform,rfof,'Relevance logic to FOL translation').
+%------------------------------------------------------------------------------

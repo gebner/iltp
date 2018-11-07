@@ -1,0 +1,162 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the ftprolog system.
+%----FOF only
+%----Written by Thomas Raths & Jens Otten, April 2005, adapted Nov 2005
+%========================================================================
+
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_ftprolog_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_ftprolog_signed_literal(++Atom):-
+    write('-'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in ftprolog format.
+%----Special case of an empty clause
+output_ftprolog_literals([]):-
+    write('[]').
+
+output_ftprolog_literals([OneLiteral]):-
+    !, output_ftprolog_signed_literal(OneLiteral).
+
+output_ftprolog_literals([FirstLiteral|RestOfLiterals]):-
+    output_ftprolog_signed_literal(FirstLiteral),
+    write('  ,'), nl, write(' '),
+    output_ftprolog_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in ftprolog format.
+output_ftprolog_clauses([]).
+
+output_ftprolog_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_ftprolog_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write('  ,'), nl, nl);
+         true),
+    output_ftprolog_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in ftprolog format.
+output_ftprolog_formula([]):-
+    !.
+
+output_ftprolog_formula(Clauses):-
+    nl,
+    write('f('), nl, nl,
+    output_ftprolog_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in ftprolog format.
+output_ftprolog_fof(~ A):-
+    !, write('( neg '), output_ftprolog_fof(A), write(' )').
+output_ftprolog_fof('|'(A,B) ):- 
+    !, write('( '), output_ftprolog_fof(A), write(' or '),
+    output_ftprolog_fof(B), write(' )').
+output_ftprolog_fof((A ; B)):- 
+    !, write('( '), output_ftprolog_fof(A), write(' or '),
+    output_ftprolog_fof(B), write(' )').
+output_ftprolog_fof(A & B):-
+    !, write('( '), output_ftprolog_fof(A), write(' and '),
+    output_ftprolog_fof(B), write(' )').
+output_ftprolog_fof(A => B):-
+    !, write('( '), output_ftprolog_fof(A), write(' imp '),
+    output_ftprolog_fof(B), write(' )').
+output_ftprolog_fof(A <=> B):-
+    !, write('( '), output_ftprolog_fof(A), write(' iff '),
+    output_ftprolog_fof(B), write(' )').
+output_ftprolog_fof(! [] : A):- !, output_ftprolog_fof(A).
+output_ftprolog_fof(! [V|L] : A):-
+    !, write('( a(x'), write(V), write(','),
+    output_ftprolog_fof(! L : A), write(' ))').
+output_ftprolog_fof(? [] : A):- !, output_ftprolog_fof(A).
+output_ftprolog_fof(? [V|L] : A):-
+    !, write('( e(x'), write(V), write(','),
+    output_ftprolog_fof(? L : A), write(' ))').
+output_ftprolog_fof($true) :- !, write('(true___ imp true___)').
+output_ftprolog_fof($false) :- !, write('(false___ and neg false___)').
+output_ftprolog_fof(Atom) :- transpred_ftprolog(Atom).
+
+%%% transform a tptp-variable or constant 'XYZ' into xXYZ
+transpred_ftprolog(A) :- atom(A), !, write(A).
+transpred_ftprolog(A) :- A=..[B|C], 
+                         write(B), write('('), transterms_ftprolog(C), write(')').
+transterms_ftprolog([A|T]):- looks_like_a_variable(A), !, write('x'), write(A),
+                             (T\=[] -> (write(','), transterms_ftprolog(T)); true).
+transterms_ftprolog([A|T]):- atom(A), !, write(A),
+                             (T\=[] -> (write(','), transterms_ftprolog(T)); true).
+% A cannot be a variable
+transterms_ftprolog([A|T]):- A=..[B|C], 
+                             write(B), write('('), transterms_ftprolog(C), write(')'),
+                            (T\=[] -> (write(','), transterms_ftprolog(T)); true).
+
+%----------------------------------------------------------------------
+%----Print out the formulae in ftprolog format.
+output_ftprolog_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_ftprolog_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('('),
+    (Status==conjecture ->
+         output_ftprolog_fof(Formula);
+         output_ftprolog_fof(Formula)),
+    write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (nl, nl,
+         write(' and '), nl, nl);
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (nl, nl,
+              write(' imp '), nl, nl);
+             true)),
+    output_ftprolog_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_ftprolog_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_ftprolog_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----ftprolog format.
+output_ftprolog_fo_formula([]):-
+    !.
+
+output_ftprolog_fo_formula(Formulae):-
+    nl,
+    write('f(('), nl, nl,
+    output_ftprolog_fo_formulae(Formulae), nl, nl,
+    write(')).'), nl, nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in ftprolog format.
+ftprolog(ftprolog,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_ftprolog_formula(Clauses).
+
+%----Print out first-order formula in ftprolog format.
+ftprolog(ftprolog,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_ftprolog_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the ftprolog format.
+ftprolog_format_information('%','.ftprolog').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+ftprolog_file_information(format,ftprolog).
+%----------------------------------------------------------------------

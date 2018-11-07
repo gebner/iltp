@@ -1,0 +1,32 @@
+%--------------------------------------------------------------------------
+% File     : GEJ002+2 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : connecting lines and intersection points
+% Version  : [D97],[D98] axioms : Especial.
+% English  : Shortend axioms
+
+% Refs     : [D97] Li Dafa. Replacing the Axioms for Connecting Lines and
+%                  Intersection Points by Two Single Axioms. AAR Newsletter 
+%                  No. 37, 1997.
+%          : [D98] Li Dafa. A Shorter and Intuitive Axiom to Replaxe the 
+%                  Third Axiom of Compatibility of Equality with Apartness 
+%                  and Convergence.  AAR Newsletter No. 39, 1998. 
+%          : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169+-200, 1995.
+% Source   : [D97], [D98]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [X,Y,Z] : (dipt(X,Y) => (apt(Z,ln(X,Y)) => (dipt(Z,X) & dipt(Z,Y))))
+)).
+
+
+fof(a1,axiom,(
+! [X,Y,Z] : (con(X,Y) => ((apt(Z,X) | apt(Z,Y)) => dipt(Z,(pt(X,Y)))))
+)).
+
+%--------------------------------------------------------------------------

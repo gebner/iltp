@@ -1,0 +1,167 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the JProver system.
+%----for FOF only
+%----Written by Jens Otten & Thomas Raths, March 2005, adapted Nov 2005
+%========================================================================
+
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_jprover_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_jprover_signed_literal(++Atom):-
+    write('-'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in JProver format.
+%----Special case of an empty clause
+output_jprover_literals([]):-
+    write('[]').
+
+output_jprover_literals([OneLiteral]):-
+    !, output_jprover_signed_literal(OneLiteral).
+
+output_jprover_literals([FirstLiteral|RestOfLiterals]):-
+    output_jprover_signed_literal(FirstLiteral),
+    write('  ,'), nl, write(' '),
+    output_jprover_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in JProver format.
+output_jprover_clauses([]).
+
+output_jprover_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_jprover_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write('  ,'), nl, nl);
+         true),
+    output_jprover_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in JProver format.
+output_jprover_formula([]):-
+    !.
+
+output_jprover_formula(Clauses):-
+    nl,
+    write('f(['), nl, nl,
+    output_jprover_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in JProver format.
+output_jprover_fof(~ A):-
+    !, write('( not{'), output_jprover_fof(A), write('})').
+output_jprover_fof('|'(A,B) ):- 
+    !, write('( '), output_jprover_fof(A), write(' or '),
+    output_jprover_fof(B), write(' )').
+output_jprover_fof((A ; B)):- 
+    !, write('( '), output_jprover_fof(A), write(' or '),
+    output_jprover_fof(B), write(' )').
+output_jprover_fof(A & B):-
+    !, write('( '), output_jprover_fof(A), write(' & '),
+    output_jprover_fof(B), write(' )').
+output_jprover_fof(A => B):-
+    !, write('( '), output_jprover_fof(A), write(' => '),
+    output_jprover_fof(B), write(' )').
+output_jprover_fof(A <=> B):-
+    !, write('(iff{'), output_jprover_fof(A), write(' ; '),
+    output_jprover_fof(B), write(' })').
+output_jprover_fof(! [] : A):- !, output_jprover_fof(A).
+output_jprover_fof(! [V|L] : A):-
+    !, write('(all x'), write(V), write(':'), put_byte(39), write('T. '),
+    output_jprover_fof(! L : A), write(')').
+output_jprover_fof(? [] : A):- !, output_jprover_fof(A).
+output_jprover_fof(? [V|L] : A):-
+    !, write('(exst x'), write(V), write(':'), put_byte(39), write('T. '),
+    output_jprover_fof(? L : A), write(')').
+output_jprover_fof($true) :- !, write('('), put_byte(39), write('truexxx => '), 
+                             put_byte(39), write('truexxx)').
+output_jprover_fof($false) :- !, write('('), put_byte(39), write('falsexxx & not{'), 
+                             put_byte(39), write('falsexxx})').
+output_jprover_fof(Atom) :- transpred_jp(Atom).
+
+%%% transform a tptp-variable or constant 'XYZ' into 'xXYZ
+transpred_jp(A) :- atom(A), !, put_byte(39), write(A).
+transpred_jp(A) :- A=..[B|C],
+                   put_byte(39), write(B), write('['), transterms_jp(C), write(']').
+
+% A is not a variable
+transterms_jp([A|T]):- looks_like_a_variable(A), !, put_byte(39), write('x'), write(A),
+                       (T\=[] -> (write(';'), transterms_jp(T)); true).
+transterms_jp([A|T]):- atom(A), !, put_byte(39), write(A),
+                       (T\=[] -> (write(';'), transterms_jp(T)); true).
+
+% A cannot be a variable
+transterms_jp([A|T]):- A=..[B|C], put_byte(39),
+                       write(B), write('['), transterms_jp(C), write(']'),
+                       (T\=[] -> (write(';'), transterms_jp(T)); true).
+
+
+%----------------------------------------------------------------------
+%----Print out the formulae in JProver format.
+output_jprover_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_jprover_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    write('(* '), write(Name), write(', '),
+    write(Status), write(' *)'), nl,
+    write('('),
+    (Status==conjecture ->
+         output_jprover_fof(Formula);
+         output_jprover_fof(Formula)),
+    write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (nl, nl,
+         write(' & '), nl, nl);
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (nl, nl,
+              write('  =>'), nl, nl);
+             true)),
+    output_jprover_fo_formulae(RestOfFormulae).
+
+output_jprover_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_jprover_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----JProver format.
+output_jprover_fo_formula([]):-
+    !.
+
+output_jprover_fo_formula(Formulae):-
+    nl,
+    write('<< '), 
+    output_jprover_fo_formulae(Formulae), nl,
+    write('>>'), nl, nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in JProver format.
+jprover(jprover,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_jprover_formula(Clauses).
+
+%----Print out first-order formula in JProver format.
+jprover(jprover,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_jprover_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the JProver format.
+jprover_format_information('%','.jprover').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+jprover_file_information(format,jprover).
+%----------------------------------------------------------------------

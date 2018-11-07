@@ -1,0 +1,22 @@
+%--------------------------------------------------------------------------
+% File     : GEJ018+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Rule of construction: orthogonal lines
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [L,A] : ((line(L) & point(A)) => line(ort(L,A)))
+)).
+
+
+%--------------------------------------------------------------------------

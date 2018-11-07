@@ -1,0 +1,23 @@
+%--------------------------------------------------------------------------
+% File     : GEJ016+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Rules of construction: intersection point of lines L and M
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+%! [L,M] : ((line(L) & line(M) & con(line(L),line(M))) => point(pt(line(L),line(M)))) 
+! [L,M] : ((line(L) & line(M) & con(L,M)) => point(pt(L,M))) 
+)).
+
+
+%--------------------------------------------------------------------------

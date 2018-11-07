@@ -1,0 +1,33 @@
+%--------------------------------------------------------------------------
+% File     : GEJ019+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Abbreviations (Ordered Geometry)
+% Version  : [P98] axioms.
+% English  :
+
+% Refs     : [P98] J. von Plato. A Constructive Theory of Ordered Affine
+%                  Geometry. Indagationes Mathematicae, vol. 9: 549-562, 
+%                  1998.
+% Source   : [P98]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(ax1,axiom,(
+! [A,L] : (apt(A,L) <=> (lapt(A,L) | lapt(A,rev(L)))))).
+
+fof(ax2,axiom,(
+! [L,M] : (con(L,M) <=> (undir(L,M) & undir(L,rev(M)))))).
+
+fof(ax3,axiom,(
+! [A,B,L] : (div(L,A,B) <=> ((lapt(A,L) & lapt(B,rev(L))) | (lapt(A,rev(L)) & lapt(B,L)))))).
+
+fof(ax4,axiom,(
+! [L,A,B] : (bf(L,A,B) <=> (dipt(A,B) & ((~ (lapt(A,L) | lapt(A,rev(L)))) & (~ (lapt(B,L) | lapt(B,rev(L))))) & (~ undir(L,ln(A,B))))))). 
+
+fof(ax5,axiom,(
+! [L,A,B,C] : (bet(L,A,B,C) <=> ((bf(L,A,B) & bf(L,B,C)) | (bf(L,C,B) & bf(L,B,A)))))).
+
+%--------------------------------------------------------------------------

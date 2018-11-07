@@ -1,0 +1,48 @@
+%--------------------------------------------------------------------------
+% File     : GEJ021+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Constructed Objects (Ordered Geometry)
+% Version  : [P98] axioms.
+% English  :
+
+% Refs     : [P98] J. von Plato. A Constructive Theory of Ordered Affine
+%                  Geometry. Indagationes Mathematicae, vol. 9: 549-562, 
+%                  1998.
+% Source   : [P98]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(ax1,axiom,(
+! [A,B] : ((point(A) & point(B) & dipt(A,B)) => line(ln(A,B))))).
+
+fof(ax2,axiom,(
+! [L,M] : ((line(L) & line(M) & (undir(L,M) & undir(L,rev(M)))) => point(pt(L,M))))).
+
+fof(ax3,axiom,(
+! [L,A] : ((point(A) & line(L)) => line(par(L,A))))).
+
+fof(ax4,axiom,(
+! [L] : (line(L) => line(rev(L))))).
+
+fof(ax5,axiom,(
+! [A,B] : (dipt(A,B) => ((~ apt(A,ln(A,B))) & (~ apt(B, ln(A,B))))))).
+
+fof(ax6,axiom,(
+! [L,M] : ((undir(L,M) & undir(L,rev(M)))  => ((~ apt(pt(L,M),L)) & (~ apt(pt(L,M),M)))))).
+
+fof(ax7,axiom,(
+! [A,L] : (~ apt(A,par(L,A))))).
+
+fof(ax8,axiom,(
+! [L] : (~ diln(L,rev(L))))).
+
+fof(ax9,axiom,(
+! [A,B] : (~ undir(ln(A,B),rev(ln(B,A)))))).
+
+fof(ax10,axiom,(
+! [A,L] : (~ undir(par(L,A),L)))).
+
+%--------------------------------------------------------------------------

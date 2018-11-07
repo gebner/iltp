@@ -1,0 +1,35 @@
+%--------------------------------------------------------------------------
+% File     : GEJ001+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : apartness for distinct points, distinct lines, convergent lines
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [X] : (~ dipt(X, X)))).
+
+fof(a2,axiom,(
+! [X] : (~ diln(X, X)))).
+
+fof(ax3,axiom,(
+! [X] : (~ con(X, X)))).
+
+fof(ax4,axiom,(
+! [X,Y,Z] : (dipt(X, Y) => ( dipt(X, Z) | dipt(Y, Z) )) ) ).
+
+fof(ax5,axiom,(
+! [X,Y,Z] : (diln(X, Y) => ( diln(X, Z) | diln(Y, Z) )) ) ).
+
+fof(ax6,axiom,(
+! [X,Y,Z] : (con(X, Y) => ( con(X, Z) | con(Y, Z) )) ) ).
+
+%--------------------------------------------------------------------------

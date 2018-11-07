@@ -1,0 +1,98 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses in a format acceptable to 
+%----Owen Astrachan's METEOR system.
+%----
+%----Written by Geoff Sutcliffe, July, 1994.
+%========================================================================
+%----------------------------------------------------------------------
+%----Output a literal with - for negative, nothing for positive
+output_meteor_signed_literal(--Atom):-
+    !,
+    write('-'),
+    write(Atom).
+
+output_meteor_signed_literal(++Atom):-
+    write(' '),
+    write(Atom).
+%----------------------------------------------------------------------
+%----Output the literals of the clause in METEOR format
+%----Special case of an empty clause
+output_meteor_clause([]):-
+    !,
+    write('false.'),
+    nl,
+    nl.
+
+output_meteor_clause([OneLiteral]):-
+    !,
+    output_meteor_signed_literal(OneLiteral),
+    write('.'),
+    nl,
+    nl.
+
+output_meteor_clause([FirstLiteral|RestOfLiterals]):-
+    output_meteor_signed_literal(FirstLiteral),
+    write(' |'),
+    nl,
+    output_meteor_clause(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Output the clauses selected by status
+output_meteor_clauses([]):-
+    !.
+
+%----If the clause has an acceptable status then output
+output_meteor_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '),
+    write(Name),
+    write(', '),
+    write(Status),
+    write('.'),
+    nl,
+    output_meteor_clause(Literals),
+    output_meteor_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+output_meteor_goal(input_clause(Name,Status,Literals)):-
+    write('% Goal clause : '),
+    write(Name),
+    write(', '),
+    write(Status),
+    write('.'),
+    nl,
+    write('goal'),
+    write(', '),
+    nl,
+    output_meteor_clause(Literals).
+%----------------------------------------------------------------------
+%----Select a clause as the top of the deduction
+%----First look for one with status theorem
+select_meteor_goal(InputClauses,input_clause(Name,negated_conjecture,
+TheoremLiterals),OtherClauses):-
+    tptp2X_select(input_clause(Name,negated_conjecture,TheoremLiterals),
+InputClauses,OtherClauses),
+    !.
+
+%----If no conjecture, then simply take first
+select_meteor_goal([FirstClause|RestOfClauses],FirstClause,
+RestOfClauses).
+%----------------------------------------------------------------------
+%----Output all the clauses in meteor format
+meteor(meteor,Clauses,_):-
+    tptp_clauses(Clauses),
+    select_meteor_goal(Clauses,GoalClause,OtherClauses),
+    output_meteor_clauses(OtherClauses),
+    output_meteor_goal(GoalClause).
+
+%----Do nothing for FOF - just leave a comment
+meteor(meteor,Formulae,_):-
+    tptp_formulae(Formulae),
+    !,
+    write('%----No FOF format available in METEOR'),
+    nl.
+%----------------------------------------------------------------------
+%----Provide information about the meteor format
+meteor_format_information('%','.me').
+%----------------------------------------------------------------------
+%----Provide information about the meteor file
+meteor_file_information(format,meteor,'METEOR format').
+%----------------------------------------------------------------------

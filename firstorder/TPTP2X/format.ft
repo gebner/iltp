@@ -1,0 +1,204 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the ft system.
+%----FOF only
+%----Written by Jens Otten & Thomas Raths, March 2005, adapted Nov 2005
+%========================================================================
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+
+output_ft_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_ft_signed_literal(++Atom):-
+    write('~'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in ft format.
+%----Special case of an empty clause
+output_ft_literals([]):-
+    write('[]').
+
+output_ft_literals([OneLiteral]):-
+    !, output_ft_signed_literal(OneLiteral).
+
+output_ft_literals([FirstLiteral|RestOfLiterals]):-
+    output_ft_signed_literal(FirstLiteral),
+    write(' & '), nl, write(' '),
+    output_ft_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in ft format.
+output_ft_clauses([]).
+
+output_ft_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_ft_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write(' & '), nl, nl);
+         true),
+    output_ft_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in ft format.
+output_ft_formula([]):-
+    !.
+
+output_ft_formula(Clauses):-
+    nl,
+    write('f(['), nl, nl,
+    output_ft_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in ft format.
+output_ft_fof(~ A):-
+    !, write('( ~ '), output_ft_fof(A), write(' )').
+output_ft_fof('|'(A,B) ):- 
+    !, write('( '), output_ft_fof(A), write(' | '),
+    output_ft_fof(B), write(' )').
+output_ft_fof((A ; B)):- 
+    !, write('( '), output_ft_fof(A), write(' | '),
+    output_ft_fof(B), write(' )').
+output_ft_fof(A & B):-
+    !, write('( '), output_ft_fof(A), write(' & '),
+    output_ft_fof(B), write(' )').
+output_ft_fof(A => B):-
+    !, write('( '), output_ft_fof(A), write(' -> '),
+    output_ft_fof(B), write(' )').
+output_ft_fof(A <=> B):-
+    !, write('( '), output_ft_fof(A), write(' <-> '),
+    output_ft_fof(B), write(' )').
+output_ft_fof(! [] : A):- ! , output_ft_fof(A).
+
+output_ft_fof(! [V|L] : A):-
+        !, write('( A'), 
+        renameVarTptpToFt(V,V1), 
+        write(V1), 
+        write(' '),
+        output_ft_fof(! L : A), write(' )').
+output_ft_fof(? [] : A):- !, output_ft_fof(A).
+output_ft_fof(? [V|L] : A):-
+        !, write('( E'),
+        renameVarTptpToFt(V,V1),         
+        write(V1), 
+        write(' '),
+        output_ft_fof(? L : A), write(' )').
+
+output_ft_fof($true) :- !, write('(truexxx->truexxx)').
+output_ft_fof($false) :- !, write('(falsexxx & ~ falsexxx)').
+
+output_ft_fof(Term) :- transpred_ft(Term).
+
+transpred_ft(A) :- atom(A), !, delete_(A,A1), write(A1).
+transpred_ft(A) :- A=..[B|C], delete_(B,B1), write(B1), 
+                   write('('), transterms_ft(C), write(')').
+
+transterms_ft([A|T]):- looks_like_a_variable(A), !, 
+                       renameVarTptpToFt(A,A1), write(A1),
+                       (T\=[] -> (write(','), transterms_ft(T)); true).
+transterms_ft([A|T]):- atom(A), !, write(A),
+                       (T\=[] -> (write(','), transterms_ft(T)); true).
+% (A cannot be a variable)
+
+transterms_ft([A|T]):- A=..[B|C], 
+                       delete_(B,B1), write(B1), write('('), transterms_ft(C), write(')'),
+                       (T\=[] -> (write(','), transterms_ft(T)); true).
+
+% delete "_"
+delete_(S,T) :- atom_chars(S,L), delete_2(L,M), atom_chars(T,M).
+
+delete_2([],[]).
+delete_2(['_'|R],S) :- !, delete_2(R,S).
+delete_2([X|R],[X|S]) :- delete_2(R,S).
+
+% rename TPTP-variable (e.g. 'XYZ') or -constant (e.g. 'const1') (Prolog-Atom) 
+%        -> Ft-Variable (e.g. x1)
+renameVarTptpToFt(A,V) :- 
+        atom_key_list(L),
+        (member_assoc(A,L,K) -> 
+          (number_chars(K,KL), concat_atom(['x'|KL],V) );
+            (length(L,N), N1 is N + 1,           
+            L1 = [(A,N1)|L],
+            retract(atom_key_list(_)),
+            assert(atom_key_list(L1)),
+            number_chars(N1,N1L), concat_atom(['x'|N1L],V) )
+        ).        
+
+
+member_assoc(X,[(Y,K)|_],K) :- X == Y.
+member_assoc(X,[_|T],K) :- member_assoc(X,T,K).
+
+:- assert(atom_key_list([])). 
+%----------------------------------------------------------------------
+%----Print out the formulae in ft format.
+output_ft_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_ft_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('('),
+    (Status==conjecture ->
+         output_ft_fof(Formula);
+         output_ft_fof(Formula)),
+    write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (nl, nl,
+         write(' & '), nl, nl);
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (nl, nl,
+              write(' -> '), nl, nl);
+             true)),
+    output_ft_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_ft_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_ft_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----ft format.
+output_ft_fo_formula([]):-
+    !.
+
+% parameters
+output_ft_fo_formula(Formulae):-
+    nl,
+    write('set forever 1.'), nl,      % contraction deepening is active
+    % largest possible values for stacks
+    write('stack 2000000.'), nl,      % main stack         
+    write('fstack 2000000.'), nl,     % formula stack      
+    write('set szsave 10000.'), nl,   % size of save stacks
+    nl,
+    output_ft_fo_formulae(Formulae), 
+    write('.'), nl, nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in ft format.
+ft(ft,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_ft_formula(Clauses).
+
+%----Print out first-order formula in ft format.
+ft(ft,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_ft_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the ft format.
+ft_format_information('%','.ft').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+ft_file_information(format,ft).
+%----------------------------------------------------------------------

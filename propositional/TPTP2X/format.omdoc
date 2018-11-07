@@ -1,0 +1,236 @@
+%============================================================================
+%----This outputs TPTP FOF in OmDoc format
+%----
+%----Written by Geoff Sutcliffe, August 2003
+%============================================================================
+%----------------------------------------------------------------------------
+output_omdoc_omv(Variable,Indent):-
+    output_indent(Indent,0),
+    write('<OMV name="'),
+    write(Variable),
+    write('"/>'),
+    nl.
+%----------------------------------------------------------------------------
+output_omdoc_oms(CD,Connective,Indent):-
+    output_indent(Indent,0),
+    write('<OMS cd="'),
+    write(CD),
+    write('" name="'),
+    write(Connective),
+    write('"/>'),
+    nl.
+%----------------------------------------------------------------------------
+output_omdoc_oma(CD,Connective,Formulae,Indent):-
+    output_indent(Indent,0),
+    write('<OMA>'),
+    nl,
+    Indent2 is Indent + 2,
+    output_omdoc_oms(CD,Connective,Indent2),
+    output_omdoc_formula_list(Formulae,Indent2),
+    output_indent(Indent,0),
+    write('</OMA>'),
+    nl.
+%----------------------------------------------------------------------------
+output_omdoc_formula_list([],_).
+
+output_omdoc_formula_list([Formula|RestOfFormulae],Indent):-
+    output_a_omdoc_formula(Formula,Indent),
+    output_omdoc_formula_list(RestOfFormulae,Indent).
+%----------------------------------------------------------------------------
+%----Unary Formula
+output_a_omdoc_formula(UnaryFormula,Indent):-
+    tptp_unary_formula(UnaryFormula,'~',Formula),
+    !,
+    output_omdoc_oma(logic1,not,[Formula],Indent).
+
+%----Binary Formula
+output_a_omdoc_formula(BinaryFormula,Indent):-
+    tptp_binary_formula(BinaryFormula,BinaryConnective,LHS,RHS),
+    !,
+    tptp2X_member((BinaryConnective)-(OmDocConnective),
+[('|')-(or), ('&')-(and), ('=>')-(implies), ('<=')-(implied), ('<=>')-(equiv), 
+('<~>')-(xor), ('~&')-(nand), ('~|')-(nor)]),
+    output_omdoc_oma(logic1,OmDocConnective,[LHS,RHS],Indent).
+
+%----Quantified
+output_a_omdoc_formula(QuantifiedFormula,Indent):-
+    tptp_quantified_formula(QuantifiedFormula,Quantifier,[Variable],Formula),
+    !,
+    output_indent(Indent,0),
+    write('<OMBIND>'),
+    nl,
+    Indent2 is Indent + 2,
+    tptp2X_member((Quantifier)-(OmDocQuantifier),
+[('!')-(forall),('?')-(exists)]),
+    output_omdoc_oms(quant1,OmDocQuantifier,Indent2),
+    output_indent(Indent2,0),
+    write('<OMBVAR>'),
+    nl,
+    Indent4 is Indent2 + 2,
+    output_omdoc_omv(Variable,Indent4),
+    output_indent(Indent2,0),
+    write('</OMBVAR>'),
+    nl,
+    output_a_omdoc_formula(Formula,Indent2),
+    output_indent(Indent,0),
+    write('</OMBIND>'),
+    nl.
+
+%----Multiple variables done one at a time
+output_a_omdoc_formula(QuantifiedFormula,Indent):-
+    tptp_quantified_formula(QuantifiedFormula,Quantifier,[Variable|
+MoreVariables],Formula),
+    !,
+    tptp_quantified_formula(SubFormula,Quantifier,MoreVariables,Formula),
+    tptp_quantified_formula(NewFormula,Quantifier,[Variable],SubFormula),
+    output_a_omdoc_formula(NewFormula,Indent).
+
+%----Atomic formulae
+output_a_omdoc_formula(Atom,Indent):-
+    atom(Atom),
+    !,
+    output_omdoc_omv(Atom,Indent).
+
+output_a_omdoc_formula(Atom,Indent):-
+    Atom =.. [Principle|Arguments],
+    output_omdoc_oma(xmp,Principle,Arguments,Indent).
+%----------------------------------------------------------------------------
+output_omdoc_fmp(Formula):-
+    write('<FMP>'),
+    nl,
+    write('  <OMOBJ>'),
+    nl,
+    output_a_omdoc_formula(Formula,4),
+    write('  </OMOBJ>'),
+    nl,
+    write('</FMP>'),
+    nl.
+%----------------------------------------------------------------------------
+output_omdoc_formulae([]).
+
+output_omdoc_formulae([fof(Name,conjecture,Formula)|RestOfFormulae]):-
+    !,
+    write('<assertion type="conjecture" id="'),
+    write(Name),
+%UNKNOWN USE OF foo    write('" style="foo" generated-by="TSTP">'),
+    write('" generated-by="TSTP">'),
+    nl,
+    output_omdoc_fmp(Formula),
+    write('</'),
+    write(assertion),
+    write('>'),
+    nl,
+    nl,
+    output_omdoc_formulae(RestOfFormulae).
+
+output_omdoc_formulae([fof(Name,Type,Formula)|RestOfFormulae]):-
+    !,
+    write('<'),
+    write(Type),
+    write(' id="'),
+    write(Name),
+%UNKNONW USE OF foo    write('" style="foo" generated-by="TSTP">'),
+    write('" generated-by="TSTP">'),
+    nl,
+    output_omdoc_fmp(Formula),
+    write('</'),
+    write(Type),
+    write('>'),
+    nl,
+    nl,
+    output_omdoc_formulae(RestOfFormulae).
+%----------------------------------------------------------------------------
+output_omdoc_symbols([]).
+
+output_omdoc_symbols([Symbol/_|RestOfPairs]):-
+    write('<symbol id="'),
+    write(Symbol),
+    write('"/>'),
+    nl,
+    output_omdoc_symbols(RestOfPairs).
+%----------------------------------------------------------------------------
+%----Extract header info from TPTP header
+extract_omdoc_header_information(FileHeader,ProblemName):-
+    tptp2X_member('File'-[FileLine],FileHeader),
+    !,
+    name(FileLine,FileLineASCII),
+    tptp2X_append(" File     : ",RestLine,FileLineASCII),
+    tptp2X_append(" : TPTP",_,TailASCII),
+    tptp2X_append(ProblemNameASCII,TailASCII,RestLine),
+    name(ProblemName,ProblemNameASCII).
+
+%----If any member failed, return default nothings
+extract_omdoc_header_information(_,unknown).
+%----------------------------------------------------------------------------
+output_omdoc(FileHeader,FunctorStructures,UnsignedPredicateStructures,
+Formulae):-
+    extract_omdoc_header_information(FileHeader,ProblemName),
+%----Output OmDoc header
+    write('<?xml version="1.0"?>'),
+    nl,
+    write('<!DOCTYPE omdoc PUBLIC "-//OMDoc//DTD OMDoc V1.1//EN" "http://www.mathweb.org/~jzimmer/omdoc1.1.dtd" []>'),
+    nl,
+
+    write('<omdoc xmlns="http://www.mathweb.org/omdoc" id="'),
+    write(ProblemName),
+    write('">'),
+    nl,
+    write('<theory id="xmp">'),
+    nl,
+    nl,
+    output_omdoc_symbols(FunctorStructures),
+    output_omdoc_symbols(UnsignedPredicateStructures),
+    nl,
+    output_omdoc_formulae(Formulae),
+    write('</theory>'),
+    nl,
+    write('</omdoc>'),
+    nl.
+%----------------------------------------------------------------------------
+%----Check for duplicate arities
+omdoc_consistent(SymbolArityPairs):-
+    tptp2X_select(Symbol/Arity,SymbolArityPairs,OtherPairs),
+    tptp2X_member(Symbol/OtherArity,OtherPairs),
+    \+ (Arity = OtherArity),
+    !,
+    write('ERROR: '),
+    write(Symbol),
+    write(' has two different arities.'),
+    nl,
+    fail.
+
+omdoc_consistent(_).
+%----------------------------------------------------------------------------
+%----Output clause-omdoc-syntax
+omdoc(omdoc,Clauses,_):-
+    tptp_clauses(Clauses),
+    !,
+    write('%----No CNF format available in OmDoc'),
+    nl.
+
+%----Output FOF-omdoc-syntax
+omdoc(omdoc,Formulae,FileHeader):-
+    tptp_formulae(Formulae),
+    !,
+%----Extract predicates and functors
+    examine_formulae_for_predicates(Formulae,_,UnsignedPredicateStructures,_),
+    examine_formulae_for_functors(Formulae,FunctorStructures,_),
+%----Check for duplicate arities
+    omdoc_consistent(UnsignedPredicateStructures),
+    omdoc_consistent(FunctorStructures),
+%----Do translation
+    output_omdoc(FileHeader,FunctorStructures,UnsignedPredicateStructures,
+Formulae).
+
+%----unknown format (to be prepared for the future)
+omdoc(omdoc,_,_):-
+    !,
+    write('%----unknown tptp input format'),
+    nl.
+%----------------------------------------------------------------------------
+%----Provide information about the OmDoc format
+omdoc_format_information('%','.omdoc').
+%----------------------------------------------------------------------------
+%----Provide information about the OmDoc file
+omdoc_file_information(format,omdoc,'OmDoc format').
+%----------------------------------------------------------------------------

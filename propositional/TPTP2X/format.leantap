@@ -1,0 +1,151 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the leanCoP system.
+%----
+%----Written by Jens Otten, November 2000
+%========================================================================
+
+%%% adapted for TPTP-v3.1.0 by Thomas Raths in Novermber, 2005
+
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_leantap_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_leantap_signed_literal(++Atom):-
+    write('-'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in leantap format.
+%----Special case of an empty clause
+output_leantap_literals([]):-
+    write('[]').
+
+output_leantap_literals([OneLiteral]):-
+    !, output_leantap_signed_literal(OneLiteral).
+
+output_leantap_literals([FirstLiteral|RestOfLiterals]):-
+    output_leantap_signed_literal(FirstLiteral),
+    write('  ,'), nl, write(' '),
+    output_leantap_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in leantap format.
+output_leantap_clauses([]).
+
+output_leantap_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_leantap_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write('  ,'), nl, nl);
+         true),
+    output_leantap_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in leantap format.
+output_leantap_formula([]):-
+    !.
+
+output_leantap_formula(Clauses):-
+    nl,
+    write('f(['), nl, nl,
+    output_leantap_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in leantap format.
+output_leantap_fof(~ A):-
+    !, write('( - '), output_leantap_fof(A), write(' )').
+output_leantap_fof('|'(A,B) ):- 
+    !, write('( '), output_leantap_fof(A), write(' v '),
+    output_leantap_fof(B), write(' )').
+output_leantap_fof((A ; B)):- 
+    !, write('( '), output_leantap_fof(A), write(' v '),
+    output_leantap_fof(B), write(' )').
+output_leantap_fof(A & B):-
+    !, write('( '), output_leantap_fof(A), write(' & '),
+    output_leantap_fof(B), write(' )').
+output_leantap_fof(A => B):-
+    !, write('( '), output_leantap_fof(A), write(' => '),
+    output_leantap_fof(B), write(' )').
+output_leantap_fof(A <=> B):-
+    !, write('( '), output_leantap_fof(A), write(' <=> '),
+    output_leantap_fof(B), write(' )').
+output_leantap_fof(! [] : A):- !, output_leantap_fof(A).
+output_leantap_fof(! [V|L] : A):-
+    !, write('( all('), write(V), write(' , '),
+    output_leantap_fof(! L : A), write(' ))').
+output_leantap_fof(? [] : A):- !, output_leantap_fof(A).
+output_leantap_fof(? [V|L] : A):-
+    !, write('( ex('), write(V), write(' , '),
+    output_leantap_fof(? L : A), write(' ))').
+output_leantap_fof($true) :- !, write('(true___=>true___)').
+output_leantap_fof($false) :- !, write('(false___ & - false___)').
+output_leantap_fof(Atom) :-
+    write(Atom).
+%----------------------------------------------------------------------
+%----Print out the formulae in leantap format.
+output_leantap_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_leantap_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('('),
+    (Status==conjecture ->
+         output_leantap_fof(Formula);
+         output_leantap_fof(Formula)),
+    write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (nl, nl,
+         write('  &'), nl, nl);
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (nl, nl,
+              write('  =>'), nl, nl);
+             true)),
+    output_leantap_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_leantap_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_leantap_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----leantap format.
+output_leantap_fo_formula([]):-
+    !.
+
+output_leantap_fo_formula(Formulae):-
+    nl,
+    write('f(('), nl, nl,
+    output_leantap_fo_formulae(Formulae), nl, nl,
+    write(')).'), nl, nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in leantap format.
+leantap(leantap,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_leantap_formula(Clauses).
+
+%----Print out first-order formula in leantap format.
+leantap(leantap,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_leantap_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the leantap format.
+leantap_format_information('%','.leantap').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+leantap_file_information(format,leantap).
+%----------------------------------------------------------------------

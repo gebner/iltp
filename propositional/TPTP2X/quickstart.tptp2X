@@ -1,0 +1,31 @@
+Quickstart tptp2X
+-----------------
+
+> cd ILTP-v1.1-prop/TPTP2X
+> ./tptp2X_install
+
+Thi s script will ask for required information. (When you are asked to
+state your desired format, then simply type 'a' for 'all').
+
+b) Use TPTP2X tool to translate formulas:
+> cd ..
+> TPTP2X/tptp2X -f <ATP system> [-t <transformations>] [Problems/<domain>/'*.p']
+
+This will write the translated formulas into the directory <ATP system>.
+The parameters are:
+
+<ATP system>: intuitionistic ATP systems are one of
+              ft, ftprolog, jprover, strip, ljt, pitp,
+              leancop (for ileanCoP, ileanTAP, ileanSeP),
+
+<domain>: one of LCL,SYN,SYJ
+                 
+<transformations>: the most important ones are:
+   stdfof: transforms non-standard connectives like <=, <~>, ~|, ~&
+           into standard ones
+   shorten: replace symbols by short ones, suppess header information
+
+   combination possible, e.g. -t stdfof+shorten
+
+
+Example: TPTP2X/tptp2X -f strip -t stdfof+shorten

@@ -1,0 +1,46 @@
+%------------------------------------------------------------------------------
+% File     : KRS027+1 : ILTP v1.1.0
+% Domain   : Knowledge Representation (Semantic Web)
+% Problem  : An example of use
+% Version  : Especial.
+% English  : 
+
+% Refs     : [Bec03] Bechhofer (2003), Email to G. Sutcliffe
+%          : [TR+04] Tsarkov et al. (2004), Using Vampire to Reason with OW
+% Source   : [Bec03]
+% Names    : consistent_backwardCompatibleWith-Manifest001 [Bec03]
+
+% Status   : Satisfiable
+% Rating   : 0.00 v3.1.0
+%
+% Status (intuit.) : Non-Theorem
+% Rating (intuit.) : 0.75 v1.1
+%
+% Syntax   : Number of formulae    :    2 (   0 unit)
+%            Number of atoms       :    4 (   0 equality)
+%            Maximal formula depth :    4 (   4 average)
+%            Number of connectives :    4 (   2 ~  ;   0  |;   1  &)
+%                                         (   1 <=>;   0 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :    4 (   0 propositional; 1-1 arity)
+%            Number of functors    :    0 (   0 constant; --- arity)
+%            Number of variables   :    2 (   0 singleton;   2 !;   0 ?)
+%            Maximal term depth    :    1 (   1 average)
+
+% Comments : Sean Bechhofer says there are some errors in the encoding of
+%            datatypes, so this problem may not be perfect. At least it's
+%            still representative of the type of reasoning required for OWL.
+%------------------------------------------------------------------------------
+%----Thing and Nothing 
+fof(axiom_0,axiom,
+    ( ! [X] : 
+        ( cowlThing(X)
+        & ~ cowlNothing(X) ) )).
+
+%----String and Integer disjoint 
+fof(axiom_1,axiom,
+    ( ! [X] : 
+        ( xsd_string(X)
+      <=> ~ xsd_integer(X) ) )).
+
+%------------------------------------------------------------------------------

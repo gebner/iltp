@@ -1,0 +1,344 @@
+#!/bin/csh
+#--------------------------------------------------------------------------
+clear
+echo "--------------------------------------------------------------------"
+echo "                This is the tptp2X installation"
+echo ""
+echo "All paths must be absolute."
+echo "Press return to accept the default values in []s"
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----adapted to ILTP library, JO, January '06
+
+#----ILTP directory
+#----Look for being in or below ILTP-v*
+set TPTPDirectory=`expr "$cwd" : "\(.*ILTP-v[0-9\.]*-firstorder\).*"`
+#----Look for being below ILTP (for me)
+if ("$TPTPDirectory" == "") then
+    set TPTPDirectory=`expr "$cwd" : "\(.*ILTP\)\/.*"`
+endif
+#----Look for being in ILTP (for me)
+if ("$TPTPDirectory" == "") then
+    set TPTPDirectory=`expr "$cwd" : "\(.*ILTP\)"`
+endif
+#----Look for being above ILTP-v* (for installation)
+if ("$TPTPDirectory" == "") then
+    set LSOutput=`ls -d ILTP-v?.?`
+    if ("$LSOutput" != "" && (-d "$LSOutput")) then
+        set TPTPDirectory="$cwd/"`expr "$LSOutput" : "\(.*ILTP-v[0-9\.]*-firstorder\).*"`
+    endif
+endif
+
+#----Now ask the user
+set LegalResponse=no
+echo "The ILTP directory must contain the TPTP2X directory."
+while ($LegalResponse != yes)
+    echo -n "ILTP directory        [$TPTPDirectory] : "
+    set Response=$<
+    if ($Response == "") then
+        set Response=$TPTPDirectory
+    endif
+#----Check for non empty response
+    if ("$Response" != "") then
+#----Check that the ILTP directory exists
+        if (!(-d $Response)) then
+            echo "Cannot find the ILTP directory."
+            continue
+        endif
+        set TPTP2XDirectory=$Response/TPTP2X
+#----Check that the TPTP2X directory exists
+        if (!(-d $TPTP2XDirectory)) then
+            echo "Cannot find the TPTP2X directory."
+            continue
+        endif
+#----Check that tptp2X.config exists (rough check of the directory)
+        if (!(-f $TPTP2XDirectory/tptp2X.config)) then
+            echo "Cannot find the tptp2X.config file."
+            continue
+        endif
+        set LegalResponse=yes
+        set TPTPDirectory=$Response
+    endif
+end
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----PrologDialect
+#----Look for a reasonable default 
+set PrologDialect=""
+if ("`which sicstus`" =~ /*) then
+    set PrologDialect=sicstus
+else 
+    if ("`which quintus`" =~ /*) then
+        set PrologDialect=quintus
+    else 
+        if ("`which eclipse`" =~ /*) then
+            set PrologDialect=eclipse
+        else
+            if ("`which pl`" =~ /* || "`which swipl`" =~ /*) then
+                set PrologDialect=swi
+            else 
+                if ("`which yap`" =~ /*) then
+                    set PrologDialect=yap
+                else 
+                    set PrologDialect=generic
+                endif
+            endif
+        endif
+    endif
+endif
+#----Check with the user
+set LegalResponse=no
+echo "The Prolog dialect must be one of :"
+echo "    generic, swi, sicstus, yap, quintus, eclipse"
+while ($LegalResponse != yes)
+    echo -n "Prolog dialect        [$PrologDialect] : "
+    set Response=$<
+    if ($Response == "") then
+        set Response=$PrologDialect
+    endif
+    if (_generic_swi_yap_sicstus_quintus_eclipse_ =~ *_${Response}_*) then
+        set LegalResponse=yes
+        set PrologDialect=$Response
+    else
+        echo $Response is not a valid Prolog dialect.
+    endif
+end
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----PrologInterpreter
+#----Look for a reasonable default executable
+set PrologInterpreter=""
+switch ($PrologDialect)
+    case generic:
+        set AbsolutePath=`which prolog`
+        breaksw
+    case bin:
+        set AbsolutePath=`which bp`
+        breaksw
+    case yap:
+        set AbsolutePath=`which yap`
+        breaksw
+    case swi:
+        set AbsolutePath=`which swipl pl | grep "^/" | head -1`
+        breaksw
+    case sicstus:
+        set AbsolutePath=`which sicstus`
+        breaksw
+    case quintus:
+        set AbsolutePath=`which quintus`
+        breaksw
+    case eclipse
+        set AbsolutePath=`which eclipse`
+        breaksw
+endsw
+#----Check that the Prolog interpreter can be found
+    if ("$AbsolutePath" =~ /*) then
+#----Found, use this as default
+        set PrologInterpreter=$AbsolutePath
+    else
+#----Not found, no default
+        set PrologInterpreter=""
+    endif
+set LegalResponse=no
+echo "The Prolog interpreter must be an executable."
+while ($LegalResponse != yes)
+    echo -n "Prolog interpreter    [$PrologInterpreter] : "
+    set Response=$<
+    if ("$Response" == "") then
+        set Response=$PrologInterpreter
+    endif
+#----An empty default is possible, so check that is was not taken
+    if ("$Response" != "") then
+#----Check that the Prolog interpreter can be found
+        set AbsolutePath=`which $Response`
+#----Have to do this in two steps so -x check lives
+        if ("$AbsolutePath" !~ /* || "$AbsolutePath" =~ *"not found") then
+            set AbsolutePath=very_unlikely_file_name
+        endif
+        if (-x $AbsolutePath) then
+            set LegalResponse=yes
+            set PrologInterpreter=$AbsolutePath
+        else
+            echo $Response does not lead to an executable.
+        endif
+    endif
+end
+
+#---Simple sanity check on the interpreter
+$PrologInterpreter < /dev/null |& grep -i $PrologDialect >& /dev/null
+if ($status != 0) then
+    echo "WARNING: $PrologInterpreter does not look like $PrologDialect"
+    echo -n "Do you want to continue? [n] : "
+    set Continue=$<
+    if ("$Continue" !~ Y* && "$Continue" !~ y*) then
+        exit
+    endif
+endif
+
+#----Set flags to keep things quiet, etc
+switch ($PrologDialect)
+    case generic:
+        set PrologArguments=''
+        breaksw
+    case bin:
+#----Larger heap (required for generators) and larger trail and larger
+#----hash table (for doing many files in batch)
+        set PrologArguments='-h25000 -s2000 -t5000 -d20 -a18'
+        breaksw
+    case swi:
+        set PrologArguments='-A0 -L0 -T0 -G128M'
+        breaksw
+    case yap:
+        set PrologArguments=''
+        breaksw
+    case sicstus:
+        set PrologArguments=''
+        breaksw
+    case quintus:
+        set PrologArguments=''
+        breaksw
+    case eclipse
+#----Larger stack for those SYNs with DFG
+        set PrologArguments='-l 512000'
+        breaksw
+endsw
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----Shell
+#----Check that the Prolog interpreter can be found
+set Shell=tcsh
+set AbsolutePath=`which $Shell`
+#----If no default shell, use csh
+if ("$AbsolutePath" !~ /*) then
+    echo "         Your site does not appear to have the "$Shell" shell."
+    echo "         -------------------------------------------------"
+    echo "This means that the tptp2X script will not be able to  deal with very"
+    echo "large numbers of files. In particular, it will not be able to convert"
+    echo "all TPTP files to another format in one go.  You can convert a domain"
+    echo "at a time.  See the  tptp2X section of  the TPTP technical report for"
+    echo "details."
+    echo ""
+    echo "You should check with your system administrator to see if $Shell can be"
+    echo "made available, after which you can reinstall tptp2X."
+    echo "--------------------------------------------------------------------"
+    set Shell=`which csh`
+else
+    set Shell=$AbsolutePath
+    echo "tcsh shell path is $Shell"
+endif
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----Gawk/awk
+#----Check that gawk or awk can be found
+set GawkPath=`which awk`
+#----If no gawk look for awk
+if ("$GawkPath" !~ /*) then
+    set GawkPath=`which gawk`
+    if ("$GawkPath" !~ /*) then
+        set GawkPath=""
+    endif
+endif
+set LegalResponse=no
+echo "gawk or awk is required for quietness modes 1 and 2."
+while ($LegalResponse != yes)
+    echo -n "gawk or awk path      [$GawkPath] : "
+    set Response=$<
+    if ("$Response" == "") then
+        set Response=$GawkPath
+    endif
+#----An empty default is possible, so check that is was not taken
+    if ("$Response" != "") then
+#----Check that gawk/awk can be found
+        set AbsolutePath=`which $Response`
+#----Have to do this in two steps so -x check lives
+        if ("$AbsolutePath" !~ /*) then
+            set AbsolutePath=very_unlikely_file_name
+        endif
+        if (-x $AbsolutePath) then
+            set LegalResponse=yes
+            set GawkPath=$AbsolutePath
+        else
+            echo $Response does not lead to an executable.
+        endif
+    else
+#----Accept the empty string
+        set LegalResponse=yes
+    endif
+end
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----Choose format files
+#----Make list of available formats
+set RequiredFormats = ""
+#----Need noglob to avoid some weird problem with the regexp after an install
+#----for [] style compilation
+set noglob
+#----Select available formats from tptp2X.main
+set AllYes = "n"
+echo "Answer y for formats you want, n you don't, or a if you want all"
+foreach FormatLine (`grep ":-.*format\.[a-zA-Z0-9]" $TPTP2XDirectory/tptp2X.main.uninstalled`)
+    set FormatName = `expr "$FormatLine" : ".*format\.\([a-zA-Z0-9]*\).*"`
+#----Check with user unless tptp
+    if ($AllYes != "y" && $FormatName != "tptp" && $FormatName != "tstp") then
+        echo -n "Do you want the $FormatName format? [yna] : "
+        set Response=$<
+    else
+        set Response="y"
+    endif
+    if ("$Response" =~ a*) then
+        set AllYes = "y"
+        set Response = "y"
+    endif
+    if ("$Response" =~ Y* || "$Response" =~ y*) then
+        set RequiredFormats = "$RequiredFormats $FormatName"
+    endif
+end
+unset noglob
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------
+#----Install tptp2X.config: 
+echo Installing tptp2X.config
+#----Remove the leading % in lines that refer to the specific dialect.
+#----Set the tptp_directory/1 fact
+sed -e "/\%\%$PrologDialect/s/^\% //" -e "/\%\%$PrologDialect/s/^\%//" -e "/^tptp_directory/s?.*?tptp_directory('$TPTPDirectory').?" $TPTP2XDirectory/tptp2X.config.uninstalled >$TPTP2XDirectory/tptp2X.config
+
+#----Set the mode 
+chmod 644 $TPTP2XDirectory/tptp2X.config
+#--------------------------------------------------------------------------
+#----Install tptp2X.main
+echo Installing tptp2X.main
+#----If a dialect that supports compile then convert the []s to compiles.
+if (_yap_swi_sicstus_quintus_eclipse_ =~ *_${PrologDialect}_*) then
+    sed -e "/:-\[/s/\[\(.*\)\]/compile(\1)/" $TPTP2XDirectory/tptp2X.main.uninstalled >$TPTP2XDirectory/tptp2X.main
+else
+    echo "It is unknown if $PrologDialect Prolog supports compile/1."
+    echo "Source files will be loaded using []/1, in tptp2X.main"
+    cp -f $TPTP2XDirectory/tptp2X.main.uninstalled $TPTP2XDirectory/tptp2X.main
+endif
+
+#----Comment all format modules out
+sed -e "/format\.[a-zA-Z0-9]/s/^[\%]*/\%/" $TPTP2XDirectory/tptp2X.main > $TPTP2XDirectory/tptp2X.main.noformats
+mv $TPTP2XDirectory/tptp2X.main.noformats $TPTP2XDirectory/tptp2X.main
+#----Uncomment the required formats
+foreach Format ($RequiredFormats)
+    echo "   Installing $Format format module"
+    sed -e "/format\.$Format/s/^\%//" $TPTP2XDirectory/tptp2X.main > $TPTP2XDirectory/tptp2X.main.noformats
+    mv $TPTP2XDirectory/tptp2X.main.noformats $TPTP2XDirectory/tptp2X.main
+end
+
+#----Set the mode 
+chmod 644 $TPTP2XDirectory/tptp2X.main
+
+#--------------------------------------------------------------------------
+#----Install tptp2X: 
+echo Installing tptp2X
+#----Have to use ? as the separator as there are /s in the substitutions
+sed -e "1s?.*?#\!$Shell?" -e "/set TPTPDirectory/s?.*?set TPTPDirectory=$TPTPDirectory?" -e "/set PrologInterpreter/s?.*?set PrologInterpreter='$PrologInterpreter'?" -e "/set PrologArguments/s/.*/set PrologArguments='$PrologArguments'/" -e "/set Gawk=/s?.*?set Gawk=$GawkPath?" $TPTP2XDirectory/tptp2X.uninstalled >$TPTP2XDirectory/tptp2X
+
+#----Set the mode to executable
+chmod 755 $TPTP2XDirectory/tptp2X
+#--------------------------------------------------------------------------
+echo "--------------------------------------------------------------------"
+echo "                tptp2X installation complete"
+echo "--------------------------------------------------------------------"
+#--------------------------------------------------------------------------

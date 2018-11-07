@@ -1,0 +1,24 @@
+%--------------------------------------------------------------------------
+% File     : GEJ022+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Uniqueness axioms for the constructions (Ordered Geometry)
+% Version  : [P98] axioms.
+% English  :
+
+% Refs     : [P98] J. von Plato. A Constructive Theory of Ordered Affine
+%                  Geometry. Indagationes Mathematicae, vol. 9: 549-562, 
+%                  1998.
+% Source   : [P98]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(ax1,axiom,(
+! [A,B,L,M] : ( (dipt(A,B) & diln(L,M)) => (lapt(A,L) | lapt(B,L) | lapt(A,M) | lapt(B,M) | lapt(A,rev(L)) | lapt(B,rev(L)) | lapt(A,rev(M)) | lapt(B,rev(M)))))).
+
+fof(ax2,axiom,(
+! [A,B,L] : ((dipt(A,B) & lapt(A,L)) => (lapt(B,L) | lcon(ln(A,B),L))))).
+
+%--------------------------------------------------------------------------

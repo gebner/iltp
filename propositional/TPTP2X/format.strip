@@ -1,0 +1,141 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the strip system.
+%----for FOF only
+%----Written by Jens Otten & Thomas Raths, March 2005
+%========================================================================
+
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_strip_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_strip_signed_literal(++Atom):-
+    write('-'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in strip format.
+%----Special case of an empty clause
+output_strip_literals([]):-
+    write('[]').
+
+output_strip_literals([OneLiteral]):-
+    !, output_strip_signed_literal(OneLiteral).
+
+output_strip_literals([FirstLiteral|RestOfLiterals]):-
+    output_strip_signed_literal(FirstLiteral),
+    write('  ,'), nl, write(' '),
+    output_strip_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in strip format.
+output_strip_clauses([]).
+
+output_strip_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_strip_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write(' & '), nl, nl);
+         true),
+    output_strip_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in strip format.
+output_strip_formula([]):-
+    !.
+
+output_strip_formula(Clauses):-
+    nl,
+    write('f(['), nl, nl,
+    output_strip_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in strip format.
+output_strip_fof(~ A):-
+    !, write('( # '), output_strip_fof(A), write(' )').
+output_strip_fof('|'(A,B) ):- 
+    !, write('( '), output_strip_fof(A), write(' | '),
+    output_strip_fof(B), write(' )').
+output_strip_fof((A;B)):- 
+    !, write('( '), output_strip_fof(A), write(' | '),
+    output_strip_fof(B), write(' )').
+output_strip_fof(A & B):-
+    !, write('( '), output_strip_fof(A), write(' & '),
+    output_strip_fof(B), write(' )').
+output_strip_fof(A => B):-
+    !, write('( '), output_strip_fof(A), write(' -> '),
+    output_strip_fof(B), write(' )').
+output_strip_fof(A <=> B):-
+    !, write('( '), output_strip_fof(A), write(' <-> '),
+    output_strip_fof(B), write(' )').
+output_strip_fof($true) :- !, write('(truexxx -> truexxx)').
+output_strip_fof($false) :- !, write('(falsexxx & # falsexxx)').
+output_strip_fof(Atom) :-
+    write(Atom).
+%----------------------------------------------------------------------
+%----Print out the formulae in strip format.
+output_strip_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_strip_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    %write('% '), write(Name), write(', '),
+    %write(Status), write('.'), nl,
+    write('('),
+    (Status==conjecture ->
+         output_strip_fof(Formula);
+         output_strip_fof(Formula)),
+    write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (
+         write(' & ') );
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (write(' -> ') );
+             true)),
+    output_strip_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_strip_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_strip_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----strip format.
+output_strip_fo_formula([]):-
+    !.
+
+output_strip_fo_formula(Formulae):-
+    nl,
+    write('define('),    
+    output_strip_fo_formulae(Formulae),
+    write(').'), nl, nl,
+    write('solve.'), nl, nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in strip format.
+strip(strip,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_strip_formula(Clauses).
+
+%----Print out first-order formula in strip format.
+strip(strip,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_strip_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the strip format.
+strip_format_information('%','.strip').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+strip_file_information(format,strip).
+%----------------------------------------------------------------------

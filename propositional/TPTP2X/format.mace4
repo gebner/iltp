@@ -1,0 +1,223 @@
+%==============================================================================
+%----This outputs TPTP Problem Set clauses in a format acceptable to 
+%----the ANL MACE system.
+%----
+%----Written by Geoff Sutcliffe, July, 1992.
+%----Revised by Geoff Sutcliffe, January 1994.
+%==============================================================================
+%==============================================================================
+%----Generic output
+%==============================================================================
+%------------------------------------------------------------------------------
+output_mace4_options([]):-
+    !.
+
+output_mace4_options([FirstOption|RestOfOptions]):-
+    write(FirstOption),
+    write('.'),
+    nl,
+    output_mace4_options(RestOfOptions).
+%------------------------------------------------------------------------------
+%----Output variables
+mace4_output_variable(Variable):-
+    write(Variable).
+%------------------------------------------------------------------------------
+%----Generic output of atoms
+mace4_output_atom($(true)):-
+    !,
+    write('$T').
+
+mace4_output_atom($(false)):-
+    !,
+    write('$F').
+
+mace4_output_atom(not_equal(X,Y)):-
+    write(X),
+    write(' != '),
+    write(Y).
+
+mace4_output_atom(equal(X,Y)):-
+    write(X),
+    write(' = '),
+    write(Y).
+
+mace4_output_atom(Atom):-
+    write(Atom).
+%------------------------------------------------------------------------------
+%==============================================================================
+%----Output of FOF
+%==============================================================================
+%------------------------------------------------------------------------------
+%----Recognise and split up quantified formulae
+mace4_quantified_formula(QuantifiedFormula,MACEQuantifier,Variables,
+Formula):-
+    QuantifiedFormula =.. [:,Quantification,Formula],
+    !,
+    Quantification =.. [Quantifier,Variables],
+    tptp2X_member((Quantifier)-(MACEQuantifier),[('!')-(all),('?')-(exists)]).
+%------------------------------------------------------------------------------
+%----Recognise and split up binary formulae
+mace4_binary_formula(BinaryFormula,MACEConnective,LHS,RHS):-
+    BinaryFormula =.. [Connective,LHS,RHS],
+    tptp2X_member((Connective)-(MACEConnective),
+[('<=>')-('<->'),('=>')-('->'),('&')-('&'),(';')-('|'),('|')-('|')]).
+%----It needs both for some reason after shorten - need to investigate
+%----|;BUG
+%------------------------------------------------------------------------------
+%----Recognise and split up unary formulae
+mace4_unary_formula(UnaryFormula,MACEConnective,Formula):-
+    UnaryFormula =.. [Connective,Formula],
+%----Had to use ()s due to some Prolog confusion about -
+    tptp2X_member((Connective)-(MACEConnective),[('~')-('~')]).
+%------------------------------------------------------------------------------
+%----The format for outputing quantified formulae in mace4 format
+%----FormulaPrefix,VariablesPrefix,VariablesSeparator,VariablesSuffix,
+%----FormulaSuffix
+mace4_quantified_format('( ',' ',' ',' ',' )').
+
+%----FormulaPrefix,ConnectivePrefix,ConnectiveSuffix,FormulaSuffix
+mace4_binary_format('( ',' ',' ',' )').
+
+%----FormulaPrefix,ConnectiveSuffix,FormulaSuffix
+mace4_unary_format('','(',')').
+%------------------------------------------------------------------------------
+%----Write a mace4 formula in fof form
+output_mace4_fof(fof(Name,Status,Formula)):-
+    write('% '),
+    write(Name),
+    write(', '),
+    write(Status),
+    write('.'),
+    nl,
+    single_variable_quantification(Formula,NewFormula),
+    output_generic_formula(mace4,NewFormula),
+    write('.'),
+    nl.
+%------------------------------------------------------------------------------
+%----Write out each formula in TPTP format
+output_mace4_formulae([OneFormula]):-
+    !,
+    output_mace4_fof(OneFormula).
+
+output_mace4_formulae([FirstFormula|RestOfFormulae]):-
+    output_mace4_fof(FirstFormula),
+    nl,
+    output_mace4_formulae(RestOfFormulae).
+%------------------------------------------------------------------------------
+%==============================================================================
+%----Output of CNF
+%==============================================================================
+%------------------------------------------------------------------------------
+%----Output a literal with - for negative, nothing for positive
+output_mace4_signed_literal(--equal(X,Y)):-
+    !,
+    write(' '),
+    mace4_output_atom(not_equal(X,Y)).
+
+output_mace4_signed_literal(--Atom):-
+    !,
+    write('~'),
+    mace4_output_atom(Atom).
+
+output_mace4_signed_literal(++Atom):-
+    write(' '),
+    mace4_output_atom(Atom).
+%------------------------------------------------------------------------------
+%----Output the literals of the clause in MACE format
+%----Special case of an empty clause
+output_mace4_clause([]):-
+    !,
+    write('$F.'),
+    nl,
+    nl.
+
+output_mace4_clause([OneLiteral]):-
+    !,
+    output_mace4_signed_literal(OneLiteral),
+    write('.'),
+    nl,
+    nl.
+
+output_mace4_clause([FirstLiteral|RestOfLiterals]):-
+    output_mace4_signed_literal(FirstLiteral),
+    write(' |'),
+    nl,
+    output_mace4_clause(RestOfLiterals).
+%------------------------------------------------------------------------------
+%----Output the clauses selected by status
+output_mace4_clauses([]):-
+    !.
+
+%----If the clause has an acceptable status then output
+output_mace4_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '),
+    write(Name),
+    write(', '),
+    write(Status),
+    write('.'),
+    nl,
+    output_mace4_clause(Literals),
+    output_mace4_clauses(RestOfClauses).
+%------------------------------------------------------------------------------
+%======================================================================
+%----Output of MACE lists
+%======================================================================
+%------------------------------------------------------------------------------
+output_mace4_list([],_):-
+    !.
+
+%----Output the clauses for the given list, selected by status
+output_mace4_list(Clauses):-
+    tptp_clauses(Clauses),
+    write('clauses(the_clauses).'),
+    nl,
+    nl,
+    output_mace4_clauses(Clauses),
+    write('end_of_list.'),
+    nl,
+    nl.
+
+%----Output the formulae for the given list, selected by status
+output_mace4_list(Formulae):-
+    tptp_formulae(Formulae),
+    write('formulas(the_formulae).'),
+    nl,
+    nl,
+    output_mace4_formulae(Formulae),
+    write('end_of_list.'),
+    nl,
+    nl.
+%------------------------------------------------------------------------------
+%----Negate the conjecture formula (assume there is only one)
+negate_mace4_conjecture(Formulae,ProofFormulae):-
+    tptp2X_select(fof(Name,conjecture,Formula),Formulae,
+OtherFormulae),
+    !,
+%----Need this for dodgy processing in Ratify
+    write('%----NOTE WELL: conjecture has been negated'),
+    nl,
+    tptp2X_append(OtherFormulae,[fof(Name,negated_conjecture,
+~(Formula))],ProofFormulae).
+
+%----If not there it's clauses or no conjecture (satisfiable FOF)
+negate_mace4_conjecture(Formulae,Formulae).
+%------------------------------------------------------------------------------
+%----Output all the clauses in MACE format
+mace4(mace4:MACEOptions,Formulae,_):-
+    negate_mace4_conjecture(Formulae,ProofFormulae),
+    output_mace4_options(
+[set(prolog_style_variables)|MACEOptions]),
+    output_mace4_list(ProofFormulae).
+
+mace4(mace4,Formulae,_):-
+    mace4(mace4:[],Formulae,_).
+%------------------------------------------------------------------------------
+%----Provide information about the MACE format
+mace4_format_information('%','.in').
+%------------------------------------------------------------------------------
+%----Provide information about the MACE file
+mace4_file_information(format,mace4:conjecture:'clear(print_given),set(auto)',
+'SoS is any of conjecture, hypothesis, not_conjecture, axioms, positive, negative, unit, none, all.
+ Flags can be added').
+%------------------------------------------------------------------------------

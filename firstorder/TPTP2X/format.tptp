@@ -1,0 +1,206 @@
+%==============================================================================
+%----Procedures for writing out clauses in TSTP format
+%----
+%----Written by Geoff Sutcliffe, March 2003.
+%==============================================================================
+%----Generic output
+%==============================================================================
+%------------------------------------------------------------------------------
+%----Output variables 
+tptp_output_variable(Variable):-
+    write(Variable).
+%------------------------------------------------------------------------------
+tptp_output_atom_list_by_hand([One]):-
+    !,
+    tptp_output_atom_by_hand(One).
+
+tptp_output_atom_list_by_hand([One,Two|Rest]):-
+    tptp_output_atom_by_hand(One),
+    write(','),
+    tptp_output_atom_list_by_hand([Two|Rest]).
+%------------------------------------------------------------------------------
+tptp_output_atom_by_hand(Variable):-
+    looks_like_a_variable(Variable),
+    !,
+    tptp_output_variable(Variable).
+
+tptp_output_atom_by_hand($(Reserved)):-
+    !,
+    write('$'),
+    tptp_output_atom_by_hand(Reserved).
+
+tptp_output_atom_by_hand(Atom):-
+    atomic(Atom),
+    !,
+    write(Atom).
+
+tptp_output_atom_by_hand(Formula):-
+    tptp_non_atomic_formula(Formula),
+    !,
+    nl,
+    output_formula(tptp,Formula,2,0,outermost).
+
+%THIS NEEDS FIXING TO AVOID BRACKETS FROM LEFT ASSOC
+tptp_output_atom_by_hand(@(LHS,RHS)) :-
+    !,
+    write('('),
+    tptp_output_atom_by_hand(LHS),
+    write(' @ '),
+    tptp_output_atom_by_hand(RHS),
+    write(')').
+
+tptp_output_atom_by_hand(equal(LHS,RHS)):-
+    !,
+    tptp_output_atom_by_hand(LHS),
+    write(' = '),
+    tptp_output_atom_by_hand(RHS).
+
+tptp_output_atom_by_hand(tptp_not_equal(LHS,RHS)):-
+    !,
+    tptp_output_atom_by_hand(LHS),
+    write(' != '),
+    tptp_output_atom_by_hand(RHS).
+
+tptp_output_atom_by_hand(Term):-
+    Term =.. [Functor|Arguments],
+    write(Functor),
+    write('('),
+    tptp_output_atom_list_by_hand(Arguments),
+    write(')').
+%------------------------------------------------------------------------------
+%----Output atoms 
+tptp_output_atom(Atom):-
+    tptp_output_atom_by_hand(Atom).
+%------------------------------------------------------------------------------
+%==============================================================================
+%----FOF format
+%==============================================================================
+%------------------------------------------------------------------------------
+%----The format for outputing quantified formulae in TSTP format
+%----FormulaPrefix,VariablesPrefix,VariablesSeparator,VariablesSuffix,
+%----FormulaSuffix
+tptp_quantified_format('',' [',',','] : ','').
+
+%----FormulaPrefix,ConnectivePrefix,ConnectiveSuffix,FormulaSuffix
+tptp_binary_format('( ','',' ',' )').
+
+%----FormulaPrefix,ConnectiveSuffix,FormulaSuffix
+tptp_unary_format('',' ','').
+%------------------------------------------------------------------------------
+output_tptp_formula_start(Language,Name,Status):-
+    write(Language),
+    write('('),
+    write(Name),
+    write(','),
+    write(Status),
+    write(',').
+%------------------------------------------------------------------------------
+output_tptp_formula_end(short,_,_):-
+    write(').'),
+    nl.
+    
+output_tptp_formula_end(long,Source,UsefulInfo):-
+    write(','),
+    nl,
+    write('    '),
+    write(Source),
+    write(','),
+    nl,
+    write('    '),
+    write(UsefulInfo),
+    write(').'),
+    nl.
+%------------------------------------------------------------------------------
+%----Write a tptp formula in fof form
+output_tptp_formula(Format,Length,AnnotatedFormula):-
+    AnnotatedFormula =.. [Language,Name,Status,Formula|_],
+    output_tptp_formula_start(Language,Name,Status),
+%----Bracket formula to avoid confusing with other arguments (esp |
+%----becomes ; of wrong precedence)
+    (tptp_binary_formula(Formula,_,_,_) -> (
+        nl,
+        write('    ('),
+        output_formula(Format,Formula,6,5,outermost)
+    );(
+        write('('),
+        nl,
+        output_formula(Format,Formula,4,0,outermost)
+    )),
+%----Old way, but extra brackets around clauses
+%----output_generic_formula(Format,Formula),
+    write(' )'),
+    output_tptp_formula_end(Length,unknown,[]).
+%------------------------------------------------------------------------------
+%----Write out each formula in TSTP format
+output_tptp_formulae(Format,Length,[OneFormula]):-
+    !,
+    output_tptp_formula(Format,Length,OneFormula).
+
+output_tptp_formulae(Format,Length,[FirstFormula|RestOfFormulae]):-
+    output_tptp_formula(Format,Length,FirstFormula),
+    nl,
+    output_tptp_formulae(Format,Length,RestOfFormulae).
+%------------------------------------------------------------------------------
+output_tptp_literals_on_one_line(Format,Length,(LHS|RHS)):-
+    !,
+    output_tptp_literals_on_one_line(Format,Length,LHS),
+    write(' | '),
+    output_tptp_literals_on_one_line(Format,Length,RHS).
+
+output_tptp_literals_on_one_line(Format,_Length,Literal):-
+    output_formula(Format,Literal,0,0,_).
+%------------------------------------------------------------------------------
+%----Write out a TSTP clause, one literal per line
+output_tptp_clause(Format,Clause,Length,no):-
+    !,
+    output_tptp_formula(Format,Length,Clause).
+    
+output_tptp_clause(Format,Clause,Length,yes):-
+    Clause =.. [cnf,Name,Status,Literals|_],
+    output_tptp_formula_start(cnf,Name,Status),
+    nl,
+    write('    '),
+    write('( '),
+    output_tptp_literals_on_one_line(Format,Length,Literals),
+    write(' )'),
+    output_tptp_formula_end(Length,unknown,[]).
+%------------------------------------------------------------------------------
+%----This writes out a list of clauses in TSTP format
+%----If only one clause left, then no new line
+output_tptp_clauses(Format,[OneClause],Length,OneLineOfLiterals):-
+    !,
+    output_tptp_clause(Format,OneClause,Length,OneLineOfLiterals).
+
+output_tptp_clauses(Format,[FirstClause|RestOfClauses],Length,
+OneLineOfLiterals):-
+    output_tptp_clause(Format,FirstClause,Length,OneLineOfLiterals),
+    nl,
+    output_tptp_clauses(Format,RestOfClauses,Length,OneLineOfLiterals).
+%------------------------------------------------------------------------------
+%----This writes out TSTP format clauses
+tptp(tptp:Length,Clauses,_):-
+%----CHANGE TO tptp_clauses WHEN I CHANGE INTERNAL STRUCTURE
+    tptp_clauses(Clauses),
+    !,
+    convert_clauses_to_tptp(Clauses,TSTPFormulae),
+%----If propositional then literals may be output on one line.
+    (   tptp_propositional(TSTPFormulae) ->
+        output_tptp_clauses(tptp,TSTPFormulae,Length,yes);
+        output_tptp_formulae(tptp,Length,TSTPFormulae) ).
+
+tptp(tptp:Length,Formulae,_):-
+%----CHANGE TO tptp_formulae WHEN I HAVE CHANGED INTERNAL DS
+    tptp_formulae(Formulae),
+    convert_formulae_to_tptp(Formulae,TSTPFormulae),
+    output_tptp_formulae(tptp,Length,TSTPFormulae).
+
+%----No length - assume short
+tptp(tptp,Formulae,FileHeader):-
+    tptp(tptp:short,Formulae,FileHeader).
+%------------------------------------------------------------------------------
+%----Provide information about the TSTP format
+tptp_format_information('%','.tptp').
+%------------------------------------------------------------------------------
+%----Provide information about the TSTP file
+tptp_file_information(format,tptp:short,'Variant is short or long').
+%------------------------------------------------------------------------------

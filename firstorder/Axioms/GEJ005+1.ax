@@ -1,0 +1,21 @@
+%--------------------------------------------------------------------------
+% File     : GEJ005+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Projective axiom (P1) : Projective geometry
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [X,Y] : (diln(X,Y) => con(X,Y))
+)).
+
+%--------------------------------------------------------------------------

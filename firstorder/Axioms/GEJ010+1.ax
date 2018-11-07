@@ -1,0 +1,26 @@
+%--------------------------------------------------------------------------
+% File     : GEJ010+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : Axioms for the orthogonal construction (Orthogonality)
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [A,L] : (~ unort(ort(L,A),L))
+)).
+
+fof(a2,axiom,(
+! [A,L] : (~ apt(A,ort(L,A)))
+)).
+
+
+%--------------------------------------------------------------------------

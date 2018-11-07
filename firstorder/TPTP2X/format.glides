@@ -1,0 +1,262 @@
+%====================================================================
+%----This outputs TPTP Problem Set clauses in a format acceptable to 
+%----PTTP+GLiDeS.
+%----
+%----Written by Marianne Brown, December 1999.
+%---- tptp2X -fglides -tnone,rm_equality:stfp 
+%---- tptp2X(<file>,[],[none,rm_equality:stfp],'glides','.').
+%====================================================================
+check_for_transform(['Comments' - X|_],Answer):-
+	X =.. [_Op,_Pred,Args],
+	glds_check_comment(Args,Answer).
+
+check_for_transform([_H|T],Answer):-
+	check_for_transform(T,Answer).
+%----------------------------------------------------------------------
+glds_check_comment([H],yes):-
+	name(H,S),
+	name('-t rm_equality:stfp',SubS),
+	is_a_substring(SubS,S).
+
+glds_check_comment([_H|[]],none).
+
+glds_check_comment([_H|T],X):-
+	glds_check_comment(T,X).
+
+%----------------------------------------------------------------------
+is_a_substring([],_).
+
+is_a_substring([_H|_T],[]):-
+	!,
+	fail.
+
+is_a_substring([H|T],[H|T2]):-
+	is_a_substring(T,T2).
+
+is_a_substring(SubS,[_H|T]):-
+	is_a_substring(SubS,T).
+
+%----------------------------------------------------------------------
+%----Output the Prolog clause header for the problem definition
+output_glds_problem_header:-
+    write(prove_this),
+%----Write the : and - separately, to avoid BinProlog problems
+    write(':'),
+    write('-'),
+    nl,
+    write('    nl,'),
+    nl,
+    write('    write('),
+    write(prove_this),
+    write('),'),
+    nl,
+    write('    nl,'),
+    nl,
+    write('    pttp(('),
+    nl.
+%--------------------------------------------------------------------
+%----Output a literal, compiling negation into the name
+output_glds_literal(++Atom,PositivePrefix,_):-
+    write(PositivePrefix),
+    write(Atom).
+
+output_glds_literal(--Atom,_,NegativePrefix):-
+    write(NegativePrefix),
+    write(Atom).
+%--------------------------------------------------------------------
+%----Output the literals of the clause, as a clause.
+%----Special case of an empty clause
+output_glds_literals([],_,_,_):-
+    !.
+
+output_glds_literals([Literal],_,PositivePrefix,NegativePrefix):-
+    !,
+    output_glds_literal(Literal,PositivePrefix,NegativePrefix).
+
+output_glds_literals([Literal|RestOfLiterals],Separator,
+PositivePrefix,NegativePrefix):-
+    output_glds_literal(Literal,PositivePrefix,NegativePrefix),
+    write(Separator),
+    nl,
+    write('            '),
+    output_glds_literals(RestOfLiterals,Separator,PositivePrefix,
+NegativePrefix).
+%--------------------------------------------------------------------
+%----Output each clause in PTTP format, ; separated.
+output_glds_problem([]):-
+    !.
+
+output_glds_problem([input_clause(_,_,Literals)|RestOfClauses]):-
+    write('        ('),
+    output_glds_literals(Literals,';','','pttpnot_'),
+    write('),'),
+    nl,
+    output_glds_problem(RestOfClauses).
+%--------------------------------------------------------------------
+%----Output the top clause in it's format
+%----Special case of an empty clause
+output_glds_query([]):-
+    !,
+    write('        (query))'),
+    nl.
+
+output_glds_query(QueryLiterals):-
+    write('        (query:-'),
+    nl,
+    write('            '),
+    output_glds_literals(QueryLiterals,',','pttpnot_',''),
+    write(')'),
+    nl.
+%--------------------------------------------------------------------
+%----Output the Prolog clause tail for the problem definition
+output_glds_problem_tail:-
+    write('        )),'),
+    nl,
+    write('    !,'),
+    nl,
+%----Output call to proof mechanism
+    write('    prove(query).'),
+    nl,
+%----Output comment about the possible problem here
+    write('%----Note that the query is executed in the context of the'),
+    nl,
+    write('%----compilation, which means some stack space may be unavailable'),
+    nl.
+%--------------------------------------------------------------------
+%----Output the Prolog clause that activates the query after
+%----compilation.
+%----This version changed to the current, on Stickel's advice
+% output_glds_query_call(ProblemName):-
+%     writeq(ProblemName),
+%     write(':-'),
+%     nl,
+%     write('    prove(query).'),
+%     nl.
+%--------------------------------------------------------------------
+%----Select a clause as the top of the deduction
+%----First look for negative one with status conjecture
+select_glds_query(InputClauses,Literals):-
+    tptp2X_member(input_clause(_,negated_conjecture,Literals),InputClauses),
+    split_literals_by_sign(Literals,[],Literals),
+    !.
+
+%----If no negative, take any conjecture
+select_glds_query(InputClauses,Literals):-
+    tptp2X_member(input_clause(_,negated_conjecture,Literals),InputClauses),
+    !.
+
+%----If no conjecture, then simply take first
+select_glds_query([input_clause(_,_,Literals)|_],Literals).
+%--------------------------------------------------------------------
+%----Output the Prolog clauses that define the problem.
+glds(glds,Clauses,_):-
+    tptp_clauses(Clauses),
+%----Output the start of the first Prolog clause
+    output_glds_problem_header,
+%----Choose a clause as the query clause
+    select_glds_query(Clauses,QueryLiterals),
+%----Output the other clauses in clausal form.
+    output_glds_problem(Clauses),
+%----Output the query in it's special form.
+    output_glds_query(QueryLiterals),
+%----Output the end of first Prolog clause.
+    output_glds_problem_tail.
+
+%----Do nothing for FOF - just leave a comment
+glds(glds,Formulae,_):-
+    tptp_formulae(Formulae),
+    !,
+    write('%----No FOF format available in GLIDES'),
+    nl.
+%--------------------------------------------------------------------
+%----Non domain specific ground 
+meb_ground(Atom):-
+	prolog_dialect(Dialect),
+	meb_ground_for_dialect(Dialect,Atom).
+
+meb_ground_for_dialect(eclipse,Atom):-
+	nonground(Atom),!,
+	fail.
+
+meb_ground_for_dialect(eclipse,_Atom).
+
+meb_ground_for_dialect(sicstus,Atom):-
+	ground(Atom).
+
+meb_ground_for_dialect(Dialect,_):-
+	write('%----Need to write a meb_ground for '),
+	write(Dialect),
+	nl,
+	halt.
+
+%------------------------------------------------------------------------------
+%----Examine the QueryLiterals and output a modified list of literals
+edit_query_literals(_,_,[],[]).
+
+edit_query_literals(Name,Status,[++Atom|Tail],[input_clause(Name,Status,[--Atom])|NewTail]):-
+	meb_ground(Atom),!,
+	edit_query_literals(Name,Status,Tail,NewTail).
+
+edit_query_literals(Name,Status,[--Atom|Tail],[input_clause(Name,Status,[++Atom])|NewTail]):-
+	meb_ground(Atom),!,
+	edit_query_literals(Name,Status,Tail,NewTail).
+
+edit_query_literals(Name,Status,[++Atom|Tail],[input_clause(Name,Status,[++NewAtom])|NewTail]):-
+	change_name(Atom,NewAtom),
+	edit_query_literals(Name,Status,Tail,NewTail).
+
+edit_query_literals(Name,Status,[--Atom|Tail],[input_clause(Name,Status,[++NewAtom])|NewTail]):-
+	change_name(Atom,NewAtom),
+	edit_query_literals(Name,Status,Tail,NewTail).
+
+change_name(Atom,NewAtom):-
+	Atom =.. [_P|Args],
+	tptp2X_length(Args,N),
+	name(dummy,Dummy),
+	tptp2X_append(Dummy,[N],Ndummy),
+	name(NewName,Ndummy),
+	NewAtom =.. [NewName|Args].
+
+%------------------------------------------------------------------------------
+%----Output all the clauses in Otter format
+mglds(mglds:SoSSpecifier:OtterOptions,Clauses,_):-
+	tptp_clauses(Clauses),
+	select_glds_query(Clauses,QueryLiterals),
+	tptp2X_select(input_clause(X,Y,QueryLiterals),Clauses,RemainingClauses),
+	edit_query_literals(X,Y,QueryLiterals,ModifiedQuery),
+    tptp2X_member(SoSSpecifier,[conjecture,hypothesis,positive,negative, unit,none,all]),
+    output_otter_header(OtterOptions),
+    extract_otter_sos(RemainingClauses,[SoSSpecifier],SoS,Usable),
+    output_otter_list(Usable,usable),
+	tptp2X_append(SoS,ModifiedQuery,NewSoS),
+    output_otter_list(NewSoS,sos).
+
+mglds(mglds:_SoSSpecifier:_OtterOptions,Formulae,_):-
+	tptp_formulae(Formulae),
+	!,
+	write('%----No FOF format available in GLIDES'),
+	nl.
+
+%----Short cut for default to auto mode
+mglds(mglds,Clauses,FileHeader):-
+    mglds(mglds:none:[set(auto)],Clauses,FileHeader).
+
+%----For backwards compatibility
+mglds(mglds(SoSSpecifier,OtterOptions),Clauses,FileHeader):-
+    mglds(mglds:SoSSpecifier:OtterOptions,Clauses,FileHeader).
+
+%------------------------------------------------------------------------------
+glides(glides,X,Y):-
+	check_for_transform(Y,T),
+	( T == yes ->
+		mglds(mglds:none:[set(dp_transform),set(auto),set(tptp_eq),clear(print_given)],X,Y)
+	  ;
+		glds(glds,X,Y)).
+
+%--------------------------------------------------------------------
+%----Provide information about the PTTP format
+glides_format_information('%','.glides').
+%--------------------------------------------------------------------
+%----Provide information about the PTTP file
+glides_file_information(format,glides,'GLiDeS format').
+%--------------------------------------------------------------------

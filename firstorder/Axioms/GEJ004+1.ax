@@ -1,0 +1,29 @@
+%--------------------------------------------------------------------------
+% File     : GEJ004+1 : ILTP v1.1
+% Domain   : Constructive Geometry
+% Axioms   : compatibility of equality with apartness and convergence
+% Version  : [P95] axioms.
+% English  :
+
+% Refs     : [P95] J. von Plato. The Axioms of Constructive Geometry. Annals
+%                  of Pure and Applied Logic 76 (2): 169-200, 1995.
+% Source   : [P95]
+% Names    :
+
+% Status   :
+% Comments : 
+%--------------------------------------------------------------------------
+
+fof(a1,axiom,(
+! [X,Y,Z] : (apt(X,Y) => (dipt(X,Z) | apt(Z,Y)))
+)).
+
+fof(a2,axiom,(
+! [X,Y,Z] : (apt(X,Y) => (diln(Y,Z) | apt(X,Z)))
+)).
+
+fof(a3,axiom,(
+! [X,Y,Z] : (con(X,Y) => (diln(Y,Z) | con(X,Z)))
+)).
+
+%--------------------------------------------------------------------------

@@ -1,0 +1,68 @@
+%==============================================================================
+%----This outputs TPTP Problem Set clauses in a format acceptable to 
+%----Bob Cowen's Mathmatica system
+%----
+%----Written by Geoff Sutcliffe, July, 2004.
+%==============================================================================
+%------------------------------------------------------------------------------
+%----Output a literal with - for negative, nothing for positive
+output_math_signed_literal(--Atom):-
+    !,
+    write('-'),
+    write(Atom).
+
+output_math_signed_literal(++Atom):-
+    write(Atom).
+%------------------------------------------------------------------------------
+%----Output the literals of the clause in Mathematica format
+
+output_math_clause([OneLiteral]):-
+    !,
+    output_math_signed_literal(OneLiteral).
+
+output_math_clause([FirstLiteral|RestOfLiterals]):-
+    output_math_signed_literal(FirstLiteral),
+    write(', '),
+    output_math_clause(RestOfLiterals).
+%------------------------------------------------------------------------------
+output_math_clause_info(Name,Status):-
+    write('% '),
+    write(Name),
+    write(', '),
+    write(Status),
+    write('.'),
+    nl.
+%------------------------------------------------------------------------------
+output_math_clauses([]).
+
+output_math_clauses([input_clause(_Name,_Status,Literals)]):-
+    !,
+%---Nothing    output_math_clause_info(Name,Status),
+    write('  { '),
+    output_math_clause(Literals),
+    write(' }'),
+    nl.
+
+output_math_clauses([input_clause(_Name,_Status,Literals)|RestOfClauses]):-
+%---Nothing    output_math_clause_info(Name,Status),
+    write('  { '),
+    output_math_clause(Literals),
+    write(' },'),
+    nl,
+    output_math_clauses(RestOfClauses).
+%------------------------------------------------------------------------------
+%----Output all the clauses in Mathematica format
+math(math,Clauses,_):-
+    tptp_clauses(Clauses),
+    write('{'),
+    nl,
+    output_math_clauses(Clauses),
+    write('}'),
+    nl.
+%------------------------------------------------------------------------------
+%----Provide information about the Mathematica format
+math_format_information('%','.mat').
+%------------------------------------------------------------------------------
+%----Provide information about the Mathematica file
+math_file_information(format,math,'').
+%------------------------------------------------------------------------------

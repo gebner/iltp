@@ -1,0 +1,153 @@
+%==============================================================================
+%----Procedures to convert CNF to FOF
+%==============================================================================
+%------------------------------------------------------------------------------
+%----Separate out the positive and negative literals
+split_atoms_by_sign([],[],[]):-
+    !.
+
+split_atoms_by_sign([++Atom|RestOfLiterals],[Atom|RestOfPositive],Negative):-
+    split_atoms_by_sign(RestOfLiterals,RestOfPositive,Negative).
+
+split_atoms_by_sign([--Atom|RestOfLiterals],Positive,[Atom|RestOfNegative]):-
+    split_atoms_by_sign(RestOfLiterals,Positive,RestOfNegative).
+%------------------------------------------------------------------------------
+%----Use connective to link these atoms
+connect([Atom],_,Atom):-
+    !.
+
+connect([Atom|RestOfAtoms],Connective,Connected):-
+    connect(RestOfAtoms,Connective,RestConnected),
+    Connected =.. [Connective,Atom,RestConnected].
+%------------------------------------------------------------------------------
+%----Convert literals to a FOF
+%----Positive and negative makes an implication
+implify_literals(Literals,Conjunction => Disjunction):-
+    split_atoms_by_sign(Literals,[Postive1|PositiveRest],
+[Negative1|NegativeRest]),
+    !,
+    connect([Postive1|PositiveRest],'|',Disjunction),
+    connect([Negative1|NegativeRest],'&',Conjunction).
+
+%----Positive is disjoined
+implify_literals(Literals,Disjunction):-
+    split_atoms_by_sign(Literals,Positive,[]),
+    !,
+    connect(Positive,'|',Disjunction).
+
+%----Negative is negated conjunction
+implify_literals(Literals,~Conjunction):-
+    split_atoms_by_sign(Literals,[],Negative),
+    connect(Negative,'&',Conjunction).
+%------------------------------------------------------------------------------
+convert_to_FOF_literals([],[]).
+
+convert_to_FOF_literals([++Atom|RestOfLiterals],[Atom|RestOfFOFLiterals]):-
+    convert_to_FOF_literals(RestOfLiterals,RestOfFOFLiterals).
+
+convert_to_FOF_literals([--Atom|RestOfLiterals],[~Atom|RestOfFOFLiterals]):-
+    convert_to_FOF_literals(RestOfLiterals,RestOfFOFLiterals).
+%------------------------------------------------------------------------------
+fofify_literals(Literals,Disjunction):-
+    convert_to_FOF_literals(Literals,FOFLiterals),
+    connect(FOFLiterals,'|',Disjunction).
+%------------------------------------------------------------------------------
+conjoin_clauses([input_clause(_,_,Literals)],Disjunction):-
+    !,
+    fofify_literals(Literals,Disjunction).
+
+conjoin_clauses([input_clause(_,_,Literals)|RestOfClauses],
+(Disjunction & RestOfConjunction)):-
+    fofify_literals(Literals,Disjunction),
+    conjoin_clauses(RestOfClauses,RestOfConjunction).
+%------------------------------------------------------------------------------
+%----Extract all the conjecture clauses
+extract_conjecture_clauses(Clauses,[input_clause(Name,negated_conjecture,
+Literals)|RestOfConjectureClauses],OtherClauses):-
+    tptp2X_select(input_clause(Name,negated_conjecture,Literals),Clauses,
+RestOfClauses),
+    !,
+    extract_conjecture_clauses(RestOfClauses,RestOfConjectureClauses,
+OtherClauses).
+
+extract_conjecture_clauses(Clauses,[],Clauses).
+%------------------------------------------------------------------------------
+universally_quantify(Formula,(! [OneVariable|RestOfVariables] : (Formula))):-
+    tptp2X_syntax_extract_variables(Formula,_,[OneVariable|RestOfVariables]),
+    !.
+
+universally_quantify(Formula,Formula).
+%------------------------------------------------------------------------------
+existentially_quantify(Formula,(? [OneVariable|RestOfVariables] : (Formula))):-
+    tptp2X_syntax_extract_variables(Formula,_,[OneVariable|RestOfVariables]),
+    !.
+
+existentially_quantify(Formula,Formula).
+%------------------------------------------------------------------------------
+obvious_make_conjecture([input_clause(Name,negated_conjecture,Literals)],
+NegatedFOFedLiterals,Name):-
+    !,
+    implify_literals(Literals,FOFedLiterals),
+    negate(FOFedLiterals,NegatedFOFedLiterals).
+
+obvious_make_conjecture([input_clause(Name,negated_conjecture,Literals)|
+RestOfConjectureClauses],NegatedFOFedLiterals '|' RestOfConjecture,
+CombinedName):-
+    implify_literals(Literals,FOFedLiterals),
+    negate(FOFedLiterals,NegatedFOFedLiterals),
+    obvious_make_conjecture(RestOfConjectureClauses,RestOfConjecture,RestOfName),
+    concatenate_atoms([Name,'__',RestOfName],CombinedName).
+%------------------------------------------------------------------------------
+obvious_translate_conjecture_clauses_to_fof([],[]):-
+    !.
+
+obvious_translate_conjecture_clauses_to_fof(ConjectureClauses,
+[fof(CombinedName,conjecture,QuantifiedFormula)]):-
+    obvious_make_conjecture(ConjectureClauses,ConjectureFormula,CombinedName),
+    existentially_quantify(ConjectureFormula,QuantifiedFormula).
+%------------------------------------------------------------------------------
+obvious_translate_axioms_clauses_to_fof([],[]).
+
+obvious_translate_axioms_clauses_to_fof([input_clause(Name,Status,Literals)|
+RestOfClauses],[fof(Name,Status,QuantifiedFormula)|RestOfFormulae]):-
+    implify_literals(Literals,Formula),
+    universally_quantify(Formula,QuantifiedFormula),
+    obvious_translate_axioms_clauses_to_fof(RestOfClauses,RestOfFormulae).
+%------------------------------------------------------------------------------
+%----Convert a set of clauses to formulae
+translate_to_fof([],_,[]):-
+    !.
+
+translate_to_fof(Clauses,obvious,FOFFormulae):-
+%----Extract the conjecture clauses
+    extract_conjecture_clauses(Clauses,ConjectureClauses,OtherClauses),
+    obvious_translate_axioms_clauses_to_fof(OtherClauses,AxiomFormulae),
+    obvious_translate_conjecture_clauses_to_fof(ConjectureClauses,
+ConjectureFormulae),
+    tptp2X_append(AxiomFormulae,ConjectureFormulae,FOFFormulae).
+
+translate_to_fof(Clauses,proving,[fof(combined,conjecture,
+~QuantifiedFormula)]):-
+    conjoin_clauses(Clauses,Formula),
+    universally_quantify(Formula,QuantifiedFormula).
+%------------------------------------------------------------------------------
+%----Formulae are clausifed 
+fofify(Clauses,Dictionary,fofify:Algorithm,FOFFormulae,Dictionary,
+NameSuffix):-
+    tptp_clauses(Clauses),
+    translate_to_fof(Clauses,Algorithm,FOFFormulae),
+    concatenate_atoms(['+fof_',Algorithm],NameSuffix).
+
+fofify(Formulae,Dictionary,fofify:Algorithm,Formulae,Dictionary,NameSuffix):-
+    tptp_formulae(Formulae),
+    concatenate_atoms(['+fof_',Algorithm],NameSuffix).
+%------------------------------------------------------------------------------
+axiomate(Formulae,Dictionary,axiomate,AxiomFormulae,Dictionary,_NameSuffix):-
+    tptp_formulae(Formulae),
+    tptp2X_select(fof(_,conjecture,_),Formulae,AxiomFormulae),
+    \+ tptp2X_member(fof(_,conjecture,_),AxiomFormulae).
+%------------------------------------------------------------------------------
+fofify_file_information(transform,fofify:obvious,'obvious or proving').
+
+fofify_file_information(transform,axiomate,'Removes the conjecture').
+%------------------------------------------------------------------------------

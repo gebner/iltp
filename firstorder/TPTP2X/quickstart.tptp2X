@@ -1,0 +1,38 @@
+Quickstart tptp2X
+-----------------
+
+a) Configure tptp2X tool:
+> cd ILTP-v1.1-firstorder/TPTP2X
+> ./tptp2X_install
+
+This script will ask for required information. (When you are asked to
+state your desired format, then simply type 'a' for 'all').
+
+b) Use TPTP2X tool to translate formulas:
+> cd ..
+> TPTP2X/tptp2X -f <ATP system> [-t <transformations>] [Problems/<domain>/'*.p']
+
+This will write the translated formulas into the directory <ATP system>.
+The parameters are:
+
+<ATP system>: intuitionistic ATP system. one of
+              ft, ftprolog, jprover, strip, ljt, pitp,
+              leancop (for the ATP-systems ileanCoP, ileanTAP, ileanSeP),
+
+<domain>: one of AGT,ALG,COM,CSN,CSR,GEJ,GEO,GPJ,GRA,GRP,HAL,KRS,
+                 LCL,MGT,MSC,NLP,NUM,PLA,PUZ,SET,SWC SWV,SYJ,SYN,TOP
+                 
+<transformations>: the most important ones are:
+   stdfof: transforms non-standard connectives like <=, <~>, ~|, ~&
+           into standard ones
+   shorten: replace symbols by short ones, suppress header information
+   add_equality: add equality axioms (necessary, if the prover has no
+                 special method for handling equality) (*)
+   combination possible, e.g. -t stdfof+shorten+add_equality 
+
+Example: TPTP2X/tptp2X -f ft -t stdfof+shorten+add_equality
+
+
+   (*) add_equality is not completely stable under SWI-Prolog. If you work with
+       SWI-Prolog, please use also "shorten" (e.g. "-t shorten+add_equality"),
+       and replace write/1 by print/1 in the format-files.
