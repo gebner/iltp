@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS168+1 : ILTP v1.1.0
+% File     : KRS168+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : De Morgan's law
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.11 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.1.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       :   12 (   0 equality)

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS024+1 : ILTP v1.1.0
+% File     : KRS024+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : An OWL Lite version of I5.3-007
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : Satisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    5 (   3 unit)
 %            Number of atoms       :    7 (   0 equality)

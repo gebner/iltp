@@ -82,26 +82,17 @@ output_ljt_fof(Atom) :-
 output_ljt_fo_formulae([]).
 
 % for TPTP-v3.1.0 or later
-output_ljt_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_ljt_fof(Formula);
-         output_ljt_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (nl, nl,
-         write(' & '), nl, nl);
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (nl, nl,
-              write('  ->'), nl, nl);
-             true)),
-    output_ljt_fo_formulae(RestOfFormulae).
+output_ljt_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    ((Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_ljt_fo_formulae(Formulae))) ;
+      (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_ljt_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+           (nl, nl, write('  -> '), nl, nl)); 
+           (nl, nl, write('  & '), nl, nl)),
+          output_ljt_fo_formulae(RestOfFormulae)))).
 
 % for TPTP-v2.7.0 or earlier
 output_ljt_fo_formulae([input_formula(Name,Status,Formula)|
@@ -117,8 +108,15 @@ output_ljt_fo_formula([]):-
 output_ljt_fo_formula(Formulae):-
     nl,
     write('f(('), nl, nl,
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('~ ('), nl) ; true),
     output_ljt_fo_formulae(Formulae), nl, nl,
-    write(')).'), nl, nl.
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
+   write(')).'), nl, nl.
 
 %----------------------------------------------------------------------
 

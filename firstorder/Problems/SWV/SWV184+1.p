@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV184+1 : ILTP v1.1.0
+% File     : SWV184+1 : ILTP v1.1.1
 % Domain   : Software Verification
 % Problem  : Simplified proof obligation cl5_nebula_init_0096
 % Version  : [DFS04] axioms : Especial.
@@ -17,7 +17,7 @@
 % Rating   : 0.36 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   90 (  55 unit)
 %            Number of atoms       :  234 (  84 equality)

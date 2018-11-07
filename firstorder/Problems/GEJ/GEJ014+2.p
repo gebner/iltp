@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ014+2 : ILTP v1.1.0
+% File     : GEJ014+2 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Lemma 4.5.i.r
 % Version  : [D97],[D98] axioms : Especial.
@@ -12,7 +12,7 @@
 % Names    :
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Comments : Shortened axioms
 %--------------------------------------------------------------------------

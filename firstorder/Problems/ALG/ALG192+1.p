@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG192+1 : ILTP v1.1.0
+% File     : ALG192+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Quasigroups 5 QG4: VERIFY-GEN-SYSES-PROBLEM-3
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : Unsatisfiable
 % Rating   : 0.00 v3.1.0, 0.83 v2.7.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Status (intuit.) : Open (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :  126 (   0 unit)
 %            Number of atoms       :  895 ( 895 equality)

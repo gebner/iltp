@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG138+1 : ILTP v1.1.0
+% File     : ALG138+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Quasigroups 4: PROP-SATS-GEN-SYS-48
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : Unsatisfiable
 % Rating   : 0.00 v3.1.0, 0.17 v2.7.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Status (intuit.) : Open (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   29 (   0 unit)
 %            Number of atoms       :  298 ( 298 equality)

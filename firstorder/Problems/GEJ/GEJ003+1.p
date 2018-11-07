@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ003+1 : ILTP v1.1.0
+% File     : GEJ003+1 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Theorem 3.3. Uniqueness of constructed points
 % Version  : [P95] axioms.
@@ -13,7 +13,7 @@
 % Names    :
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Comments :
 %--------------------------------------------------------------------------

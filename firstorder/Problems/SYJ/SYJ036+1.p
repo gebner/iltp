@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ036+1 : ILTP v1.1.0
+% File     : SYJ036+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : formula being Problematic for Ft-Algorithm
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Names    : ft7c : Ft benchmark formulae (pred.) (1992)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : 

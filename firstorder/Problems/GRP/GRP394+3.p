@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRP394+3 : ILTP v1.1.0
+% File     : GRP394+3 : ILTP v1.1.1
 % Domain   : Group Theory
 % Problem  : Group theory (equality) axioms
 % Version  : [MOW76] (equality) axioms : 
@@ -14,8 +14,8 @@
 % Status   : Satisfiable
 % Rating   : 0.00 v3.1.0, 0.50 v2.7.0, 0.33 v2.6.0, 0.67 v2.5.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Status (intuit.) : Non-Theorem (Problem negated)
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :    3 (   3 unit)
 %            Number of atoms       :    3 (   3 equality)

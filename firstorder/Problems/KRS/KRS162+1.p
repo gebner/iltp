@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS162+1 : ILTP v1.1.0
+% File     : KRS162+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Entailment for three natural numbers
 % Version  : Especial.
@@ -16,7 +16,7 @@
 % Rating   : 0.33 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   20 (   0 unit)
 %            Number of atoms       :   78 (  26 equality)

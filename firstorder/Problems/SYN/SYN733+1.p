@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN733+1 : ILTP v1.1.0
+% File     : SYN733+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Peter Andrews Problem Y2141
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.22 v3.1.0, 0.00 v2.5.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :    5 (   0 equality)

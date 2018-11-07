@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET755+4 : ILTP v1.1.0
+% File     : SET755+4 : ILTP v1.1.1
 % Domain   : Set Theory (Mappings)
 % Problem  : If X is a subset of Y, then f-1(X) is a subset of f-1(Y)
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.73 v3.1.0, 0.78 v2.7.0, 0.83 v2.6.0, 0.86 v2.5.0, 0.88 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   29 (   1 unit)
 %            Number of atoms       :  133 (   6 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN917+1 : ILTP v1.1.0
+% File     : SYN917+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Combined problems from Smullyan
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.78 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   94 (   0 equality)

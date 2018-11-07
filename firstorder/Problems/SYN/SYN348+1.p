@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN348+1 : ILTP v1.1.0
+% File     : SYN348+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Church problem 46.17 (4)
 % Version  : Especial.
@@ -12,8 +12,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v3.1.0, 0.17 v2.7.0, 0.33 v2.6.0, 0.25 v2.5.0, 0.33 v2.3.0, 0.67 v2.2.1, 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :    8 (   0 equality)

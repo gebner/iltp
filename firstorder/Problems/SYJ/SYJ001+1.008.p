@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ001+1 : ILTP v1.1.0
+% File     : SYJ001+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Alternations of quantifiers
 % Version  : Especial.
@@ -15,7 +15,7 @@
 % Names    : ft1.3 : Ft benchmark formulae (pred.) (1992)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.1.0
 %
 
 % Comments : 

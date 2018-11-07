@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT031+1 : ILTP v1.1.0
+% File     : MGT031+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : First movers appear first in an environment
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -14,8 +14,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v3.1.0, 0.17 v2.7.0, 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   10 (   0 unit)
 %            Number of atoms       :   32 (   4 equality)

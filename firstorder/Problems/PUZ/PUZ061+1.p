@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : PUZ061+1 : ILTP v1.1.0
+% File     : PUZ061+1 : ILTP v1.1.1
 % Domain   : Puzzles
 % Problem  : Food problems
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   17 (   0 equality)

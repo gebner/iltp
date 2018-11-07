@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS022+1 : ILTP v1.1.0
+% File     : KRS022+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Informal semantics for RDF container are not respected by OWL
 % English  : The informal semantics indicated by comments concerning user 
@@ -10,11 +10,11 @@
 % Source   : [Bec03]
 % Names    : consistent_I5.2-Manifest011 [Bec03]
 
-% Status   : Satisfiable
+% Status   : Satisfiable (Problem negated)
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    5 (   3 unit)
 %            Number of atoms       :    7 (   0 equality)

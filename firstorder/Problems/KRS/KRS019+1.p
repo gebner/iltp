@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS019+1 : ILTP v1.1.0
+% File     : KRS019+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The complement of a class can be defined using OWL Lite 
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : Satisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    6 (   0 unit)
 %            Number of atoms       :   14 (   0 equality)

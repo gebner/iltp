@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT038+1 : ILTP v1.1.0
+% File     : MGT038+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : FMs become extinct in stable environments
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -15,8 +15,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v3.1.0, 0.17 v2.7.0, 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    8 (   1 unit)
 %            Number of atoms       :   27 (   2 equality)

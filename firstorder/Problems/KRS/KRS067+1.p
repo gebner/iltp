@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS067+1 : ILTP v1.1.0
+% File     : KRS067+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : DL Test: fact1.1
 % Version  : Especial.
@@ -15,8 +15,8 @@
 % Status   : Unsatisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Status (intuit.) : Theorem (Problem negated)
+% Rating (intuit.) : 0.25 v1.1.0
 %
 % Syntax   : Number of formulae    :    6 (   1 unit)
 %            Number of atoms       :   17 (   0 equality)

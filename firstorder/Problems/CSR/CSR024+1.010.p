@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : CSR024+1.010 : ILTP v1.1.0
+% File     : CSR024+1.010 : ILTP v1.1.1
 % Domain   : Commonsense Reasoning
 % Problem  : Multiple trolleys, size 10
 % Version  : [Mue05] axioms : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.82 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   49 (  18 unit)
 %            Number of atoms       :  302 ( 171 equality)

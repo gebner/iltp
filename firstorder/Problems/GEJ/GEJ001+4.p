@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ001+4 : ILTP v1.1.0
+% File     : GEJ001+4 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Theorem 3.1. Uniqueness of constructed lines
 % Version  : [D97],[D98],[T96] axioms : Especial.
@@ -14,7 +14,7 @@
 % Names    :
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Comments : Shortened and Reduced axioms
 %--------------------------------------------------------------------------

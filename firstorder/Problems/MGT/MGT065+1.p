@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT065+1 : ILTP v1.1.0
+% File     : MGT065+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Long-run hazard of mortality
 % Version  : [Han98] axioms.
@@ -17,7 +17,7 @@
 % Rating   : 0.36 v3.1.0, 0.44 v2.7.0, 0.33 v2.6.0, 0.50 v2.5.0, 0.33 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   5 unit)
 %            Number of atoms       :   70 (  12 equality)

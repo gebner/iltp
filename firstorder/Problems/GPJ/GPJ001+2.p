@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GPJ001+2 : ILTP v1.1.0
+% File     : GPJ001+2 : ILTP v1.1.1
 % Domain   : Non-Clausal Group Theory
 % Problem  : Example 4.3 (commutativity)
 % Version  : [T96] : Especial.
@@ -14,7 +14,7 @@
 % Names    :
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Comments : reduced axioms (conditions) and different order
 %--------------------------------------------------------------------------

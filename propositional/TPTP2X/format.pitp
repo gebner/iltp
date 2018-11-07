@@ -97,8 +97,15 @@ output_pitp_fof(A <=> B):-
     !, write('(( '), output_pitp_fof(A), write(' -> '), output_pitp_fof(B), write(' ) & ( '),
     output_pitp_fof(B), write(' -> '), output_pitp_fof(A), write('))').
 output_pitp_fof($true) :- !, write('(truexxx -> truexxx)').
-output_pitp_fof($false) :- !, write('falsexxx & ~ falsexxx').
-output_pitp_fof(Atom) :- write(Atom).
+output_pitp_fof($false) :- !, write('(falsexxx & ~ falsexxx)').
+output_pitp_fof(Atom) :- transpred_pitp(Atom).
+
+transpred_pitp(A) :- atom(A), !, write(A).
+transpred_pitp(A) :- A=..[B|C], write(B), transterms_pitp(C).
+
+transterms_pitp([]) :- !.
+transterms_pitp([A|T]):- atom(A), !, write(A), transterms_pitp(T).
+transterms_pitp([A|T]):- A=..[B|C], write(B), transterms_pitp(C), transterms_pitp(T).
 
 %----------------------------------------------------------------------
 %----Print out the formulae in pitp format.
@@ -137,9 +144,15 @@ RestOfFormulae]):-
 output_pitp_fo_formula([]):-
     !.
 
-% parameters
 output_pitp_fo_formula(Formulae):-
+     % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             write('~ (') ; true),
     output_pitp_fo_formulae(Formulae), 
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             write(')'); true),
     nl.
 
 %----------------------------------------------------------------------

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT052+1 : ILTP v1.1.0
+% File     : MGT052+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : The environment at any time is similar with itself
 % Version  : [Han98] axioms.
@@ -15,7 +15,7 @@
 % Rating   : 0.22 v3.1.0, 0.17 v2.7.0, 0.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    8 (   1 unit)
 %            Number of atoms       :   21 (   3 equality)

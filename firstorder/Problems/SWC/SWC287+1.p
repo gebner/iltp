@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC287+1 : ILTP v1.1.0
+% File     : SWC287+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_pst_strict_sorted1_x_minimal
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 0.36 v3.1.0, 0.56 v2.7.0, 0.50 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  410 (  77 equality)

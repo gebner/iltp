@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN724+1 : ILTP v1.1.0
+% File     : SYN724+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Peter Andrews Problem THM31
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.11 v3.1.0, 0.17 v2.7.0, 0.00 v2.5.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.0.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :    5 (   0 equality)

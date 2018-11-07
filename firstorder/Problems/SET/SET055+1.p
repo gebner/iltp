@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET055+1 : ILTP v1.1.0
+% File     : SET055+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Reflexivity of equality
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0, 0.67 v2.6.0, 0.71 v2.5.0, 0.62 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0, 0.50 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  17 unit)
 %            Number of atoms       :   94 (  17 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PLA029+2 : ILTP v1.1.0
+% File     : PLA029+2 : ILTP v1.1.1
 % Domain   : Planning (Blocks world)
 % Problem  : Blocks world axioms
 % Version  : [Bau99] axioms.
@@ -14,8 +14,8 @@
 % Status   : Satisfiable
 % Rating   : 0.33 v3.1.0, 0.00 v2.7.0, 0.33 v2.5.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Non-Theorem (Problem negated)
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :   24 (   0 unit)
 %            Number of atoms       :  119 (   0 equality)

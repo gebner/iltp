@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ107+1.003 : ILTP v1.1.0
+% File     : SYJ107+1.003 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : 
 % Version  : Especial.
@@ -19,7 +19,7 @@
 % Names    : prop_n3 : JProver test formulae (2000)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : cause exponential proof length in EVERY LJ proof wrt. the 

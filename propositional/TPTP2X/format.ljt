@@ -117,8 +117,15 @@ output_ljt_fo_formula([]):-
 output_ljt_fo_formula(Formulae):-
     nl,
     write('f(('), nl, nl,
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('~ ('), nl) ; true),
     output_ljt_fo_formulae(Formulae), nl, nl,
-    write(')).'), nl, nl.
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
+   write(')).'), nl, nl.
 
 %----------------------------------------------------------------------
 

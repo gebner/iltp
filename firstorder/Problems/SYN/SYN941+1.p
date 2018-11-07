@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN941+1 : ILTP v1.1.0
+% File     : SYN941+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Syntactic from Shults
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :    7 (   0 equality)

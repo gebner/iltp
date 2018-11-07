@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET008+3 : ILTP v1.1.0
+% File     : SET008+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : (X \ Y) ^ Y = the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -16,7 +16,7 @@
 % Rating   : 0.18 v3.1.0, 0.11 v2.7.0, 0.00 v2.5.0, 0.12 v2.4.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   10 (   4 unit)
 %            Number of atoms       :   21 (   4 equality)

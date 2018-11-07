@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM342+1 : ILTP v1.1.0
+% File     : NUM342+1 : ILTP v1.1.1
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : XY (X + Y = 8) => X - Y = 0
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.82 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :  402 ( 374 unit)
 %            Number of atoms       :  474 (   5 equality)

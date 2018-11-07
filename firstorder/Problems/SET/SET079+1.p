@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET079+1 : ILTP v1.1.0
+% File     : SET079+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : A set belongs to its singleton
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0, 0.11 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.25 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0, 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   95 (  17 equality)

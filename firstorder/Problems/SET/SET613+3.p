@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET613+3 : ILTP v1.1.0
+% File     : SET613+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : (X U Y) \ X ^ Y = (X \ Y) U (Y \ X)
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -17,7 +17,7 @@
 % Rating   : 0.91 v3.1.0, 0.89 v2.7.0, 1.00 v2.5.0, 0.88 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   11 (   4 unit)
 %            Number of atoms       :   25 (   6 equality)

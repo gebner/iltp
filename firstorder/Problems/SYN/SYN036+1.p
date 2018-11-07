@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN036+1 : ILTP v1.1.0
+% File     : SYN036+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Andrews Challenge Problem
 % Version  : Especial.
@@ -18,7 +18,7 @@
 % Rating   : 0.33 v3.1.0, 0.50 v2.7.0, 0.00 v2.5.0, 0.33 v2.4.0, 0.33 v2.2.1, 0.50 v2.2.0, 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :    8 (   0 equality)

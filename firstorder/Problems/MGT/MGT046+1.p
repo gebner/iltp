@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT046+1 : ILTP v1.1.0
+% File     : MGT046+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Unendowed organization's hazard of mortality declines with age
 % Version  : [Han98] axioms.
@@ -16,7 +16,7 @@
 % Rating   : 0.27 v3.1.0, 0.22 v2.7.0, 0.17 v2.4.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   14 (   0 unit)
 %            Number of atoms       :   58 (  12 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT039+2 : ILTP v1.1.0
+% File     : MGT039+2 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favours EPs above Fms if change is slow
 % Version  : [PM93] axioms.
@@ -16,7 +16,7 @@
 % Rating   : 0.55 v3.1.0, 0.56 v2.7.0, 0.50 v2.6.0, 0.57 v2.5.0, 0.62 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   19 (   2 unit)
 %            Number of atoms       :   71 (   3 equality)

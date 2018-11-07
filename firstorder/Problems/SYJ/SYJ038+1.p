@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ038+1 : ILTP v1.1.0
+% File     : SYJ038+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Fruit & Cheese
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Names    : ft8.1 : Ft benchmark formulae (pred.) (1992)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : modified original conjecture "food(X)" into "? [X] : food(X)"

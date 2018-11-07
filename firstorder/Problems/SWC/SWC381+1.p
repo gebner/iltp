@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC381+1 : ILTP v1.1.0
+% File     : SWC381+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_some1_x_some1
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 0.36 v3.1.0, 0.56 v2.7.0, 0.50 v2.5.0, 0.33 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  409 (  75 equality)

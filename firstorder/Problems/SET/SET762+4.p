@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET762+4 : ILTP v1.1.0
+% File     : SET762+4 : ILTP v1.1.1
 % Domain   : Set Theory (Mappings)
 % Problem  : The image of empty set is empty 
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.45 v3.1.0, 0.56 v2.7.0, 0.33 v2.6.0, 0.43 v2.5.0, 0.50 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   29 (   1 unit)
 %            Number of atoms       :  130 (   6 equality)

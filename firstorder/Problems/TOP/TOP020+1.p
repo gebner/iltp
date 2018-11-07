@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : TOP020+1 : ILTP v1.1.0
+% File     : TOP020+1 : ILTP v1.1.1
 % Domain   : Topology
 % Problem  : Property of a Hausdorff topological space
 % Version  : [AMR93] axioms : Especial.
@@ -14,8 +14,8 @@
 % Status   : Unsatisfiable
 % Rating   : 1.00 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    9 (   0 unit)
 %            Number of atoms       :   37 (   7 equality)

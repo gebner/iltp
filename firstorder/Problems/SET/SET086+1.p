@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET086+1 : ILTP v1.1.0
+% File     : SET086+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : A singleton set has a member
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.09 v3.1.0, 0.22 v2.7.0, 0.33 v2.6.0, 0.29 v2.5.0, 0.25 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   98 (  19 equality)

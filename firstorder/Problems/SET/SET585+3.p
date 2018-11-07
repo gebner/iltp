@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET585+3 : ILTP v1.1.0
+% File     : SET585+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : The intersection of X and Y is a subset of the union of X and Z
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -15,7 +15,7 @@
 % Rating   : 0.09 v3.1.0, 0.11 v2.7.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0, 0.50 v1.0.0
 %
 % Syntax   : Number of formulae    :   11 (   6 unit)
 %            Number of atoms       :   21 (   3 equality)

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS089+1 : ILTP v1.1.0
+% File     : KRS089+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A test for the interaction of one-of and inverse 
 % Version  : Especial.
@@ -16,8 +16,8 @@
 % Status   : Unsatisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Open (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   19 (   2 unit)
 %            Number of atoms       :   57 (  18 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT053+1 : ILTP v1.1.0
+% File     : MGT053+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : The dissimilarity relation is symmetric
 % Version  : [Han98] axioms.
@@ -15,7 +15,7 @@
 % Rating   : 0.22 v3.1.0, 0.17 v2.7.0, 0.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    8 (   0 unit)
 %            Number of atoms       :   22 (   3 equality)

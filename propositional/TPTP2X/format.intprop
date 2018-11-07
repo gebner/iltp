@@ -1,0 +1,148 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the intprop system.
+%----
+%----Written by Jens Otten & Thomas Raths, March 2005
+%========================================================================
+
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_intprop_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_intprop_signed_literal(++Atom):-
+    write('-'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in intprop format.
+%----Special case of an empty clause
+output_intprop_literals([]):-
+    write('[]').
+
+output_intprop_literals([OneLiteral]):-
+    !, output_intprop_signed_literal(OneLiteral).
+
+output_intprop_literals([FirstLiteral|RestOfLiterals]):-
+    output_intprop_signed_literal(FirstLiteral),
+    write('  ,'), nl, write(' '),
+    output_intprop_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in intprop format.
+output_intprop_clauses([]).
+
+output_intprop_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(' , '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_intprop_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write(' & '), nl, nl);
+         true),
+    output_intprop_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in intprop format.
+output_intprop_formula([]):-
+    !.
+
+output_intprop_formula(Clauses):-
+    nl,
+    write('f(['), nl, nl,
+    output_intprop_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in intprop format.
+output_intprop_fof(~ A):-
+    !, write('( non '), output_intprop_fof(A), write(' )').
+output_intprop_fof('|'(A,B) ):- 
+    !, write('( '), output_intprop_fof(A), write(' or '),
+    output_intprop_fof(B), write(' )').
+output_intprop_fof((A;B)):- 
+    !, write('( '), output_intprop_fof(A), write(' or '),
+    output_intprop_fof(B), write(' )').
+output_intprop_fof(A & B):-
+    !, write('( '), output_intprop_fof(A), write(' and '),
+    output_intprop_fof(B), write(' )').
+output_intprop_fof(A => B):-
+    !, write('( '), output_intprop_fof(A), write(' imp '),
+    output_intprop_fof(B), write(' )').
+output_intprop_fof(A <=> B):-
+    !, write('( '), output_intprop_fof(A), write(' eq '),
+    output_intprop_fof(B), write(' )').
+output_intprop_fof($true) :- !, write('(true___ imp true___)').
+output_intprop_fof($false) :- !, write('(false___ and non false___)').
+output_intprop_fof(Atom) :-
+    write(Atom).
+%----------------------------------------------------------------------
+%----Print out the formulae in intprop format.
+output_intprop_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_intprop_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('('),
+    (Status==conjecture ->
+         output_intprop_fof(Formula);
+         output_intprop_fof(Formula)),
+    write(')'),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (nl, nl,
+         write(' and '), nl, nl);
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (nl, nl,
+              write(' imp '), nl, nl);
+             true)),
+    output_intprop_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_intprop_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_intprop_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----intprop format.
+output_intprop_fo_formula([]):-
+    !.
+
+output_intprop_fo_formula(Formulae):-
+    nl,
+    write('f(('), nl, nl,
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('non ('), nl) ; true),
+    output_intprop_fo_formulae(Formulae), nl, nl,
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
+    write(')).'), nl, nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in intprop format.
+intprop(intprop,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_intprop_formula(Clauses).
+
+%----Print out first-order formula in intprop format.
+intprop(intprop,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_intprop_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the intprop format.
+intprop_format_information('%','.intprop').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+intprop_file_information(format,intprop).
+%----------------------------------------------------------------------

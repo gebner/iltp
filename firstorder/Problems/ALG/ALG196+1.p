@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG196+1 : ILTP v1.1.0
+% File     : ALG196+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Quasigroups 7 QG5: CPROPS-ISO-COMPLETE-PROBLEM-2
 % Version  : Especial.
@@ -10,11 +10,11 @@
 % Source   : [Mei03]
 % Names    : 
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   58 (   0 unit)
 %            Number of atoms       : 7269 (7269 equality)

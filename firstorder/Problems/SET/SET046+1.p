@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET046+1 : ILTP v1.1.0
+% File     : SET046+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : No set of non-circular sets
 % Version  : Especial.
@@ -17,7 +17,7 @@
 % Rating   : 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :    3 (   0 equality)

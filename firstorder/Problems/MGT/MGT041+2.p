@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT041+2 : ILTP v1.1.0
+% File     : MGT041+2 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : There are non-FM and non-EP organisations
 % Version  : [PM93] axioms.
@@ -16,7 +16,7 @@
 % Rating   : 0.11 v3.1.0, 0.00 v2.5.0, 0.33 v2.4.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.0.0
 %
 % Syntax   : Number of formulae    :    5 (   0 unit)
 %            Number of atoms       :   17 (   0 equality)

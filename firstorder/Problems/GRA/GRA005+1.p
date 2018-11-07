@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRA005+1 : ILTP v1.1.0
+% File     : GRA005+1 : ILTP v1.1.1
 % Domain   : Graph Theory
 % Problem  : Maximal shortest path length in terms of triangles
 % Version  : Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.45 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 
 % Syntax   : Number of formulae    :   17 (   1 unit)

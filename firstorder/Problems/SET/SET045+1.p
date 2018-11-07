@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET045+1 : ILTP v1.1.0
+% File     : SET045+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : No Universal Set
 % Version  : Especial.
@@ -20,7 +20,7 @@
 % Rating   : 0.11 v3.1.0, 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    2 (   1 unit)
 %            Number of atoms       :    4 (   0 equality)

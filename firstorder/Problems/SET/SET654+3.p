@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET654+3 : ILTP v1.1.0
+% File     : SET654+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : Y a subset of Y1 => R (X to Y) is (X to Y1)
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -15,7 +15,7 @@
 % Rating   : 0.18 v3.1.0, 0.11 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.12 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   23 (   1 unit)
 %            Number of atoms       :   92 (   1 equality)

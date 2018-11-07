@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET672+3 : ILTP v1.1.0
+% File     : SET672+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : Y1 restricted to R (X to Y) is (X to Y1)
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -11,11 +11,11 @@
 % Source   : [ILF]
 % Names    : RELSET_1 (35) [Wor89]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   29 (   2 unit)
 %            Number of atoms       :  120 (   5 equality)

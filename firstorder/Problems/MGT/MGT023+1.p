@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT023+1 : ILTP v1.1.0
+% File     : MGT023+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Stable environments have a critical point.
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -15,7 +15,7 @@
 % Rating   : 0.09 v3.1.0, 0.11 v2.7.0, 0.17 v2.6.0, 0.29 v2.5.0, 0.25 v2.4.0, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       :   17 (   1 equality)

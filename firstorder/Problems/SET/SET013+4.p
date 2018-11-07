@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET013+4 : ILTP v1.1.0
+% File     : SET013+4 : ILTP v1.1.1
 % Domain   : Set Theory (Naive)
 % Problem  : Commutativity of intersection
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.55 v3.1.0, 0.67 v2.7.0, 0.50 v2.6.0, 0.71 v2.5.0, 0.88 v2.4.0, 0.25 v2.3.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   2 unit)
 %            Number of atoms       :   30 (   3 equality)

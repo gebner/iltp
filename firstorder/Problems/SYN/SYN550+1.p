@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN550+1 : ILTP v1.1.0
+% File     : SYN550+1 : ILTP v1.1.1
 % Domain   : Syntactic (Translated)
 % Problem  : dia box p <=> dia box dia box p
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.44 v3.1.0, 0.67 v2.7.0, 0.33 v2.6.0, 0.00 v2.5.0, 0.33 v2.4.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   1 unit)
 %            Number of atoms       :   12 (   0 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT028+1 : ILTP v1.1.0
+% File     : MGT028+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : FMs have a negative growth rate in stable environments
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -17,7 +17,7 @@
 % Rating   : 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       :   23 (   0 equality)

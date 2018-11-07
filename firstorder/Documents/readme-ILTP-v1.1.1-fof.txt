@@ -1,12 +1,22 @@
-First-order part of the ILTP-v1.1.0-Library
--------------------------------------------
+First-order part of the ILTP-v1.1.1-Library
+-----------------------------------------
+
+The Intuitionistic Logic Theorem Proving (ILTP) library provides a
+platform for testing and benchmarking automated theorem proving
+systems for first-order intuitionistic logic. It includes a collection
+of propositional and first-order benchmark formulas in a standardised
+syntax and tools for converting the formulas into some of the existing
+intuitionistic theorem prover formats. It also includes information
+about implementations of theorem provers for intuitionistic logic and
+their perfomance results on the benchmark formulas.
+Webpage: http://www.iltp.de.
 
 Installation
 ------------
 
-Unpack and untar ILTP-v1.1.0-firstorder.tar.gz
-> tar -xzf ILTP-v1.1.0-firstorder.tar.gz
-This will create the directory ILTP-v1.1.0-firstorder.
+Unpack and untar ILTP-v1.1.1-firstorder.tar.gz
+> tar -xzf ILTP-v1.1.1-firstorder.tar.gz
+This will create the directory ILTP-v1.1.1-firstorder.
  
 Contents
 --------
@@ -14,8 +24,10 @@ Contents
 * Problems    - benchmark formulas in a standardised syntax
 * Axioms      - axiom sets needed for formulating the problems
 * tptp2X      - tool for converting the formula into some of the existing 
-                intuitionistic ATP system format:
-* Documents   - formula and result statistics
+                intuitionistic ATP system format
+* Documents   - performance results on the benchark formulas for some
+                intuitionistic ATP systems, statistics, example sessions,
+                readme-ILTP-v1.1.1-fof.txt - this file
 
 tptp2X
 ------
@@ -28,7 +40,7 @@ You will need some Prolog Interpreter. For full details see the
 technical manual at http://www.cs.miami.edu/~tptp. 
  
 a) Configure tptp2X tool:
-> cd ILTP-v1.1-firstorder/TPTP2X
+> cd ILTP-v1.1.1-firstorder/TPTP2X
 > ./tptp2X_install
 
 This script will ask for required information. (When you are asked to
@@ -68,7 +80,7 @@ Problems
 --------
 
 2550 problems of 24 domains
-2479 non-propositional. 71 propositional
+2480 non-propositional. 70 propositional
 statistics: 2363 abstract problems, of which 20 are generic
             class. status: 1950 valid, 553 invalid, 47 unknown
             185 pure-equality problems

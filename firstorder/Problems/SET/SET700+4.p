@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET700+4 : ILTP v1.1.0
+% File     : SET700+4 : ILTP v1.1.1
 % Domain   : Set Theory (Naive)
 % Problem  : Property of intersection and difference 2
 % Version  : [Pas99] axioms.
@@ -14,7 +14,7 @@
 % Rating   : 0.45 v3.1.0, 0.56 v2.7.0, 0.67 v2.6.0, 0.71 v2.5.0, 0.88 v2.4.0, 0.25 v2.3.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   1 unit)
 %            Number of atoms       :   33 (   3 equality)

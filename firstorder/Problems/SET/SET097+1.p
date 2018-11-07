@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET097+1 : ILTP v1.1.0
+% File     : SET097+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : A class contains 0, 1 or at least 2 members.
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.91 v3.1.0, 0.89 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   97 (  18 equality)

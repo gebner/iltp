@@ -75,11 +75,11 @@ output_jprover_fof(A <=> B):-
     output_jprover_fof(B), write(' })').
 output_jprover_fof(! [] : A):- !, output_jprover_fof(A).
 output_jprover_fof(! [V|L] : A):-
-    !, write('(all x'), write(V), write(':'), put_byte(39), write('T. '),
+    !, write('(all x'), print(V), write(':'), put_byte(39), write('T. '),
     output_jprover_fof(! L : A), write(')').
 output_jprover_fof(? [] : A):- !, output_jprover_fof(A).
 output_jprover_fof(? [V|L] : A):-
-    !, write('(exst x'), write(V), write(':'), put_byte(39), write('T. '),
+    !, write('(exst x'), print(V), write(':'), put_byte(39), write('T. '),
     output_jprover_fof(? L : A), write(')').
 output_jprover_fof($true) :- !, write('('), put_byte(39), write('truexxx => '), 
                              put_byte(39), write('truexxx)').
@@ -93,7 +93,7 @@ transpred_jp(A) :- A=..[B|C],
                    put_byte(39), write(B), write('['), transterms_jp(C), write(']').
 
 % A is not a variable
-transterms_jp([A|T]):- looks_like_a_variable(A), !, put_byte(39), write('x'), write(A),
+transterms_jp([A|T]):- looks_like_a_variable(A), !, put_byte(39), write('x'), print(A),
                        (T\=[] -> (write(';'), transterms_jp(T)); true).
 transterms_jp([A|T]):- atom(A), !, put_byte(39), write(A),
                        (T\=[] -> (write(';'), transterms_jp(T)); true).
@@ -143,8 +143,15 @@ output_jprover_fo_formula([]):-
 output_jprover_fo_formula(Formulae):-
     nl,
     write('<< '), 
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('(not{('), nl) ; true),
     output_jprover_fo_formulae(Formulae), nl,
-    write('>>'), nl, nl.
+    (\+ (member(fof(_,conjecture,_),Formulae);
+        member(input_formula(_,conjecture,_),Formulae)) -> 
+                                            (write(')})'), nl); true),
+   write('>>'), nl, nl.
 
 %----------------------------------------------------------------------
 

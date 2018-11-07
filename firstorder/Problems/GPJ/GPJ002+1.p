@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GPJ002+1 : ILTP v1.1.0
+% File     : GPJ002+1 : ILTP v1.1.1
 % Domain   : Non-Clausal Group Theory
 % Problem  : section 7, Exercise 7
 % Version  : Especial.
@@ -11,7 +11,7 @@
 % Names    :
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Comments : 
 %--------------------------------------------------------------------------

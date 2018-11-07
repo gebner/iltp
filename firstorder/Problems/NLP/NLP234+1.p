@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP234+1 : ILTP v1.1.0
+% File     : NLP234+1 : ILTP v1.1.1
 % Domain   : Natural Language Processing
 % Problem  : Vincent believes that every man smokes, problem 15
 % Version  : [Bos00b] axioms.
@@ -15,8 +15,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.25 v3.1.0, 0.83 v2.6.0, 0.50 v2.5.0, 0.33 v2.4.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :  170 (   0 equality)

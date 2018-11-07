@@ -82,25 +82,17 @@ output_strip_fof(Atom) :-
 output_strip_fo_formulae([]).
 
 % for TPTP-v3.1.0 or later
-output_strip_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    %write('% '), write(Name), write(', '),
-    %write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_strip_fof(Formula);
-         output_strip_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (
-         write(' & ') );
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (write(' -> ') );
-             true)),
-    output_strip_fo_formulae(RestOfFormulae).
+output_strip_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    ((Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_strip_fo_formulae(Formulae))) ;
+      (%write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_strip_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+           (nl, nl, write('  -> '), nl, nl)); 
+           (nl, nl, write('  & '), nl, nl)),
+          output_strip_fo_formulae(RestOfFormulae)))).
 
 % for TPTP-v2.7.0 or earlier
 output_strip_fo_formulae([input_formula(Name,Status,Formula)|
@@ -116,7 +108,14 @@ output_strip_fo_formula([]):-
 output_strip_fo_formula(Formulae):-
     nl,
     write('define('),    
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             write('# (') ; true),
     output_strip_fo_formulae(Formulae),
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             write(')'); true),
     write(').'), nl, nl,
     write('solve.'), nl, nl.
 

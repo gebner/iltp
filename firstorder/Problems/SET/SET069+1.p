@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET069+1 : ILTP v1.1.0
+% File     : SET069+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : If one argument is a proper class, pair contains only the other
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 1.00 v2.5.0, 0.88 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   95 (  17 equality)

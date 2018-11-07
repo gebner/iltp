@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET587+3 : ILTP v1.1.0
+% File     : SET587+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X \ Y = the empty set iff X (= Y
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -16,7 +16,7 @@
 % Rating   : 0.45 v3.1.0, 0.33 v2.6.0, 0.29 v2.5.0, 0.12 v2.4.0, 0.25 v2.3.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    9 (   2 unit)
 %            Number of atoms       :   21 (   4 equality)

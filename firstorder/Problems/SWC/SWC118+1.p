@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC118+1 : ILTP v1.1.0
+% File     : SWC118+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_ne_segment_total2_x_run_ord_max2
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 0.09 v3.1.0, 0.22 v2.7.0, 0.50 v2.6.0, 0.33 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  424 (  82 equality)

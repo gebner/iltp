@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT040+2 : ILTP v1.1.0
+% File     : MGT040+2 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favours FMs above EPs if change is not extreme
 % Version  : [PM93] axioms.
@@ -16,8 +16,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v3.1.0, 0.17 v2.7.0, 0.00 v2.5.0, 0.33 v2.4.0, 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   14 (   2 unit)
 %            Number of atoms       :   54 (   1 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO124+1 : ILTP v1.1.0
+% File     : GEO124+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Every oriented curve has at most one starting point
 % Version  : [EHK99] axioms.
@@ -14,7 +14,7 @@
 % Rating   : 0.27 v3.1.0, 0.22 v2.7.0, 0.33 v2.5.0, 0.17 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   28 (   2 unit)
 %            Number of atoms       :  115 (  17 equality)

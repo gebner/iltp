@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO147+1 : ILTP v1.1.0
+% File     : GEO147+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Meeting is possible only if there is a common position
 % Version  : [EHK99] axioms.
@@ -14,7 +14,7 @@
 % Rating   : 0.27 v3.1.0, 0.22 v2.7.0, 0.17 v2.5.0, 0.00 v2.4.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   37 (   3 unit)
 %            Number of atoms       :  135 (  17 equality)

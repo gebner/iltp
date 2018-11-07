@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET108+1 : ILTP v1.1.0
+% File     : SET108+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : 1st and 2nd make the ordered pair
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.09 v3.1.0, 0.44 v2.7.0, 0.50 v2.6.0, 0.57 v2.5.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :  101 (  20 equality)

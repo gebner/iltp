@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV207+1 : ILTP v1.1.0
+% File     : SWV207+1 : ILTP v1.1.1
 % Domain   : Software Verification
 % Problem  : Simplified proof obligation quaternion_ds1_inuse_0018
 % Version  : [DFS04] axioms : Especial.
@@ -16,8 +16,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 1.00 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   90 (  55 unit)
 %            Number of atoms       :  247 ( 107 equality)

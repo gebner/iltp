@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG015+1 : ILTP v1.1.0
+% File     : ALG015+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Groups 4: CPROPS-ISO-COMPLETE-PROBLEM-1
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.22 v3.1.0, 0.25 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   38 (   2 unit)
 %            Number of atoms       : 1006 (1006 equality)

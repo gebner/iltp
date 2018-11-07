@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ202+1.001 : ILTP v1.1.0
+% File     : SYJ202+1.001 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Cook pigeon-hole problem
 % Version  : Especial.
@@ -27,7 +27,7 @@
 % Names    : ph_p1 : Dyckhoff's benchmark formulas (1997)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : 

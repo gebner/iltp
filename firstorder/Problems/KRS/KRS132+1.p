@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS132+1 : ILTP v1.1.0
+% File     : KRS132+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The union of two classes can be defined
 % Version  : Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.22 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   12 (   0 unit)
 %            Number of atoms       :   36 (   0 equality)

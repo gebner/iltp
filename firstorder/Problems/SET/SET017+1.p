@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET017+1 : ILTP v1.1.0
+% File     : SET017+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Left cancellation for unordered pairs
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.27 v3.1.0, 0.56 v2.7.0, 0.50 v2.6.0, 0.43 v2.5.0, 0.25 v2.4.0, 0.25 v2.3.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   97 (  18 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ110+1 : ILTP v1.1.0
+% File     : SYJ110+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : 
 % Version  : Especial.
@@ -17,7 +17,7 @@
 % Names    : jens_fo : JProver test formulae (2000)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : Only difference to example in [OK96]: all-closure wrt. the 

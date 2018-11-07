@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS158+1 : ILTP v1.1.0
+% File     : KRS158+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : DL Test: k_lin ABox test from DL98 systems comparison
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.11 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   31 (  11 unit)
 %            Number of atoms       :   71 (   0 equality)

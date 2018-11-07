@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ113+1 : ILTP v1.1.0
+% File     : SYJ113+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : 
 % Version  : Especial.
@@ -17,7 +17,7 @@
 % Names    : jens_fo_fv : JProver test formulae (2000)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : refers to the ORIGINAL first-order example in [OK96]

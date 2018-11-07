@@ -130,7 +130,7 @@ renameVarTptpToFt(A,V) :-
         ).        
 
 
-member_assoc(X,[(Y,K)|_],K) :- X == Y.
+member_assoc(X,[(Y,K)|_],K) :- X == Y, !.
 member_assoc(X,[_|T],K) :- member_assoc(X,T,K).
 
 :- assert(atom_key_list([])). 
@@ -171,7 +171,6 @@ RestOfFormulae]):-
 output_ft_fo_formula([]):-
     !.
 
-% parameters
 output_ft_fo_formula(Formulae):-
     nl,
     write('set forever 1.'), nl,      % contraction deepening is active
@@ -180,7 +179,14 @@ output_ft_fo_formula(Formulae):-
     write('fstack 2000000.'), nl,     % formula stack      
     write('set szsave 10000.'), nl,   % size of save stacks
     nl,
+   % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('~ ('), nl) ; true),
     output_ft_fo_formulae(Formulae), 
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
     write('.'), nl, nl.
 
 %----------------------------------------------------------------------

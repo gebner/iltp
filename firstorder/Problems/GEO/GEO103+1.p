@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO103+1 : ILTP v1.1.0
+% File     : GEO103+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Common endpoint of subcurves and another point means inclusion
 % Version  : [EHK99] axioms.
@@ -16,7 +16,7 @@
 % Rating   : 1.00 v2.7.0, 0.83 v2.5.0, 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)
 %            Number of atoms       :   77 (  11 equality)

@@ -116,7 +116,14 @@ output_strip_fo_formula([]):-
 output_strip_fo_formula(Formulae):-
     nl,
     write('define('),    
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             write('# (') ; true),
     output_strip_fo_formulae(Formulae),
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             write(')'); true),
     write(').'), nl, nl,
     write('solve.'), nl, nl.
 

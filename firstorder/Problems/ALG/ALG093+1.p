@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG093+1 : ILTP v1.1.0
+% File     : ALG093+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Loops 5: REPRESENTATIVES-SATISFY-PROPS-PROBLEM-4
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.89 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    4 (   1 unit)
 %            Number of atoms       :  801 ( 801 equality)

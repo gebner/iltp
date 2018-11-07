@@ -6,6 +6,7 @@
 %========================================================================
 
 %%% adapted for TPTP-v3.1.0 by Thomas Raths in Novermber, 2005
+:-set_flag(print_depth,100).
 
 %----------------------------------------------------------------------
 %----Print out a literal with - for negative, nothing for positive.
@@ -77,41 +78,32 @@ output_leantap_fof(A <=> B):-
     output_leantap_fof(B), write(' )').
 output_leantap_fof(! [] : A):- !, output_leantap_fof(A).
 output_leantap_fof(! [V|L] : A):-
-    !, write('( all('), write(V), write(' , '),
+    !, write('( all('), print(V), write(' , '),
     output_leantap_fof(! L : A), write(' ))').
 output_leantap_fof(? [] : A):- !, output_leantap_fof(A).
 output_leantap_fof(? [V|L] : A):-
-    !, write('( ex('), write(V), write(' , '),
+    !, write('( ex('), print(V), write(' , '),
     output_leantap_fof(? L : A), write(' ))').
 output_leantap_fof($true) :- !, write('(true___=>true___)').
 output_leantap_fof($false) :- !, write('(false___ & - false___)').
 output_leantap_fof(Atom) :-
-    write(Atom).
+    print(Atom).
 %----------------------------------------------------------------------
 %----Print out the formulae in leantap format.
 output_leantap_fo_formulae([]).
 
 % for TPTP-v3.1.0 or later
-output_leantap_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_leantap_fof(Formula);
-         output_leantap_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (nl, nl,
-         write('  &'), nl, nl);
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (nl, nl,
-              write('  =>'), nl, nl);
-             true)),
-    output_leantap_fo_formulae(RestOfFormulae).
+output_leantap_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    ((Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_leantap_fo_formulae(Formulae))) ;
+      (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_leantap_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+           (nl, nl, write('  =>'), nl, nl)); 
+           (nl, nl, write('  &'), nl, nl)),
+          output_leantap_fo_formulae(RestOfFormulae)))).
 
 % for TPTP-v2.7.0 or earlier
 output_leantap_fo_formulae([input_formula(Name,Status,Formula)|
@@ -127,7 +119,14 @@ output_leantap_fo_formula([]):-
 output_leantap_fo_formula(Formulae):-
     nl,
     write('f(('), nl, nl,
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('- ('), nl) ; true),
     output_leantap_fo_formulae(Formulae), nl, nl,
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
     write(')).'), nl, nl.
 
 %----------------------------------------------------------------------

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ201+2.019 : ILTP v1.1.0
+% File     : SYJ207+1.019 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : de Bruijn's example
 % Version  : Especial.
@@ -17,8 +17,8 @@
 % Source   : [Dyc97]
 % Names    : debruijn_n19 : Dyckhoff's benchmark formulas (1997)
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.0.0
 %
 
 % Comments : "quite a tough exercise for students to prove by natural

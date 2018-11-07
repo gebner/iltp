@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET056+1 : ILTP v1.1.0
+% File     : SET056+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Expanded equality definition
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.55 v3.1.0, 0.67 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   98 (  17 equality)

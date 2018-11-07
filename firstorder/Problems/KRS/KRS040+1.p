@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS040+1 : ILTP v1.1.0
+% File     : KRS040+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Example of use
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : Satisfiable
 % Rating   : 0.67 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   83 (  21 unit)
 %            Number of atoms       :  205 ( 161 equality)

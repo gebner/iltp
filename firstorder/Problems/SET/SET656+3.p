@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET656+3 : ILTP v1.1.0
+% File     : SET656+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : The intersection of a relation R from X to Y and X x Y is R
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -14,7 +14,7 @@
 % Rating   : 0.45 v3.1.0, 0.33 v2.6.0, 0.43 v2.5.0, 0.38 v2.4.0, 0.50 v2.3.0, 0.67 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   31 (   2 unit)
 %            Number of atoms       :  128 (  11 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO089+1 : ILTP v1.1.0
+% File     : GEO089+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Inner points of a sub-curve of a curve are inner points
 % Version  : [EHK99] axioms.
@@ -14,7 +14,7 @@
 % Rating   : 0.91 v3.1.0, 0.78 v2.7.0, 0.83 v2.5.0, 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)
 %            Number of atoms       :   70 (  10 equality)

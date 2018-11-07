@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG209+1 : ILTP v1.1.0
+% File     : ALG209+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Quasigroups 7 QG5: REPRESENTATIVES-SATISFY-PROPS-PROBLEM-3
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.78 v3.1.0, 0.75 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       : 1162 (1162 equality)

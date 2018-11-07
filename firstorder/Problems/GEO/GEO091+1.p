@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO091+1 : ILTP v1.1.0
+% File     : GEO091+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Two points determine subcurve
 % Version  : [EHK99] axioms.
@@ -11,11 +11,11 @@
 % Source   : [KE99]
 % Names    : Theorem 2.13 [KE99]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)
 %            Number of atoms       :   76 (  12 equality)

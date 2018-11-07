@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET071+1 : ILTP v1.1.0
+% File     : SET071+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : If both arguments are proper classes, pair is null
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.55 v3.1.0, 0.67 v2.6.0, 0.71 v2.5.0, 0.62 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   96 (  17 equality)

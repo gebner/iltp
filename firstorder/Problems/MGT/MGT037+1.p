@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT037+1 : ILTP v1.1.0
+% File     : MGT037+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Once appeared, efficient producers do not disappear
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -15,7 +15,7 @@
 % Rating   : 0.18 v3.1.0, 0.22 v2.7.0, 0.33 v2.6.0, 0.43 v2.5.0, 0.38 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   16 (   1 unit)
 %            Number of atoms       :   70 (   8 equality)

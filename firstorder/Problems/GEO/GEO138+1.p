@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO138+1 : ILTP v1.1.0
+% File     : GEO138+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Curve and ordered points determine oriented curve
 % Version  : [EHK99] axioms.
@@ -11,11 +11,11 @@
 % Source   : [KE99]
 % Names    : Corollary 4.21 [KE99]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   28 (   2 unit)
 %            Number of atoms       :  116 (  18 equality)

@@ -4,7 +4,7 @@
 %----FOF only
 %----Written by Thomas Raths & Jens Otten, April 2005, adapted Nov 2005
 %========================================================================
-
+:-set_flag(print_depth,100).
 %----------------------------------------------------------------------
 %----Print out a literal with - for negative, nothing for positive.
 %----Use positive representation
@@ -75,11 +75,11 @@ output_ftprolog_fof(A <=> B):-
     output_ftprolog_fof(B), write(' )').
 output_ftprolog_fof(! [] : A):- !, output_ftprolog_fof(A).
 output_ftprolog_fof(! [V|L] : A):-
-    !, write('( a(x'), write(V), write(','),
+    !, write('( a(x'), print(V), write(','),
     output_ftprolog_fof(! L : A), write(' ))').
 output_ftprolog_fof(? [] : A):- !, output_ftprolog_fof(A).
 output_ftprolog_fof(? [V|L] : A):-
-    !, write('( e(x'), write(V), write(','),
+    !, write('( e(x'), print(V), write(','),
     output_ftprolog_fof(? L : A), write(' ))').
 output_ftprolog_fof($true) :- !, write('(true___ imp true___)').
 output_ftprolog_fof($false) :- !, write('(false___ and neg false___)').
@@ -89,7 +89,7 @@ output_ftprolog_fof(Atom) :- transpred_ftprolog(Atom).
 transpred_ftprolog(A) :- atom(A), !, write(A).
 transpred_ftprolog(A) :- A=..[B|C], 
                          write(B), write('('), transterms_ftprolog(C), write(')').
-transterms_ftprolog([A|T]):- looks_like_a_variable(A), !, write('x'), write(A),
+transterms_ftprolog([A|T]):- looks_like_a_variable(A), !, write('x'), print(A),
                              (T\=[] -> (write(','), transterms_ftprolog(T)); true).
 transterms_ftprolog([A|T]):- atom(A), !, write(A),
                              (T\=[] -> (write(','), transterms_ftprolog(T)); true).
@@ -103,26 +103,17 @@ transterms_ftprolog([A|T]):- A=..[B|C],
 output_ftprolog_fo_formulae([]).
 
 % for TPTP-v3.1.0 or later
-output_ftprolog_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_ftprolog_fof(Formula);
-         output_ftprolog_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (nl, nl,
-         write(' and '), nl, nl);
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (nl, nl,
-              write(' imp '), nl, nl);
-             true)),
-    output_ftprolog_fo_formulae(RestOfFormulae).
+output_ftprolog_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    ((Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_ftprolog_fo_formulae(Formulae))) ;
+      (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_ftprolog_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+           (nl, nl, write('  imp '), nl, nl)); 
+           (nl, nl, write('  and '), nl, nl)),
+          output_ftprolog_fo_formulae(RestOfFormulae)))).
 
 % for TPTP-v2.7.0 or earlier
 output_ftprolog_fo_formulae([input_formula(Name,Status,Formula)|
@@ -138,7 +129,14 @@ output_ftprolog_fo_formula([]):-
 output_ftprolog_fo_formula(Formulae):-
     nl,
     write('f(('), nl, nl,
+    % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('neg ('), nl) ; true),
     output_ftprolog_fo_formulae(Formulae), nl, nl,
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
     write(')).'), nl, nl.
 
 %----------------------------------------------------------------------

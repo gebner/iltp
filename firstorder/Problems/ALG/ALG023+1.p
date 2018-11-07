@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG023+1 : ILTP v1.1.0
+% File     : ALG023+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Groups 4: VERIFY-GEN-SYSES-PROBLEM-1
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : Unsatisfiable
 % Rating   : 0.33 v3.1.0, 0.50 v2.7.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Status (intuit.) : Open (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   35 (   1 unit)
 %            Number of atoms       :  325 ( 325 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG199+1 : ILTP v1.1.0
+% File     : ALG199+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Quasigroups 7 QG5: CPROPS-PAIRWISE-EXCLUSIVE-PROBLEM-2
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.22 v3.1.0, 0.25 v2.7.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Rating (intuit.) : 0.50 v1.0.0
 %
 % Syntax   : Number of formulae    :    7 (   0 unit)
 %            Number of atoms       : 1420 (1420 equality)

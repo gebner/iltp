@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET679+3 : ILTP v1.1.0
+% File     : SET679+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : The identity relation on D is not the empty set
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -14,7 +14,7 @@
 % Rating   : 0.27 v3.1.0, 0.22 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.12 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   24 (   4 unit)
 %            Number of atoms       :   82 (   4 equality)

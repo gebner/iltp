@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT022+1 : ILTP v1.1.0
+% File     : MGT022+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Decreasing resource availability affects FMS more than EPs
 % Version  : [PB+94] axioms.
@@ -16,9 +16,9 @@
 %          : L4 [PB+94]
 
 % Status   : Theorem
-% Rating   : 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
+% Rating (intuit.) : 0.00 v1.0.0
 % Rating (intuit.) : 0.00 v1.1
 %
 % Syntax   : Number of formulae    :    4 (   1 unit)

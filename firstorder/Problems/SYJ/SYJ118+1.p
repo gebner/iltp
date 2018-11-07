@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ118+1 : ILTP v1.1.0
+% File     : SYJ118+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : 
 % Version  : Especial.
@@ -19,7 +19,7 @@
 % Names    : deadlock2 : JProver test formulae (2000)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : Some weired LJ deadlock
@@ -30,8 +30,8 @@
 %--------------------------------------------------------------------------
 fof(con,conjecture,(
 (( ! [X] : ( ! [Y] : ( p(X, Y) | b(X, Y) )) ) &
-( ( ? [X] : ( ? [Y] : p(X, Y))) => ( ? [A] : a(A, C))) & 
-( ! [Z] : ( a(Z, C) => ( ? [B] : ~(p(Z, B)))) )) =>
+( ( ? [X] : ( ? [Y] : p(X, Y))) => ( ? [A] : a(A, c))) & 
+( ! [Z] : ( a(Z, c) => ( ? [B] : ~(p(Z, B)))) )) =>
 ( ? [X] : ( ? [Y] : b(X, Y)))
 )).
 

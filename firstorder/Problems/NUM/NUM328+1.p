@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM328+1 : ILTP v1.1.0
+% File     : NUM328+1 : ILTP v1.1.1
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : ?1 + ? = ?1
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.64 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :  402 ( 375 unit)
 %            Number of atoms       :  473 (   5 equality)

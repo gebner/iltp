@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET667+3 : ILTP v1.1.0
+% File     : SET667+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : Id on A subset of R => A subset domain R & A subset range R
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -16,7 +16,7 @@
 % Rating   : 0.55 v3.1.0, 0.67 v2.7.0, 0.83 v2.6.0, 0.57 v2.5.0, 0.62 v2.4.0, 0.75 v2.3.0, 0.67 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   32 (   2 unit)
 %            Number of atoms       :  124 (   4 equality)

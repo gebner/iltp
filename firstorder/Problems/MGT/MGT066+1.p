@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT066+1 : ILTP v1.1.0
+% File     : MGT066+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Inequalities.
 % Version  : [Han98] axioms.
@@ -14,8 +14,8 @@
 % Status   : Satisfiable
 % Rating   : 0.67 v3.1.0, 0.33 v2.7.0, 0.50 v2.6.0, 0.67 v2.5.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    6 (   0 unit)
 %            Number of atoms       :   16 (   3 equality)

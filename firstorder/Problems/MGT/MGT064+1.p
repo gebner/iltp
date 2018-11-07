@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT064+1 : ILTP v1.1.0
+% File     : MGT064+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Conditions for a decreasing then increasing hazard of mortality
 % Version  : [Han98] axioms.
@@ -19,7 +19,7 @@
 % Rating   : 0.55 v3.1.0, 0.67 v2.6.0, 0.83 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   20 (   6 unit)
 %            Number of atoms       :   77 (  12 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET105+1 : ILTP v1.1.0
+% File     : SET105+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Special member 3 of an ordered pair
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 1.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   96 (  17 equality)

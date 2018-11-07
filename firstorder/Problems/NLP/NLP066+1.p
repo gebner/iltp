@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP066+1 : ILTP v1.1.0
+% File     : NLP066+1 : ILTP v1.1.1
 % Domain   : Natural Language Processing
 % Problem  : A man comes out of the bathroom, problem 8
 % Version  : [Bos00b] axioms.
@@ -15,8 +15,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v2.7.0, 0.33 v2.6.0, 0.00 v2.4.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   68 (   0 equality)

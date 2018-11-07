@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET666+3 : ILTP v1.1.0
+% File     : SET666+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : The identity relation on X is a relation from X to X
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -14,7 +14,7 @@
 % Rating   : 0.36 v3.1.0, 0.33 v2.6.0, 0.29 v2.5.0, 0.25 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   25 (   2 unit)
 %            Number of atoms       :   88 (   2 equality)

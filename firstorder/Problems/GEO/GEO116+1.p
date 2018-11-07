@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO116+1 : ILTP v1.1.0
+% File     : GEO116+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Open curve betweenness property for three points
 % Version  : [EHK99] axioms.
@@ -12,11 +12,11 @@
 % Source   : [KE99]
 % Names    : Corollary 3.9 [KE99]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   18 (   1 unit)
 %            Number of atoms       :   83 (  14 equality)

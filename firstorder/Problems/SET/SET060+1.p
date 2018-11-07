@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET060+1 : ILTP v1.1.0
+% File     : SET060+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Nothing in the intersection of a set and its complement
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.09 v3.1.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  17 unit)
 %            Number of atoms       :   94 (  16 equality)

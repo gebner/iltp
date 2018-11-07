@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV226+1 : ILTP v1.1.0
+% File     : SWV226+1 : ILTP v1.1.1
 % Domain   : Software Verification
 % Problem  : Simplified proof obligation quaternion_ds1_symm_0601
 % Version  : [DFS04] axioms : Especial.
@@ -16,7 +16,7 @@
 % Rating   : 0.09 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   83 (  48 unit)
 %            Number of atoms       :  281 ( 146 equality)

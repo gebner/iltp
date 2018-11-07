@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO115+1 : ILTP v1.1.0
+% File     : GEO115+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Basic property of orderings on linear structures 5
 % Version  : [EHK99] axioms.
@@ -14,10 +14,9 @@
 %          : T8 [EHK99]
 
 % Status   : CounterSatisfiable
-% Rating   : 1.00 v2.4.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   18 (   1 unit)
 %            Number of atoms       :   78 (  12 equality)

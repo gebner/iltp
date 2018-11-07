@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO100+1 : ILTP v1.1.0
+% File     : GEO100+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Subcurves with common endpoint can be complemented
 % Version  : [EHK99] axioms.
@@ -13,10 +13,10 @@
 % Names    : Theorem 2.18 [KE99]
 %            T2 [EHK99]
 
-% Status   : Unknown
-% Rating   : 1.00 v2.4.0
+% Status   : Unsolved
 %
 % Status (intuit.) : Open
+% Rating (intuit.) : 1.00 v1.0.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)

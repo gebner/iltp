@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC414+1 : ILTP v1.1.0
+% File     : SWC414+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_swap_x_swap_tos
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  424 (  80 equality)

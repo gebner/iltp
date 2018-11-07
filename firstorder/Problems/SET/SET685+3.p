@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET685+3 : ILTP v1.1.0
+% File     : SET685+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : y in R (X to Y) o D1 iff ?x in D : <x,y> in R & x in D1
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -15,7 +15,7 @@
 % Rating   : 0.45 v3.1.0, 0.56 v2.7.0, 0.50 v2.6.0, 0.43 v2.5.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   28 (   2 unit)
 %            Number of atoms       :  123 (   6 equality)

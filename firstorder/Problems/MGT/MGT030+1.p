@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT030+1 : ILTP v1.1.0
+% File     : MGT030+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Earliest time point when FM growth rate exceeds EP growth rate
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -16,7 +16,7 @@
 % Rating   : 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       :   23 (   0 equality)

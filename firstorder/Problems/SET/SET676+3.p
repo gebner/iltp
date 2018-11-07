@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET676+3 : ILTP v1.1.0
+% File     : SET676+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : X x X is a binary relation on X
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -14,7 +14,7 @@
 % Rating   : 0.18 v3.1.0, 0.11 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.12 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   20 (   1 unit)
 %            Number of atoms       :   77 (   2 equality)

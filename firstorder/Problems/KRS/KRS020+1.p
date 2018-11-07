@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS020+1 : ILTP v1.1.0
+% File     : KRS020+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The union of two classes can be defined using OWL Lite 
 % Version  : Especial.
@@ -14,8 +14,8 @@
 % Status   : Satisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   11 (   0 unit)
 %            Number of atoms       :   29 (   0 equality)

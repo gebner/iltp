@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET643+3 : ILTP v1.1.0
+% File     : SET643+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : X x Y is a relation from X to Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   20 (   1 unit)
 %            Number of atoms       :   82 (   2 equality)

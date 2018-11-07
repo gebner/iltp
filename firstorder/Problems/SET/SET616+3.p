@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET616+3 : ILTP v1.1.0
+% File     : SET616+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X \ Y = Y \ X, then X = Y
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -16,7 +16,7 @@
 % Rating   : 0.27 v3.1.0, 0.33 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    7 (   1 unit)
 %            Number of atoms       :   18 (   5 equality)

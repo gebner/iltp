@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS165+1 : ILTP v1.1.0
+% File     : KRS165+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Two classes may be different names for the same set of individuals
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.1.0
 %
 % Syntax   : Number of formulae    :    4 (   0 unit)
 %            Number of atoms       :   14 (   0 equality)

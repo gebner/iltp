@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS140+1 : ILTP v1.1.0
+% File     : KRS140+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Test illustrating extensional semantics of owl:TransitiveProperty
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   15 (   4 unit)
 %            Number of atoms       :   40 (   8 equality)

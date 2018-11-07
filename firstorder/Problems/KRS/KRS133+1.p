@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS133+1 : ILTP v1.1.0
+% File     : KRS133+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : How to express mutual disjointness between classes
 % Version  : Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.78 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :  125 (  78 unit)
 %            Number of atoms       :  328 (  86 equality)

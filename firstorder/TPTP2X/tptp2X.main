@@ -94,39 +94,41 @@ declare_TPTP_operators:-
 %----confuse tptp2X_install
 :-compile('format.bliksem').
 :-compile('format.carine').
-%:-compile('format.code').
+:-compile('format.code').
 :-compile('format.dedam').
 :-compile('format.dimacs').
 :-compile('format.dfg').
 :-compile('format.eqp').
-%:-compile('format.finder').
-%:-compile('format.glides').
-%:-compile('format.ilf').
+:-compile('format.finder').
+:-compile('format.gandalf').
+:-compile('format.glides').
+:-compile('format.ilf').
 :-compile('format.kif').
-%:-compile('format.tap').
-%:-compile('format.leantap').
+:-compile('format.tap').
+:-compile('format.leantap').
 :-compile('format.mace4').
-%:-compile('format.math').
-%:-compile('format.meteor').
-%:-compile('format.mgtp').
-%:-compile('format.omdoc').
-%:-compile('format.oscar').
+:-compile('format.math').
+:-compile('format.meteor').
+:-compile('format.mgtp').
+:-compile('format.omdoc').
+:-compile('format.oscar').
 :-compile('format.otter').
 :-compile('format.protein').
 :-compile('format.prover9').
-%:-compile('format.pttp').
-%:-compile('format.satchmo').
+:-compile('format.pttp').
+:-compile('format.satchmo').
 :-compile('format.scott').
-%:-compile('format.sem').
+:-compile('format.sem').
 :-compile('format.setheo').
-%:-compile('format.sprfn').
-%:-compile('format.thinker').
+:-compile('format.sprfn').
+:-compile('format.thinker').
 :-compile('format.oldtptp').
 :-compile('format.tptp').
 :-compile('format.prefix').
 :-compile('format.waldmeister').
 :-compile('format.ft').
 :-compile('format.ftprolog').
+:-compile('format.intprop').
 :-compile('format.jprover').
 :-compile('format.leancop').
 :-compile('format.ljt').
@@ -808,16 +810,17 @@ output_formulae_in_format(Header,[],OutputFormulae,schulz,schulz,_):-
     write(' : '),
     output_formulae(OutputFormulae,Header,schulz,schulz).
 
+%%% no comments
 output_formulae_in_format(FileHeader,IncludeDirectives,OutputFormulae,
 OutputFormat,FormatName,CommentAtom):-
 %----Output the file header
-    output_separator_line(CommentAtom),
-    output_file_header(FileHeader,CommentAtom),
-    output_separator_line(CommentAtom),
+%    output_separator_line(CommentAtom),
+%    output_file_header(FileHeader,CommentAtom),
+%    output_separator_line(CommentAtom),
     output_include_directives(IncludeDirectives,CommentAtom,FormatName),
     output_formulae(OutputFormulae,FileHeader,OutputFormat,FormatName),
 %----Put a comment line
-    output_separator_line(CommentAtom),
+%    output_separator_line(CommentAtom),
     !.
 
 %----Error case. Don't fail - the file still has to be closed.

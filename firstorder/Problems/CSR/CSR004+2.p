@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : CSR004+2 : ILTP v1.1.0
+% File     : CSR004+2 : ILTP v1.1.1
 % Domain   : Commonsense Reasoning
 % Problem  : Overflow happens at time 3
 % Version  : [Mue04] axioms : Augmented > Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.09 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :   57 (  27 unit)
 %            Number of atoms       :  138 (  40 equality)

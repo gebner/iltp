@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ056+2 : ILTP v1.1.0
+% File     : GEJ056+2 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Existence. Example 1
 % Version  : [D97],[D98] axioms : Especial.
@@ -10,9 +10,9 @@
 %                  of Pure and Applied Logic 76 (2): 169-200, 1995.
 % Source   : [P95]
 % Names    :
-
+%
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.50 v1.1.0
 % Syntax   : 
 % Comments :
 %--------------------------------------------------------------------------

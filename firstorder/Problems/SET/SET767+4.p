@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET767+4 : ILTP v1.1.0
+% File     : SET767+4 : ILTP v1.1.1
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Equivalence classes on E are power_set E 
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.36 v3.1.0, 0.33 v2.7.0, 0.17 v2.6.0, 0.29 v2.5.0, 0.38 v2.4.0, 0.25 v2.3.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)
 %            Number of atoms       :   70 (   4 equality)

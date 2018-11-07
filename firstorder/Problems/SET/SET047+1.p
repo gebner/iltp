@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET047+1 : ILTP v1.1.0
+% File     : SET047+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Set equality is symmetric
 % Version  : Especial.
@@ -17,7 +17,7 @@
 % Rating   : 0.22 v3.1.0, 0.17 v2.7.0, 0.00 v2.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :    2 (   0 unit)
 %            Number of atoms       :    5 (   0 equality)

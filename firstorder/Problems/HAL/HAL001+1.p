@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : HAL001+1 : ILTP v1.1.0
+% File     : HAL001+1 : ILTP v1.1.1
 % Domain   : Homological Algebra
 % Problem  : Short Five Lemma, Part 1
 % Version  : [TPTP] axioms.
@@ -9,11 +9,11 @@
 % Source   : [TPTP]
 % Names    :
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.6.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   31 (  18 unit)
 %            Number of atoms       :   84 (  16 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET675+3 : ILTP v1.1.0
+% File     : SET675+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : R o R^-1(Y) is the range of R & R^-1(R o X) is the domain of R
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -16,7 +16,7 @@
 % Rating   : 0.27 v3.1.0, 0.22 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.12 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   36 (   2 unit)
 %            Number of atoms       :  135 (  12 equality)

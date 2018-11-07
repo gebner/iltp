@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV040+1 : ILTP v1.1.0
+% File     : SWV040+1 : ILTP v1.1.1
 % Domain   : Software Verification
 % Problem  : Unsimplified proof obligation gauss_init_0073
 % Version  : [DFS04] axioms : Especial.
@@ -17,7 +17,7 @@
 % Rating   : 1.00 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   83 (  48 unit)
 %            Number of atoms       :  213 (  80 equality)

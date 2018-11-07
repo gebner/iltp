@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : GRP012+5 : ILTP v1.1.0
+% File     : GRP012+5 : ILTP v1.1.1
 % Domain   : Group Theory
 % Problem  : Inverse of products = Product of inverses
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   16 (   0 equality)

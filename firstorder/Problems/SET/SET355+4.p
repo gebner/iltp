@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET355+4 : ILTP v1.1.0
+% File     : SET355+4 : ILTP v1.1.1
 % Domain   : Set Theory (Naive)
 % Problem  : If X is in Y, then X is a subset of the sum of Y
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.18 v3.1.0, 0.11 v2.7.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   1 unit)
 %            Number of atoms       :   31 (   3 equality)

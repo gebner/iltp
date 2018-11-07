@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ013+1 : ILTP v1.1.0
+% File     : SYJ013+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Using Existence-quantor
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Names    : ft4.1 : Ft benchmark formulae (pred.) (1992)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Rating (intuit.) : 0.50 v1.0.0
 %
 
 % Comments : 

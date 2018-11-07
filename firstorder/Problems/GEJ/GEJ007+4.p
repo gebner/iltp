@@ -1,7 +1,7 @@
 %--------------------------------------------------------------------------
-% File     : GEJ007+4 : ILTP v1.1.0
+% File     : GEJ007+4 : ILTP v1.1.1
 % Domain   : Constructive Geometry
-% Problem  : Lemma 4.1.i.l (Theorems 4: symmetry in apartness and incidence)
+% Problem  : Lemma 4.1.ii.l (Theorems 4: symmetry in apartness and incidence)
 % Version  : [D97],[D98],[T96] axioms : Especial.
 % English  : If two lines are convergent and a point is apart from at least
 %          : one of these lines, then this point is distinct from the
@@ -15,7 +15,7 @@
 % Names    :
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.1.0
 %
 % Comments : Shortened and Reduced axioms
 %--------------------------------------------------------------------------

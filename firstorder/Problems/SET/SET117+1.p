@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET117+1 : ILTP v1.1.0
+% File     : SET117+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Corollary 1 to every ordered pair being a set
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.09 v3.1.0, 0.11 v2.7.0, 0.17 v2.6.0, 0.14 v2.5.0, 0.12 v2.4.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   95 (  17 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN051+1 : ILTP v1.1.0
+% File     : SYN051+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Pelletier Problem 21
 % Version  : Especial.
@@ -16,7 +16,7 @@
 % Rating   : 0.11 v3.1.0, 0.00 v2.5.0, 0.33 v2.4.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       :    6 (   0 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG060+1 : ILTP v1.1.0
+% File     : ALG060+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Loops 5: CPROPS-PAIRWISE-EXCLUSIVE-PROBLEM-15
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.78 v3.1.0, 0.89 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    7 (   0 unit)
 %            Number of atoms       :  654 ( 654 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET623+3 : ILTP v1.1.0
+% File     : SET623+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : (X sym\ Y) sym\ Z = X sym\ (Y sym\ Z)
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -13,11 +13,11 @@
 % Source   : [ILF]
 % Names    : BOOLE (99) [TS89] 
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   15 (  12 unit)
 %            Number of atoms       :   21 (  13 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ203+2.016 : ILTP v1.1.0
+% File     : SYJ209+1.016 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Formulae requiring many contractions
 % Version  : Especial.
@@ -18,8 +18,8 @@
 % Source   : [Dyc97]
 % Names    : con_n16 : Dyckhoff's benchmark formulas (1997)
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.0.0
 %
 
 % Comments : "proof in LJ needs n contractions" [Dyc97]

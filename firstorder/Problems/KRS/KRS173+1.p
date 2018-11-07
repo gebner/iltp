@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS173+1 : ILTP v1.1.0
+% File     : KRS173+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A simple infinite loop for implementors to avoid
 % Version  : Especial.
@@ -13,8 +13,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    5 (   1 unit)
 %            Number of atoms       :   17 (   0 equality)

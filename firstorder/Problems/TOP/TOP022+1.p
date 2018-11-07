@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : TOP022+1 : ILTP v1.1.0
+% File     : TOP022+1 : ILTP v1.1.1
 % Domain   : Topology (Homotopy theory)
 % Problem  : Homotopy groups
 % Version  : [Shu96] axioms : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    4 (   0 unit)
 %            Number of atoms       :   12 (   0 equality)

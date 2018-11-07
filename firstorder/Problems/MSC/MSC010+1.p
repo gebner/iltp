@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : MSC010+1 : ILTP v1.1.0
+% File     : MSC010+1 : ILTP v1.1.1
 % Domain   : Miscellaneous
 % Problem  : Simple, but hard, obligation from proof verification
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.82 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    2 (   0 unit)
 %            Number of atoms       :  136 (  30 equality)

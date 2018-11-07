@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO114+1 : ILTP v1.1.0
+% File     : GEO114+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Basic property of orderings on linear structures 4
 % Version  : [EHK99] axioms.
@@ -12,10 +12,10 @@
 % Names    : Theorem 3.8 (4) [KE99]
 %          : T7 [EHK99]
 
-% Status   : Unknown
-% Rating   : 1.00 v2.4.0
+% Status   : Unsolved
 %
 % Status (intuit.) : Open
+% Rating (intuit.) : 1.00 v1.0.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :   18 (   1 unit)

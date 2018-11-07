@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PLA026+1 : ILTP v1.1.0
+% File     : PLA026+1 : ILTP v1.1.1
 % Domain   : Planning
 % Problem  : Blocks 3/2/1, 5/4 => 5/3, 1, 4/2
 % Version  : [Bau99] axioms.
@@ -14,8 +14,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.33 v3.1.0, 0.67 v2.5.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   69 (  40 unit)
 %            Number of atoms       :  191 (   0 equality)

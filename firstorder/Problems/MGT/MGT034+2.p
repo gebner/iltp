@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT034+2 : ILTP v1.1.0
+% File     : MGT034+2 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favors FMs above EPs until critical point reached
 % Version  : [PM93] axioms.
@@ -15,9 +15,9 @@
 %          : T3 [PB+94]
 
 % Status   : Theorem
-% Rating   : 0.18 v3.1.0, 0.33 v2.6.0, 0.29 v2.5.0, 0.25 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
+% Rating (intuit.) : 1.00 v1.0.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :   21 (   0 unit)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ204+1.004 : ILTP v1.1.0
+% File     : SYJ204+1.004 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Formulae with normal natural deduction proofs only of exponential size
 % Version  : Especial.
@@ -16,7 +16,7 @@
 % Names    : schwicht_p4 : Dyckhoff's benchmark formulas (1997)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : "...no normal natural deduction proof of size less than an

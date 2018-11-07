@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP034+1 : ILTP v1.1.0
+% File     : NLP034+1 : ILTP v1.1.1
 % Domain   : Natural Language Processing
 % Problem  : Three young guys, problem 9
 % Version  : [Bos00b] axioms.
@@ -14,8 +14,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.50 v2.7.0, 0.83 v2.6.0, 0.75 v2.5.0, 0.67 v2.4.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   72 (   0 equality)

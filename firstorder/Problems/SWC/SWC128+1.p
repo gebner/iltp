@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC128+1 : ILTP v1.1.0
+% File     : SWC128+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_pr_works_always_x_filter_segment
 % Version  : [Wei00] axioms : Biased.
@@ -18,7 +18,7 @@
 % Rating   : 0.27 v3.1.0, 0.78 v2.7.0, 0.67 v2.6.0, 0.83 v2.5.0, 1.00 v2.4.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.1.0, 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (  10 unit)
 %            Number of atoms       :  395 (  71 equality)

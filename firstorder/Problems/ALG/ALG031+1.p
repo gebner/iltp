@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG031+1 : ILTP v1.1.0
+% File     : ALG031+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Groups 6: REPRESENTATIVES-PAIRWISE-NOT-ISO-PROBLEM-1
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.22 v3.1.0, 0.33 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    6 (   0 unit)
 %            Number of atoms       :  294 ( 294 equality)

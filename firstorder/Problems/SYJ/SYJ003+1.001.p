@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ003+1 : ILTP v1.1.0
+% File     : SYJ003+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Alternations of quantifiers
 % Version  : Especial.
@@ -15,7 +15,7 @@
 % Names    : 
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.1.0
 %
 
 % Comments : 

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT062+1 : ILTP v1.1.0
+% File     : MGT062+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Condictions for decreasing hazard of mortality
 % Version  : [Han98] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 0.36 v3.1.0, 0.56 v2.7.0, 0.33 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   14 (   1 unit)
 %            Number of atoms       :   63 (  13 equality)

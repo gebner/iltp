@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ047+1 : ILTP v1.1.0
+% File     : PUZ047+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : Taking the wolf, goat, and cabbage across river
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.00 v2.5.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   30 (   0 equality)

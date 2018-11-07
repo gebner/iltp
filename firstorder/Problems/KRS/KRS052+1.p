@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS052+1 : ILTP v1.1.0
+% File     : KRS052+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Integer multiplication in OWL DL, interacting with infinity
 % Version  : Especial.
@@ -15,8 +15,8 @@
 % Status   : Satisfiable
 % Rating   : 0.33 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   39 (   0 unit)
 %            Number of atoms       :  161 (  60 equality)

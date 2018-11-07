@@ -23,7 +23,7 @@ fof(ax2,axiom,(
 ! [L,M,N] : (((~ undir(L,M)) & (~ undir(L,N))) => (~ undir(M,N))))).
 
 fof(ax3,axiom,(
-! [A,B,L] : ((~ (undir(L,M) & undir(L,rev(M)))) <=> ((~ undir(L,M)) | (~ undir(L,rev(M))))))).
+! [L,M] : ((~ (undir(L,M) & undir(L,rev(M)))) <=> ((~ undir(L,M)) | (~ undir(L,rev(M))))))).
 
 fof(ax3,axiom,(
 ! [L,M,N] : (((~ undir(L,M) | (~ undir(L,rev(M)))) & (~ undir(L,N) | (~ undir(L,rev(N))))) => (~ undir(M,N) | (~ undir(M,rev(N))))))).

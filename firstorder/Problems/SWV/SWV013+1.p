@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWV013+1 : ILTP v1.1.0
+% File     : SWV013+1 : ILTP v1.1.1
 % Domain   : Software Verification
 % Problem  : Fact 5 of the Neumann-Stubblebine analysis
 % Version  : [Wei99] axioms.
@@ -13,8 +13,8 @@
 % Status   : Satisfiable
 % Rating   : 0.00 v3.1.0, 0.33 v2.7.0, 0.00 v2.6.0, 0.25 v2.5.0, 0.00 v2.4.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.50 v1.1
+% Status (intuit.) : Non-Theorem (Problem negated)
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :   28 (  12 unit)
 %            Number of atoms       :   71 (   0 equality)

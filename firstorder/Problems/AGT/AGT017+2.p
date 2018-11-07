@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : AGT017+2 : ILTP v1.1.0
+% File     : AGT017+2 : ILTP v1.1.1
 % Domain   : Agents
 % Problem  : Problem for the CPlanT system
 % Version  : [Bar03] axioms : Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.18 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.0.0
 %
 % Syntax   : Number of formulae    :  923 ( 891 unit)
 %            Number of atoms       : 1023 (   2 equality)

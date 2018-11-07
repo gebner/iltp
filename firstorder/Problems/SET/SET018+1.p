@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET018+1 : ILTP v1.1.0
+% File     : SET018+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Second components of equal ordered pairs are equal
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.
@@ -14,7 +14,7 @@
 % Rating   : 0.91 v3.1.0, 1.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   42 (  16 unit)
 %            Number of atoms       :   96 (  18 equality)

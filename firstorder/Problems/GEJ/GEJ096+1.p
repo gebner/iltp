@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ096+1 : ILTP v1.1.0
+% File     : GEJ096+1 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Theorem 6.7 (Ordered Geometry)
 % Version  : [P98] axioms.
@@ -10,9 +10,9 @@
 %                  1998.
 % Source   : [P98]
 % Names    :
-
+%
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 % Syntax   : 
 % Comments :
 %--------------------------------------------------------------------------

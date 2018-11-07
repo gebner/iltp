@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT025+1 : ILTP v1.1.0
+% File     : MGT025+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Constant population means opposite growth rates
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.
@@ -17,7 +17,7 @@
 % Rating   : 0.36 v3.1.0, 0.44 v2.7.0, 0.50 v2.6.0, 0.43 v2.5.0, 0.38 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    8 (   0 unit)
 %            Number of atoms       :   49 (   9 equality)

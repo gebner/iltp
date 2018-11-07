@@ -127,6 +127,8 @@ declare_TPTP_operators:-
 %:-['format.waldmeister'].
 %:-compile('format.ft').
 %:-compile('format.ftprolog').
+%:-compile('format.gandalf').
+%:-compile('format.intprop').
 %:-compile('format.jprover').
 %:-compile('format.leancop').
 %:-compile('format.ljt').

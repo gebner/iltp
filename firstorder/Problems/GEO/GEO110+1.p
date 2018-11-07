@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO110+1 : ILTP v1.1.0
+% File     : GEO110+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Betweenness for closed curves
 % Version  : [EHK99] axioms.
@@ -10,11 +10,11 @@
 % Source   : [KE99]
 % Names    : Theorem 3.7 [KE99]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   18 (   1 unit)
 %            Number of atoms       :   81 (  14 equality)

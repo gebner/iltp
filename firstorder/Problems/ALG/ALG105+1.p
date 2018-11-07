@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG105+1 : ILTP v1.1.0
+% File     : ALG105+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Quasigroups 4: PROP-ISO-COMPLETE-75
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.22 v3.1.0, 0.00 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   26 (   0 unit)
 %            Number of atoms       : 1008 (1008 equality)

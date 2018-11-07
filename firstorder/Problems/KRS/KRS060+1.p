@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS060+1 : ILTP v1.1.0
+% File     : KRS060+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Description cannot be expressed as a multicomponent restriction 
 % Version  : Especial.
@@ -14,8 +14,8 @@
 % Status   : Satisfiable
 % Rating   : 0.00 v3.1.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    5 (   1 unit)
 %            Number of atoms       :    9 (   0 equality)

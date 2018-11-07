@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : CSR005+2 : ILTP v1.1.0
+% File     : CSR005+2 : ILTP v1.1.1
 % Domain   : Commonsense Reasoning
 % Problem  : Filling at time 3
 % Version  : [Mue04] axioms : Augmented > Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.82 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   56 (  26 unit)
 %            Number of atoms       :  137 (  40 equality)

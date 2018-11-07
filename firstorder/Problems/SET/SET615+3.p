@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET615+3 : ILTP v1.1.0
+% File     : SET615+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : (X U Y) \ Z = (X \ Z) U (Y \ Z)
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -16,7 +16,7 @@
 % Rating   : 0.64 v3.1.0, 0.67 v2.7.0, 0.83 v2.6.0, 0.86 v2.5.0, 0.88 v2.4.0, 0.50 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    8 (   3 unit)
 %            Number of atoms       :   18 (   4 equality)

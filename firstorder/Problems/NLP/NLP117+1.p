@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP117+1 : ILTP v1.1.0
+% File     : NLP117+1 : ILTP v1.1.1
 % Domain   : Natural Language Processing
 % Problem  : An old dirty white Chevy, problem 4
 % Version  : [Bos00b] axioms.
@@ -16,7 +16,7 @@
 % Rating   : 0.33 v3.1.0, 0.67 v2.7.0, 0.33 v2.6.0, 0.00 v2.4.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   68 (   0 equality)

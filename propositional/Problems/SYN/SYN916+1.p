@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN916+1 : ILTP v1.1.0
+% File     : SYN916+1 : ILTP v1.1.1
 % Domain   : Syntactic
 % Problem  : FALSE
 % Version  : Biased.
@@ -13,7 +13,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   1 unit)
 %            Number of atoms       :    1 (   0 equality)

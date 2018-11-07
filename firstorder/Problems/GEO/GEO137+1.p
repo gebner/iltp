@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO137+1 : ILTP v1.1.0
+% File     : GEO137+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Identical oriented lines
 % Version  : [EHK99] axioms.
@@ -12,10 +12,10 @@
 % Names    : Theorem 4.20 [KE99]
 %          : T11 [EHK99]
 
-% Status   : Unknown
-% Rating   : 1.00 v2.4.0
+% Status   : Unsolved
 %
 % Status (intuit.) : Open
+% Rating (intuit.) : 1.00 v1.0.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :   28 (   2 unit)

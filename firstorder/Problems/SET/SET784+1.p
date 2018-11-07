@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET784+1 : ILTP v1.1.0
+% File     : SET784+1 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Mapping axioms for the SET006+0 set theory axioms
 % Version  : [Pas99] axioms.
@@ -12,8 +12,8 @@
 % Status   : Satisfiable
 % Rating   : 1.00 v3.1.0, 0.83 v2.7.0, 0.67 v2.6.0, 1.00 v2.5.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   28 (   1 unit)
 %            Number of atoms       :  128 (   6 equality)

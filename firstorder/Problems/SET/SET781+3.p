@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET781+3 : ILTP v1.1.0
+% File     : SET781+3 : ILTP v1.1.1
 % Domain   : Set Theory
 % Problem  : Set theory axioms based on NBG set theory
 % Version  : [Quaife, 1992] axioms : Reduced & Augmented > Complete.
@@ -13,8 +13,8 @@
 % Status   : Satisfiable
 % Rating   : 1.00 v3.1.0, 0.83 v2.7.0, 0.67 v2.6.0, 1.00 v2.5.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved (Problem negated)
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   41 (  16 unit)
 %            Number of atoms       :   93 (  16 equality)

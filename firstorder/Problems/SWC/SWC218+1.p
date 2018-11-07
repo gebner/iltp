@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC218+1 : ILTP v1.1.0
+% File     : SWC218+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_pst_not_nil_x_insert_some
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 0.36 v3.1.0, 0.44 v2.7.0, 0.33 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  406 (  75 equality)

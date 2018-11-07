@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ111+1 : ILTP v1.1.0
+% File     : SYJ111+1 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : 
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Names    : subst : JProver test formulae (2000)
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : Making branches independent from eigenvariables introduced 

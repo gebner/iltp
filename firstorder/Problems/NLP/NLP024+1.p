@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP024+1 : ILTP v1.1.0
+% File     : NLP024+1 : ILTP v1.1.1
 % Domain   : Natural Language Processing
 % Problem  : Mia wants to dance, problem 2 
 % Version  : [Bos00b] axioms.
@@ -14,8 +14,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v3.1.0, 0.17 v2.6.0, 0.00 v2.4.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   74 (   0 unit)
 %            Number of atoms       :  218 (   2 equality)

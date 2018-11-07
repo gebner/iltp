@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG028+1 : ILTP v1.1.0
+% File     : ALG028+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Groups 6: CPROPS-PAIRWISE-EXCLUSIVE-PROBLEM-1
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.11 v2.7.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Rating (intuit.) : 0.25 v1.1.0, 0.50 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   1 unit)
 %            Number of atoms       :  864 ( 864 equality)

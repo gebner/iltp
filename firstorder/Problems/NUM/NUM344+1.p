@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM344+1 : ILTP v1.1.0
+% File     : NUM344+1 : ILTP v1.1.1
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : x+1 = z => z > x
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.64 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :  402 ( 374 unit)
 %            Number of atoms       :  474 (   5 equality)

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM343+1 : ILTP v1.1.0
+% File     : NUM343+1 : ILTP v1.1.1
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : -1 < ? & ? < 1 => 21 + ? = 21
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.27 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :  402 ( 374 unit)
 %            Number of atoms       :  475 (   5 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN516+1 : ILTP v1.1.0
+% File     : SYN516+1 : ILTP v1.1.1
 % Domain   : Syntactic (Translated)
 % Problem  : ALC, N=5, R=1, L=15, K=3, D=2, P=0, Index=047
 % Version  : Especial.
@@ -14,8 +14,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :  119 (   0 equality)

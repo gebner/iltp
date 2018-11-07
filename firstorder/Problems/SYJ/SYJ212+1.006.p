@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ206+2.006 : ILTP v1.1.0
+% File     : SYJ212+1.006 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Equivalences
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Names    : equiv_n6 : Dyckhoff's benchmark formulas (1997)
 %
 % Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 
 % Comments : this formula is different to the equivalences formulated

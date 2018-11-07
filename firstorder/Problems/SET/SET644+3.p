@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET644+3 : ILTP v1.1.0
+% File     : SET644+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : a in R (X to Y) => ? x, y : a is <x,y> & x in X & y in Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -15,7 +15,7 @@
 % Rating   : 0.27 v3.1.0, 0.44 v2.7.0, 0.33 v2.6.0, 0.29 v2.5.0, 0.25 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   28 (   2 unit)
 %            Number of atoms       :  119 (   8 equality)

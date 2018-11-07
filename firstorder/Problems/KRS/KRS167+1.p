@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS167+1 : ILTP v1.1.0
+% File     : KRS167+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Two classes with the same complete description are equivalent
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.11 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   13 (   0 unit)
 %            Number of atoms       :   44 (  10 equality)

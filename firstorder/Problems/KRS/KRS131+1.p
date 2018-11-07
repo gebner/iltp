@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS131+1 : ILTP v1.1.0
+% File     : KRS131+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The complement of a class can be defined
 % Version  : Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.22 v3.1.0
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :    7 (   0 unit)
 %            Number of atoms       :   20 (   0 equality)

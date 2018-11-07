@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC099+1 : ILTP v1.1.0
+% File     : SWC099+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_ne_segment_front_total1_x_run_eq_front1
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 0.73 v3.1.0, 0.78 v2.7.0, 0.83 v2.6.0, 0.67 v2.5.0, 0.83 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  412 (  75 equality)

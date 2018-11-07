@@ -6,11 +6,25 @@
 %----extended to handle FOF: JO, June 2004
 %========================================================================
 
-%%% Thomas Raths November, 2005: changes due to TPTP3.1.0
+%%% Thomas Raths (TR) November, 2005-: changes due to TPTP3.1.0-
+:-set_flag(print_depth,1000). %%% for Eclipse Prolog
 
 %----------------------------------------------------------------------
 %----Print out a literal with - for negative, nothing for positive.
 %----Use positive representation
+%%% T.R.
+output_leancop_signed_literal(--('$tptp_equal'(X,Y))) :-
+    !, write(' (equal('), write(X), write(' , '), write(Y), write('))').
+
+output_leancop_signed_literal(--('$tptp_not_equal'(X,Y))) :-
+    !, write(' - (equal('), write(X), write(' , '), write(Y), write('))').
+
+output_leancop_signed_literal(++('$tptp_equal'(X,Y))) :-
+    !, write(' - (equal('), write(X), write(' , '), write(Y), write('))').
+
+output_leancop_signed_literal(++('$tptp_not_equal'(X,Y))) :-
+    !, write(' (equal('), write(X), write(' , '), write(Y), write('))').
+
 output_leancop_signed_literal(--Atom):-
     !, write(' '), write(Atom).
 
@@ -32,8 +46,40 @@ output_leancop_literals([FirstLiteral|RestOfLiterals]):-
 %----------------------------------------------------------------------
 %----Print out the clauses in leanCoP format.
 output_leancop_clauses([]).
+%%% for TPTP-v3.1.0 or later
+%%% if clause = $true (or ­($true)), then ignore it,
+%%% if clause = $false (or -($false)), then clause set is valid => add e.g. [truexxx], [-(truexxx)]
+%%% for TPTP-v3.2.0: '$true', '$false', for TPTP-v3.1.0: $true, $false
 
-output_leancop_clauses([input_clause(Name,Status,Literals)|
+output_leancop_clauses([cnf(Name,Status,[++($true)])|
+RestOfClauses]):- !,
+    output_leancop_clauses(RestOfClauses).
+
+output_leancop_clauses([cnf(Name,Status,[--($false)])|
+RestOfClauses]):- !,
+    output_leancop_clauses(RestOfClauses).
+
+output_leancop_clauses([cnf(Name,Status,[++($false)])|
+RestOfClauses]):- !,
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('[truexxx], [-(truexxx)]'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write('  ,'), nl, nl);
+         true),
+    output_leancop_clauses(RestOfClauses).
+
+output_leancop_clauses([cnf(Name,Status,[--($true)])|
+RestOfClauses]):- !,
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('[truexxx], [-(truexxx)]'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write('  ,'), nl, nl);
+         true),
+    output_leancop_clauses(RestOfClauses).
+
+output_leancop_clauses([cnf(Name,Status,Literals)|
 RestOfClauses]):-
     write('% '), write(Name), write(', '),
     write(Status), write('.'), nl,
@@ -44,6 +90,12 @@ RestOfClauses]):-
         (nl, nl, write('  ,'), nl, nl);
          true),
     output_leancop_clauses(RestOfClauses).
+
+%%% for TPTP-v2.7.0 or earlier
+output_leancop_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+        output_leancop_clauses([cnf(Name,Status,Literals)|
+    RestOfClauses]).
 %----------------------------------------------------------------------
 %----Print out the list of input clauses as a formula in leanCoP format.
 output_leancop_formula([]):-
@@ -86,34 +138,30 @@ output_leancop_fof((? [V|L] : A)):-
     output_leancop_fof(? L : A), write(' )').
 output_leancop_fof($true) :- !, write('(true___=>true___)').
 output_leancop_fof($false) :- !, write('(false___ , ~ false___)').
+output_leancop_fof('$tptp_equal'(X,Y)) :- !, write('equal('), 
+                                           write(X), write(' , '), write(Y), write(')').
+output_leancop_fof('$tptp_not_equal'(X,Y)) :- !,  write('(~ ( equal('), 
+                                           write(X), write(' , '), write(Y), write(')))').
 output_leancop_fof(Atom) :- print(Atom).
 %----------------------------------------------------------------------
 %----Print out the formulae in leanCoP format.
 output_leancop_fo_formulae([]).
 
-% for TPTP-v3.1.0 or later
-output_leancop_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_leancop_fof(Formula);
-         output_leancop_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (nl, nl,
-         write('  ,'), nl, nl);
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (nl, nl,
-              write('  =>'), nl, nl);
-             true)),
-    output_leancop_fo_formulae(RestOfFormulae).
+%%% for TPTP-v3.1.0 or later
+output_leancop_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    (Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_leancop_fo_formulae(Formulae)) ;
+      (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_leancop_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+           (nl, nl, write('  =>'), nl, nl)); 
+           (nl, nl, write('  ,'), nl, nl)),
+          output_leancop_fo_formulae(RestOfFormulae)))).
 
-% for TPTP-v2.7.0 or earlier
+
+%%% for TPTP-v2.7.0 or earlier
 output_leancop_fo_formulae([input_formula(Name,Status,Formula)|
 RestOfFormulae]):-
     output_leancop_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
@@ -127,7 +175,14 @@ output_leancop_fo_formula([]):-
 output_leancop_fo_formula(Formulae):-
     nl,
     write('f(('), nl, nl,
+    %%% negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('~ ('), nl) ; true),
     output_leancop_fo_formulae(Formulae), nl, nl,
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
     write(')).'), nl, nl.
 
 %----------------------------------------------------------------------

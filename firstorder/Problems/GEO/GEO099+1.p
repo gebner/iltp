@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO099+1 : ILTP v1.1.0
+% File     : GEO099+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Open subcurves can be complemented to form the sum
 % Version  : [EHK99] axioms.
@@ -11,11 +11,11 @@
 % Source   : [KE99]
 % Names    : Theorem 2.17 [KE99]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)
 %            Number of atoms       :   75 (  12 equality)

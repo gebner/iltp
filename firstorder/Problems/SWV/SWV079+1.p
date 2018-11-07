@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV079+1 : ILTP v1.1.0
+% File     : SWV079+1 : ILTP v1.1.1
 % Domain   : Software Verification
 % Problem  : Unsimplified proof obligation cl5_nebula_array_0020
 % Version  : [DFS04] axioms : Especial.
@@ -17,7 +17,7 @@
 % Rating   : 1.00 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   90 (  55 unit)
 %            Number of atoms       :  214 (  77 equality)

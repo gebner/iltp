@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ005+4 : ILTP v1.1.0
+% File     : GEJ005+4 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Lemma 4.1.i.l (Theorems 4: symmetry in apartness and incidence)
 % Version  : [D97],[D98],[T96] axioms : Especial.
@@ -15,7 +15,7 @@
 % Names    :
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Comments : Shortened and Reduced axioms
 %--------------------------------------------------------------------------

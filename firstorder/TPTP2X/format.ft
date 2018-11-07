@@ -5,6 +5,7 @@
 %----Written by Jens Otten & Thomas Raths, March 2005, adapted Nov 2005
 %========================================================================
 %----------------------------------------------------------------------
+:-set_flag(print_depth,100).
 %----Print out a literal with - for negative, nothing for positive.
 %----Use positive representation
 
@@ -130,7 +131,7 @@ renameVarTptpToFt(A,V) :-
         ).        
 
 
-member_assoc(X,[(Y,K)|_],K) :- X == Y.
+member_assoc(X,[(Y,K)|_],K) :- X == Y, !.
 member_assoc(X,[_|T],K) :- member_assoc(X,T,K).
 
 :- assert(atom_key_list([])). 
@@ -139,26 +140,17 @@ member_assoc(X,[_|T],K) :- member_assoc(X,T,K).
 output_ft_fo_formulae([]).
 
 % for TPTP-v3.1.0 or later
-output_ft_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_ft_fof(Formula);
-         output_ft_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (nl, nl,
-         write(' & '), nl, nl);
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (nl, nl,
-              write(' -> '), nl, nl);
-             true)),
-    output_ft_fo_formulae(RestOfFormulae).
+output_ft_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    ((Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_ft_fo_formulae(Formulae))) ;
+      (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_ft_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+           (nl, nl, write('  -> '), nl, nl)); 
+           (nl, nl, write('  & '), nl, nl)),
+          output_ft_fo_formulae(RestOfFormulae)))).
 
 % for TPTP-v2.7.0 or earlier
 output_ft_fo_formulae([input_formula(Name,Status,Formula)|
@@ -171,7 +163,6 @@ RestOfFormulae]):-
 output_ft_fo_formula([]):-
     !.
 
-% parameters
 output_ft_fo_formula(Formulae):-
     nl,
     write('set forever 1.'), nl,      % contraction deepening is active
@@ -180,7 +171,14 @@ output_ft_fo_formula(Formulae):-
     write('fstack 2000000.'), nl,     % formula stack      
     write('set szsave 10000.'), nl,   % size of save stacks
     nl,
+   % negate problems without conjecture
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write('~ ('), nl) ; true),
     output_ft_fo_formulae(Formulae), 
+    (\+ (member(fof(_,conjecture,_),Formulae);
+         member(input_formula(_,conjecture,_),Formulae)) -> 
+                                             (write(')'), nl); true),
     write('.'), nl, nl.
 
 %----------------------------------------------------------------------

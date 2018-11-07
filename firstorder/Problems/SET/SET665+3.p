@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET665+3 : ILTP v1.1.0
+% File     : SET665+3 : ILTP v1.1.1
 % Domain   : Set Theory (Relations)
 % Problem  : The identity relation on X is a subset of X x X
 % Version  : [Wor89] axioms : Reduced > Incomplete.
@@ -14,7 +14,7 @@
 % Rating   : 0.64 v3.1.0, 0.67 v2.6.0, 0.86 v2.5.0, 0.75 v2.4.0, 0.75 v2.3.0, 0.67 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   28 (   2 unit)
 %            Number of atoms       :  114 (   4 equality)

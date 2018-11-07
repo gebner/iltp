@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : GRP001+6 : ILTP v1.1.0
+% File     : GRP001+6 : ILTP v1.1.1
 % Domain   : Group Theory
 % Problem  : X^2 = identity => commutativity
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.33 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    1 (   0 unit)
 %            Number of atoms       :   16 (   0 equality)

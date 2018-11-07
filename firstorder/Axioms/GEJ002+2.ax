@@ -25,8 +25,8 @@ fof(a1,axiom,(
 )).
 
 
-fof(a1,axiom,(
-! [X,Y,Z] : (con(X,Y) => ((apt(Z,X) | apt(Z,Y)) => dipt(Z,(pt(X,Y)))))
+fof(a2,axiom,(
+! [X,Y,Z] : (con(X,Y) => ((apt(Z,X) | apt(Z,Y)) => dipt(Z,pt(X,Y))))
 )).
 
 %--------------------------------------------------------------------------

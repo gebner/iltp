@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET027+4 : ILTP v1.1.0
+% File     : SET027+4 : ILTP v1.1.1
 % Domain   : Set Theory (Naive)
 % Problem  : Transitivity of subset 
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.09 v3.1.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   1 unit)
 %            Number of atoms       :   32 (   3 equality)

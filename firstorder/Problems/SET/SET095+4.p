@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET095+4 : ILTP v1.1.0
+% File     : SET095+4 : ILTP v1.1.1
 % Domain   : Set Theory (Naive)
 % Problem  : If X is in Y, then the singleton containing X is a subset of Y
 % Version  : [Pas99] axioms.
@@ -13,7 +13,7 @@
 % Rating   : 0.09 v3.1.0, 0.00 v2.6.0, 0.14 v2.5.0, 0.12 v2.4.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   1 unit)
 %            Number of atoms       :   31 (   3 equality)

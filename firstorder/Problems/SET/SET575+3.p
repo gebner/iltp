@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET575+3 : ILTP v1.1.0
+% File     : SET575+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : Trybulec's 15th Boolean property of sets
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -15,7 +15,7 @@
 % Rating   : 0.11 v3.1.0, 0.00 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+% Rating (intuit.) : 0.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    3 (   0 unit)
 %            Number of atoms       :    8 (   0 equality)

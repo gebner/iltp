@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRP396+1 : ILTP v1.1.0
+% File     : GRP396+1 : ILTP v1.1.1
 % Domain   : Group Theory (Named Semigroups)
 % Problem  : Group theory (Named Semigroups) axioms
 % Version  : [Gol93] axioms.
@@ -12,8 +12,8 @@
 % Status   : Satisfiable
 % Rating   : 0.33 v2.7.0, 0.67 v2.5.0
 %
-% Status (intuit.) : Non-Theorem
-% Rating (intuit.) : 0.25 v1.1
+% Status (intuit.) : Non-Theorem (Problem negated)
+% Rating (intuit.) : 0.75 v1.1.0
 %
 % Syntax   : Number of formulae    :    2 (   0 unit)
 %            Number of atoms       :    7 (   1 equality)

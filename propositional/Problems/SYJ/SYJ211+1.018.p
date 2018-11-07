@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ205+2.018 : ILTP v1.1.0
+% File     : SYJ211+1.018 : ILTP v1.1.1
 % Domain   : Intuitionistic Syntactic
 % Problem  : Formulae of Korn & Kreitz
 % Version  : Especial.
@@ -18,8 +18,8 @@
 % Source   : [Dyc97]
 % Names    : kk_n18 : Dyckhoff's benchmark formulas (1997)
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Non-Theorem
+% Rating (intuit.) : 0.75 v1.0.0
 %
 
 % Comments : 

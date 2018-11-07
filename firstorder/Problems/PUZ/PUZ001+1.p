@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ001+1 : ILTP v1.1.0
+% File     : PUZ001+1 : ILTP v1.1.1
 % Domain   : Puzzles
 % Problem  : Dreadbury Mansion
 % Version  : Especial.
@@ -23,7 +23,7 @@
 % Rating   : 0.22 v3.1.0, 0.17 v2.7.0, 0.00 v2.5.0, 0.33 v2.4.0, 0.33 v2.2.1, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   14 (   6 unit)
 %            Number of atoms       :   24 (   5 equality)

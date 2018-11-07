@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT033+2 : ILTP v1.1.0
+% File     : MGT033+2 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favors FMs above EPs until EPs appear
 % Version  : [PM93] axioms.
@@ -14,9 +14,9 @@
 %          : T2 [PB+94]
 
 % Status   : CounterSatisfiable
-% Rating   : 0.00 v3.1.0, 0.33 v2.6.0, 0.50 v2.5.0, 0.67 v2.4.0, 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :   18 (   0 unit)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG210+1 : ILTP v1.1.0
+% File     : ALG210+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Star-algebras are closed under multiplication
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.45 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :    3 (   1 unit)
 %            Number of atoms       :    7 (   3 equality)

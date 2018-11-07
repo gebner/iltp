@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM341+1 : ILTP v1.1.0
+% File     : NUM341+1 : ILTP v1.1.1
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : x + y = z <=> z - y = x & z - x = y
 % Version  : Especial.
@@ -13,7 +13,7 @@
 % Rating   : 0.36 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :  402 ( 374 unit)
 %            Number of atoms       :  475 (   5 equality)

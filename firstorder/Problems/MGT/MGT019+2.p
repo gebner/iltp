@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT019+2 : ILTP v1.1.0
+% File     : MGT019+2 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Growth rate of EPs exceeds that of FMs in stable environments
 % Version  : [PM93] axioms.
@@ -14,9 +14,9 @@
 %          : L1 [PB+94]
 
 % Status   : CounterSatisfiable
-% Rating   : 0.00 v2.1.0
 %
-% Status (intuit.) : Unknown
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :    5 (   0 unit)

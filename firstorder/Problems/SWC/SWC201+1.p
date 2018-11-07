@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC201+1 : ILTP v1.1.0
+% File     : SWC201+1 : ILTP v1.1.1
 % Domain   : Software Creation
 % Problem  : cond_pst_equal3_x_run_eq_max1
 % Version  : [Wei00] axioms.
@@ -18,7 +18,7 @@
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   96 (   9 unit)
 %            Number of atoms       :  411 (  74 equality)

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ005+1 : ILTP v1.1.0
+% File     : PUZ005+1 : ILTP v1.1.1
 % Domain   : Puzzles
 % Problem  : The Lion and the Unicorn
 % Version  : [OS95] axioms.
@@ -16,7 +16,7 @@
 % Rating   : 0.00 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   46 (   7 unit)
 %            Number of atoms       :  110 (   0 equality)

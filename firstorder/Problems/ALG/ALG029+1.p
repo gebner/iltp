@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG029+1 : ILTP v1.1.0
+% File     : ALG029+1 : ILTP v1.1.1
 % Domain   : General Algebra
 % Problem  : Groups 6: CPROPS-SORTED-DISCRIMINANT-PROBLEM-1
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.18 v3.1.0, 0.11 v2.7.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :    5 (   0 unit)
 %            Number of atoms       :   26 (   6 equality)

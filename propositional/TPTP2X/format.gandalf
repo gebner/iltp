@@ -1,0 +1,228 @@
+%========================================================================
+%----This outputs TPTP Problem Set clauses and formulae in a format
+%----acceptable to the Gandlaf system.
+%----adapted format.leancop, 
+%----        Written by Jens Otten, November 2000
+%----        extended to handle FOF: JO, June 2004
+%---to Gandalf-syntax by Thomas Raths, June 2006
+%========================================================================
+%%% Thomas Raths November, 2005: changes due to TPTP3.1.0
+
+% must not contain comments starting with %
+% in order to make tptp2X not writing comments:
+% in tptp2X.main: replace 
+%
+% output_formulae_in_format(FileHeader,IncludeDirectives,OutputFormulae,
+% OutputFormat,FormatName,CommentAtom):-
+% %----Output the file header
+%    output_separator_line(CommentAtom),
+%    output_file_header(FileHeader,CommentAtom),
+%    output_separator_line(CommentAtom),
+%    output_include_directives(IncludeDirectives,CommentAtom,FormatName),
+% %----Put a comment line
+%    output_separator_line(CommentAtom),
+%    !.
+%
+% by
+
+% output_formulae_in_format(FileHeader,IncludeDirectives,OutputFormulae,
+% OutputFormat,FormatName,CommentAtom):-
+%    output_formulae(OutputFormulae,FileHeader,OutputFormat,FormatName),
+%    output_file_header(FileHeader,CommentAtom),
+%   !.
+
+
+
+% example:
+% ((frm
+% (-> (& (all x (p x)) (exist y (q y))) (exist z (v (p z) (- (q z)))))
+% ))
+%
+% syntax:
+% ((frm
+% (< formula >)
+% ))
+% 
+% <constant>, <variable>: a, b, c, a1, x1, X1, ..., 0, 1, ...
+%                         note: not case-sensitive!
+% <function symbol>, <predicate symbol> : f, f1, p, p1, ...
+% 
+% <term>: <function> <term list>
+%         <term list> : (<term1> <term2> ... <term n>) (n>=1)
+%         (note: propositional literal p can be represented as e.g. p a)
+% <atom> : <predicate symbol> (<term1> <term2> ... <term n>)
+% <formula> : <atom>
+% (- <formula>)
+% (& <formula-list>)
+% (v <formula-list>)
+% (-> [<formula1>] <formula2>)
+% (all <variable> (<formula>))
+% (exist <varibale> (<formula>))
+% <formula-list> : <formula1> <formula2> ... <formula n> (n>=1)
+
+%----------------------------------------------------------------------
+%----Print out a literal with - for negative, nothing for positive.
+%----Use positive representation
+output_gandalf_signed_literal(--Atom):-
+    !, write(' '), write(Atom).
+
+output_gandalf_signed_literal(++Atom):-
+    write('-'), write(Atom).
+%----------------------------------------------------------------------
+%----Print out the literals of a clause in gandalf format.
+%----Special case of an empty clause
+output_gandalf_literals([]):-
+    write('[]').
+
+output_gandalf_literals([OneLiteral]):-
+    !, output_gandalf_signed_literal(OneLiteral).
+
+output_gandalf_literals([FirstLiteral|RestOfLiterals]):-
+    output_gandalf_signed_literal(FirstLiteral),
+    write('  ,'), nl, write(' '),
+    output_gandalf_literals(RestOfLiterals).
+%----------------------------------------------------------------------
+%----Print out the clauses in gandalf format.
+output_gandalf_clauses([]).
+
+output_gandalf_clauses([input_clause(Name,Status,Literals)|
+RestOfClauses]):-
+    write('% '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    write('['),
+    output_gandalf_literals(Literals),
+    write(']'),
+    (RestOfClauses\==[]  ->
+        (nl, nl, write('  ,'), nl, nl);
+         true),
+    output_gandalf_clauses(RestOfClauses).
+%----------------------------------------------------------------------
+%----Print out the list of input clauses as a formula in gandalf format.
+output_gandalf_formula([]):-
+    !.
+
+output_gandalf_formula(Clauses):-
+    nl,
+    write('f(['), nl, nl,
+    output_gandalf_clauses(Clauses), nl, nl,
+    write(']).'), nl, nl.
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out the connectives, quantifiers, and literals of a formula
+%----in gandalf format.
+output_gandalf_fof((~ A)):-
+    !, write('(- '), output_gandalf_fof(A), write(' )').
+output_gandalf_fof('|'(A,B) ):-
+    !, write('(v '), output_gandalf_fof(A), write(' '),
+    output_gandalf_fof(B), write(' )').
+output_gandalf_fof((A;B)):-
+    !, write('(v '), output_gandalf_fof(A), write(' '),
+    output_gandalf_fof(B), write(' )').
+output_gandalf_fof((A & B)):-
+    !, write('(& '), output_gandalf_fof(A), write(' '),
+    output_gandalf_fof(B), write(' )').
+output_gandalf_fof((A => B)):-
+    !, write('(-> '), output_gandalf_fof(A), write(' '),
+    output_gandalf_fof(B), write(' )').
+output_gandalf_fof((A <=> B)):-
+    !, write('(& (-> '), output_gandalf_fof(A), write(' '),
+    output_gandalf_fof(B), write(' ) (-> '),
+    output_gandalf_fof(B), write(' '), output_gandalf_fof(A), write(' ))').
+output_gandalf_fof((! [] : A)):- !, output_gandalf_fof(A).
+output_gandalf_fof((! [V|L] : A)):-
+    !, write('(all '), print(V), write(' '),
+    output_gandalf_fof(! L : A), write(' )').
+output_gandalf_fof((? [] : A)):- !, output_gandalf_fof(A).
+output_gandalf_fof((? [V|L] : A)):-
+    !, write('( exist '), print(V), write(' '),
+    output_gandalf_fof(? L : A), write(' )').
+output_gandalf_fof($true) :- !, write('(-> (true___ a) (true___ a))').
+output_gandalf_fof($false) :- !, write('(& (false___ a) (- (false___ a)))').
+output_gandalf_fof(Atom) :- write('('), transpred_gd(Atom), write(')').
+
+% present propos. literals p as p a
+transpred_gd(A) :- atom(A), !, write(A), write(' a').
+transpred_gd(A) :- A=..[B|C],
+                   write(B), write(' '), transterms_gd(C).
+
+transterms_gd([A|T]):- looks_like_a_variable(A), !, print(A),
+                       (T\=[] -> (write(' '), transterms_gd(T)); true).
+transterms_gd([A|T]):- atom(A), !, write(A),
+                       (T\=[] -> (write(' '), transterms_gd(T)); true).
+
+transterms_gd([A|T]):- A=..[B|C], 
+                       write('( '), write(B), write(' '), transterms_gd(C), write(')'),
+                       (T\=[] -> (write(' '), transterms_gd(T)); true).
+
+
+%----------------------------------------------------------------------
+%----Print out the formulae in gandalf format.
+output_gandalf_fo_formulae([]).
+
+% for TPTP-v3.1.0 or later
+output_gandalf_fo_formulae([fof(Name,Status,Formula)|
+RestOfFormulae]):-
+    write('; '), write(Name), write(', '),
+    write(Status), write('.'), nl,
+    (Status==conjecture ->
+         output_gandalf_fof(Formula);
+         output_gandalf_fof(Formula)),
+    ( (RestOfFormulae=[fof(_,axiom,_)|_];
+       RestOfFormulae=[fof(_,lemma,_)|_];
+       RestOfFormulae=[fof(_,definition,_)|_];
+       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
+        (nl, nl);
+         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+             (nl, 
+              % write('(') for &: see down
+              write(')'), nl);
+             true)),
+    output_gandalf_fo_formulae(RestOfFormulae).
+
+% for TPTP-v2.7.0 or earlier
+output_gandalf_fo_formulae([input_formula(Name,Status,Formula)|
+RestOfFormulae]):-
+    output_gandalf_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]).
+
+%----------------------------------------------------------------------
+%----Print out the list of input formulae as a first-order formula in
+%----gandalf format.
+output_gandalf_fo_formula([]):-
+    !.
+
+output_gandalf_fo_formula(Formulae):-
+    write('((frm'), nl,
+    ( Formulae = [fof(_,Status,Formula)|_] ;  Formulae = [input_formula(_,Status,Formula)|_] ),
+    (Status == conjecture ->
+     output_gandalf_fof(Formula);
+     ( (\+ (member(fof(_,conjecture,_),Formulae);
+            member(input_formula(_,conjecture,_),Formulae)) -> 
+            (write('(- (&'), nl,
+             output_gandalf_fo_formulae(Formulae), nl,
+             write('))'));
+            (write('(->'), nl, write('(&'), nl,
+             output_gandalf_fo_formulae(Formulae), nl, 
+             % ')' for & is written above
+             write(')'))))),
+    nl, write('))'), nl.
+
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+%----Print out all the clauses in gandalf format.
+gandalf(gandalf,Clauses,_):-
+    tptp_clauses(Clauses),
+    output_gandalf_formula(Clauses).
+
+%----Print out first-order formula in gandalf format.
+gandalf(gandalf,Formulae,_):-
+    tptp_formulae(Formulae),
+    output_gandalf_fo_formula(Formulae).
+%----------------------------------------------------------------------
+%----Provide information about the gandalf format.
+gandalf_format_information('%','.gandalf').
+%----------------------------------------------------------------------
+%----Provide information about the TPTP file.
+gandalf_file_information(format,gandalf).
+%----------------------------------------------------------------------

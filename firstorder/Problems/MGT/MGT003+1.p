@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT003+1 : ILTP v1.1.0
+% File     : MGT003+1 : ILTP v1.1.1
 % Domain   : Management (Organisation Theory)
 % Problem  : Organizational death rates decrease with age.
 % Version  : [PB+94] axioms.
@@ -13,9 +13,9 @@
 %          : T3FOL2 [PB+94]
 
 % Status   : Theorem
-% Rating   : 0.11 v3.1.0, 0.00 v2.1.0
 %
 % Status (intuit.) : Open
+% Rating (intuit.) : 1.00 v1.0.0
 % Rating (intuit.) : 1.00 v1.1
 %
 % Syntax   : Number of formulae    :    5 (   0 unit)

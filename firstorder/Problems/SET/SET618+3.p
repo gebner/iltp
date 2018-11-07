@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET618+3 : ILTP v1.1.0
+% File     : SET618+3 : ILTP v1.1.1
 % Domain   : Set Theory (Boolean properties)
 % Problem  : The symmetric difference of X and X is the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.
@@ -15,7 +15,7 @@
 % Rating   : 0.18 v3.1.0, 0.11 v2.7.0, 0.00 v2.5.0, 0.12 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1
 %
 % Status (intuit.) : Theorem
-% Rating (intuit.) : 0.75 v1.1
+% Rating (intuit.) : 0.75 v1.1.0, 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   12 (   8 unit)
 %            Number of atoms       :   19 (   8 equality)

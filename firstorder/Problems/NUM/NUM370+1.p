@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM370+1 : ILTP v1.1.0
+% File     : NUM370+1 : ILTP v1.1.1
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : 0 + ! = !
 % Version  : Especial.
@@ -12,8 +12,8 @@
 % Status   : CounterSatisfiable
 % Rating   : 1.00 v3.1.0
 %
-% Status (intuit.) : Unknown
-% Rating (intuit.) : 1.00 v1.1
+% Status (intuit.) : Unsolved
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :  402 ( 375 unit)
 %            Number of atoms       :  473 (   5 equality)

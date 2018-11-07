@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : CSR006+1 : ILTP v1.1.0
+% File     : CSR006+1 : ILTP v1.1.1
 % Domain   : Commonsense Reasoning
 % Problem  : Waterlevel is 3 at time 3
 % Version  : [Mue04] axioms : Especial.
@@ -15,7 +15,7 @@
 % Rating   : 0.73 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   55 (  25 unit)
 %            Number of atoms       :  136 (  40 equality)

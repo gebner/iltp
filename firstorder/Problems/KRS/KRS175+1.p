@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS175+1 : ILTP v1.1.0
+% File     : KRS175+1 : ILTP v1.1.1
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : An inverse to test unionOf-003
 % Version  : Especial.
@@ -14,7 +14,7 @@
 % Rating   : 0.00 v3.1.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.1.0
 %
 % Syntax   : Number of formulae    :   15 (   2 unit)
 %            Number of atoms       :   43 (  11 equality)

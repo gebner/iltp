@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO093+1 : ILTP v1.1.0
+% File     : GEO093+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Sum of meeting open curves is open
 % Version  : [EHK99] axioms.
@@ -15,7 +15,7 @@
 % Rating   : 0.73 v3.1.0, 0.78 v2.7.0, 0.67 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   17 (   1 unit)
 %            Number of atoms       :   72 (  10 equality)

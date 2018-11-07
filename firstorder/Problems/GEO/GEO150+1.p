@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO150+1 : ILTP v1.1.0
+% File     : GEO150+1 : ILTP v1.1.1
 % Domain   : Geometry (Oriented curves)
 % Problem  : Objects cannot be at two places simultaneously
 % Version  : [EHK99] axioms.
@@ -10,11 +10,11 @@
 % Source   : [EHK99]
 % Names    : T16 [EHK99]
 
-% Status   : Unknown
+% Status   : Unsolved
 % Rating   : 1.00 v2.4.0
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   37 (   3 unit)
 %            Number of atoms       :  134 (  18 equality)

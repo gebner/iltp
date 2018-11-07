@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ054+2 : ILTP v1.1.0
+% File     : GEJ054+2 : ILTP v1.1.1
 % Domain   : Constructive Geometry
 % Problem  : Corollary 8.10
 % Version  : [D97],[D98] axioms : Especial.
@@ -11,9 +11,9 @@
 %                  of Pure and Applied Logic 76 (2): 169-200, 1995.
 % Source   : [P95]
 % Names    :
-
-% Status (intuit.) : Theorem
-% Rating (intuit.) : 0.00 v1.1
+%
+% Status (intuit.) : Open
+% Rating (intuit.) : 1.00 v1.1.0
 % Syntax   : 
 % Comments : Shortened axioms
 %--------------------------------------------------------------------------
@@ -22,6 +22,8 @@ include('Axioms/GEJ001+1.ax').
 include('Axioms/GEJ002+2.ax').
 include('Axioms/GEJ003+1.ax').
 include('Axioms/GEJ004+2.ax').
+include('Axioms/GEJ006+1.ax').
+include('Axioms/GEJ007+1.ax').
 include('Axioms/GEJ008+1.ax').
 include('Axioms/GEJ009+1.ax').
 include('Axioms/GEJ010+1.ax').

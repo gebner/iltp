@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET741+4 : ILTP v1.1.0
+% File     : SET741+4 : ILTP v1.1.1
 % Domain   : Set Theory (Mappings)
 % Problem  : Problem on composition of mappings 6
 % Version  : [Pas99] axioms.
@@ -15,7 +15,7 @@
 % Rating   : 0.91 v3.1.0, 1.00 v2.5.0, 0.88 v2.4.0, 0.75 v2.3.0, 0.67 v2.2.1
 %
 % Status (intuit.) : Open
-% Rating (intuit.) : 1.00 v1.1
+% Rating (intuit.) : 1.00 v1.0.0
 %
 % Syntax   : Number of formulae    :   29 (   1 unit)
 %            Number of atoms       :  135 (   6 equality)
