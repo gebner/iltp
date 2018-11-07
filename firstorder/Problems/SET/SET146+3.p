@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET146+3 : ILTP v1.1.1
+% File     : SET146+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : The intersection of X and the empty set is the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

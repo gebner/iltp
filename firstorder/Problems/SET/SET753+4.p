@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET753+4 : ILTP v1.1.1
+% File     : SET753+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Image of intersection is a subset of intersection of images
 % Version  : [Pas99] axioms.

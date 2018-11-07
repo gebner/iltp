@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN917+1 : ILTP v1.1.1
+% File     : SYN917+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Combined problems from Smullyan
 % Version  : Especial.

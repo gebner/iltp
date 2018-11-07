@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG028+1 : ILTP v1.1.1
+% File     : ALG028+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Groups 6: CPROPS-PAIRWISE-EXCLUSIVE-PROBLEM-1
 % Version  : Especial.

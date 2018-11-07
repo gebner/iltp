@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET603+4 : ILTP v1.1.1
+% File     : SET603+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : The difference of X and the empty set is X
 % Version  : [Pas99] axioms.

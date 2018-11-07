@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS090+1 : ILTP v1.1.1
+% File     : KRS090+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A pattern comes up a lot in more complex ontologies
 % Version  : Especial.

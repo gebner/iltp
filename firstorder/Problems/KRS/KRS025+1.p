@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS025+1 : ILTP v1.1.1
+% File     : KRS025+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Classes can be the object of annotation properties
 % Version  : Especial.

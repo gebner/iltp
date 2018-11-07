@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO103+1 : ILTP v1.1.1
+% File     : GEO103+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Common endpoint of subcurves and another point means inclusion
 % Version  : [EHK99] axioms.

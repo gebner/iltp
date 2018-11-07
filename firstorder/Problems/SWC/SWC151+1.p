@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC151+1 : ILTP v1.1.1
+% File     : SWC151+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pr_works_on_total_ord_x_pr_works_on_total_ord
 % Version  : [Wei00] axioms.

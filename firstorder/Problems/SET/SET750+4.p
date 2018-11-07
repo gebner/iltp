@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET750+4 : ILTP v1.1.1
+% File     : SET750+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Property of isomorphism
 % Version  : [Pas99] axioms.

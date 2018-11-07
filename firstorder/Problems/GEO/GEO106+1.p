@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO106+1 : ILTP v1.1.1
+% File     : GEO106+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Two common endpoints means identical or sum to whole
 % Version  : [EHK99] axioms.

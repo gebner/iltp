@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT017+1 : ILTP v1.1.1
+% File     : MGT017+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Length of reoganisation proportional to organization size
 % Version  : [PB+94] axioms.

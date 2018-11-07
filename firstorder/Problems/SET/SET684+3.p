@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET684+3 : ILTP v1.1.1
+% File     : SET684+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : <x,z> in P(DtoE) o R(EtoF) iff ?y in E:<x,y> in P & <y,z> in R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

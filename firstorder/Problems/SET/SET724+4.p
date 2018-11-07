@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET724+4 : ILTP v1.1.1
+% File     : SET724+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If GoF = HoF and F is surjective, then G = H
 % Version  : [Pas99] axioms.

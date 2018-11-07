@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : TOP020+1 : ILTP v1.1.1
+% File     : TOP020+1 : ILTP v1.1.2
 % Domain   : Topology
 % Problem  : Property of a Hausdorff topological space
 % Version  : [AMR93] axioms : Especial.

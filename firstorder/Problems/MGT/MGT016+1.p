@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT016+1 : ILTP v1.1.1
+% File     : MGT016+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : More complex organizations have shorter reorganization
 % Version  : [PB+94] axioms.

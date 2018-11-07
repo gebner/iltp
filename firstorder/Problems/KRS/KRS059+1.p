@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS059+1 : ILTP v1.1.1
+% File     : KRS059+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Abstract syntax restrictions with multiple components
 % Version  : Especial.

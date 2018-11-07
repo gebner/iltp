@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS144+1 : ILTP v1.1.1
+% File     : KRS144+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : An owl:cardinality constraint is simply shorthand
 % Version  : Especial.

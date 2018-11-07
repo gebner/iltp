@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET732+4 : ILTP v1.1.1
+% File     : SET732+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Property of restriction 3
 % Version  : [Pas99] axioms.

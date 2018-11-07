@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET616+3 : ILTP v1.1.1
+% File     : SET616+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X \ Y = Y \ X, then X = Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

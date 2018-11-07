@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG157+1 : ILTP v1.1.1
+% File     : ALG157+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Quasigroups 4: PROP-SATS-GEN-SYS-67
 % Version  : Especial.

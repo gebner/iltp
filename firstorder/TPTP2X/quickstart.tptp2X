@@ -36,3 +36,7 @@ Example: TPTP2X/tptp2X -f ft -t stdfof+shorten+add_equality
    (*) add_equality is not completely stable under SWI-Prolog. If you work with
        SWI-Prolog, please use also "shorten" (e.g. "-t shorten+add_equality"),
        and replace write/1 by print/1 in the format-files.
+
+For the ATP-system JProver: 
+The formulas for JProver must not contain Prolog-comments (starting
+with %). So you may just copy tptp2X.main.no_comments to tptp2X.main.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET148+4 : ILTP v1.1.1
+% File     : SET148+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : A set intersection itself is itself 
 % Version  : [Pas99] axioms.

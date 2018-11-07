@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO099+1 : ILTP v1.1.1
+% File     : GEO099+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Open subcurves can be complemented to form the sum
 % Version  : [EHK99] axioms.

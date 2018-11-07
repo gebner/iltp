@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : CSR020+1 : ILTP v1.1.1
+% File     : CSR020+1 : ILTP v1.1.2
 % Domain   : Commonsense Reasoning
 % Problem  : Not spinning at time 2
 % Version  : [Mue04] axioms : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT036+1 : ILTP v1.1.1
+% File     : MGT036+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : First movers never outcompete efficient producers. 
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.

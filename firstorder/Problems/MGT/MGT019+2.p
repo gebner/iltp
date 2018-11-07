@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT019+2 : ILTP v1.1.1
+% File     : MGT019+2 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Growth rate of EPs exceeds that of FMs in stable environments
 % Version  : [PM93] axioms.

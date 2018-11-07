@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ203+1.008 : ILTP v1.1.1
+% File     : SYJ203+1.008 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : Formulae requiring many contractions
 % Version  : Especial.

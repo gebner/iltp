@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ056+2 : ILTP v1.1.1
+% File     : GEJ056+2 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Existence. Example 1
 % Version  : [D97],[D98] axioms : Especial.

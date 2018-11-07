@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET175+3 : ILTP v1.1.1
+% File     : SET175+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : Absorbtion for union
 % Version  : [Try89] axioms : Reduced > Incomplete.

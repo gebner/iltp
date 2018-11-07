@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRP396+1 : ILTP v1.1.1
+% File     : GRP396+1 : ILTP v1.1.2
 % Domain   : Group Theory (Named Semigroups)
 % Problem  : Group theory (Named Semigroups) axioms
 % Version  : [Gol93] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET169+3 : ILTP v1.1.1
+% File     : SET169+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : Intersection distributes over union
 % Version  : [Try89] axioms : Reduced > Incomplete.

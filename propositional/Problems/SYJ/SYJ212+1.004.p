@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ212+1.004 : ILTP v1.1.1
+% File     : SYJ212+1.004 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : Equivalences
 % Version  : Especial.

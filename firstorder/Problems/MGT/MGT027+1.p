@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT027+1 : ILTP v1.1.1
+% File     : MGT027+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : The FM set contracts in stable environments
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.

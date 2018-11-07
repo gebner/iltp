@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GPJ001+3 : ILTP v1.1.1
+% File     : GPJ001+3 : ILTP v1.1.2
 % Domain   : Non-Clausal Group Theory
 % Problem  : Example 8.1 (commutativity)
 % Version  : Especial.

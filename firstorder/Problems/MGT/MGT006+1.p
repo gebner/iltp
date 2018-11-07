@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT006+1 : ILTP v1.1.1
+% File     : MGT006+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Reliability and accountability increase with time.
 % Version  : Especial.

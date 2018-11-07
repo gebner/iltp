@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET643+3 : ILTP v1.1.1
+% File     : SET643+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : X x Y is a relation from X to Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET631+3 : ILTP v1.1.1
+% File     : SET631+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X intersects the difference of Y and Z, then X intersects Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET701+4 : ILTP v1.1.1
+% File     : SET701+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Property of intersection and difference 3
 % Version  : [Pas99] axioms.

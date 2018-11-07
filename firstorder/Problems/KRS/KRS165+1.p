@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS165+1 : ILTP v1.1.1
+% File     : KRS165+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Two classes may be different names for the same set of individuals
 % Version  : Especial.

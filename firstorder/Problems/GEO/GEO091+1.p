@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO091+1 : ILTP v1.1.1
+% File     : GEO091+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Two points determine subcurve
 % Version  : [EHK99] axioms.

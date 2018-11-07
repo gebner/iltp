@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET598+3 : ILTP v1.1.1
+% File     : SET598+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X = Y ^ Z iff X (= Y, X (= Z, !V: V (= Y & V (= Z, V (= X
 % Version  : [Try89] axioms : Reduced > Incomplete.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS026+1 : ILTP v1.1.1
+% File     : KRS026+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The extension of OWL Thing may be a singleton in OWL DL
 % Version  : Especial.

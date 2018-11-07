@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET159+4 : ILTP v1.1.1
+% File     : SET159+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Associativity of union 
 % Version  : [Pas99] axioms.

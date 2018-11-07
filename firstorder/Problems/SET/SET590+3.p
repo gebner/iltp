@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET590+3 : ILTP v1.1.1
+% File     : SET590+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : The difference of X and Y is a subset of X
 % Version  : [Try89] axioms : Reduced > Incomplete.

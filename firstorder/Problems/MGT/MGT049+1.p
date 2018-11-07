@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT049+1 : ILTP v1.1.1
+% File     : MGT049+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Structural position does not vary with its age
 % Version  : [Han98] axioms.

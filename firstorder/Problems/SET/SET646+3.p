@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET646+3 : ILTP v1.1.1
+% File     : SET646+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : If x is in X and y is in Y then {<x,y>} is from X to Y.
 % Version  : [Wor89] axioms : Reduced > Incomplete.

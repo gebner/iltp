@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO158+1 : ILTP v1.1.1
+% File     : GEO158+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Simple curve axioms
 % Version  : [EHK99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC375+1 : ILTP v1.1.1
+% File     : SWC375+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_set_eq_x_copy
 % Version  : [Wei00] axioms.

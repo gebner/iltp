@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT005+2 : ILTP v1.1.1
+% File     : MGT005+2 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Complexity increases the risk of death due to reorganization.
 % Version  : Especial.

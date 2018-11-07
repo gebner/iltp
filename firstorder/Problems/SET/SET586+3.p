@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET586+3 : ILTP v1.1.1
+% File     : SET586+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y, then X ^ Z (= Y ^ Z
 % Version  : [Try89] axioms : Reduced > Incomplete.

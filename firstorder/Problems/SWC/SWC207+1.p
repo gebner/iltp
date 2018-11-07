@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC207+1 : ILTP v1.1.1
+% File     : SWC207+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_not_nil_ne_x_maximal
 % Version  : [Wei00] axioms.

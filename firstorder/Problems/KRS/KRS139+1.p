@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS139+1 : ILTP v1.1.1
+% File     : KRS139+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A Lite version of test SymmetricProperty-001
 % Version  : Especial.

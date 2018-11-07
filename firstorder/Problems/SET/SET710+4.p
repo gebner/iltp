@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET710+4 : ILTP v1.1.1
+% File     : SET710+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Associativity of composition
 % Version  : [Pas99] axioms.

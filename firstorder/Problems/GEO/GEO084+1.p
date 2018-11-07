@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO084+1 : ILTP v1.1.1
+% File     : GEO084+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Sum is monotone, part 2
 % Version  : [EHK99] axioms.

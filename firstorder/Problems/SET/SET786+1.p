@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET786+1 : ILTP v1.1.1
+% File     : SET786+1 : ILTP v1.1.2
 % Domain   : Set theory
 % Problem  : Peter Andrews Problem THM25
 % Version  : Especial.

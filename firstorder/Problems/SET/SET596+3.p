@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET596+3 : ILTP v1.1.1
+% File     : SET596+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y and Y ^ Z = the empty set, then X ^ Z = the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET758+4 : ILTP v1.1.1
+% File     : SET758+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : The image of the inverse image of Y is a subset of Y 
 % Version  : [Pas99] axioms.

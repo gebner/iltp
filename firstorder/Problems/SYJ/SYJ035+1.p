@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ035+1 : ILTP v1.1.1
+% File     : SYJ035+1 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : formula being Problematic for Ft-Algorithm
 % Version  : Especial.

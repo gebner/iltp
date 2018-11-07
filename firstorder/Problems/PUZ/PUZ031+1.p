@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ031+1 : ILTP v1.1.1
+% File     : PUZ031+1 : ILTP v1.1.2
 % Domain   : Puzzles
 % Problem  : Schubert's Steamroller
 % Version  : Especial.

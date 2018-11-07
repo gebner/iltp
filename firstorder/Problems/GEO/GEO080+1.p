@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO080+1 : ILTP v1.1.1
+% File     : GEO080+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Reflexivity of part_of
 % Version  : [EHK99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO120+1 : ILTP v1.1.1
+% File     : GEO120+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Oriented curve finishing point is endpoint of underlying curve
 % Version  : [EHK99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC125+1 : ILTP v1.1.1
+% File     : SWC125+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_ne_segment_x_run_strict_ord_max1
 % Version  : [Wei00] axioms.

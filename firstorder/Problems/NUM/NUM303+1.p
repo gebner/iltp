@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM303+1 : ILTP v1.1.1
+% File     : NUM303+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : 31 != 21
 % Version  : Especial.

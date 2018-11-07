@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET685+3 : ILTP v1.1.1
+% File     : SET685+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : y in R (X to Y) o D1 iff ?x in D : <x,y> in R & x in D1
 % Version  : [Wor89] axioms : Reduced > Incomplete.

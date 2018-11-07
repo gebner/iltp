@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET721+4 : ILTP v1.1.1
+% File     : SET721+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If the composition of F and G is injective, then F is injective
 % Version  : [Pas99] axioms.

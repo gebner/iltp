@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS138+1 : ILTP v1.1.1
+% File     : KRS138+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Extensional semantics of owl:SymmetricProperty
 % Version  : Especial.

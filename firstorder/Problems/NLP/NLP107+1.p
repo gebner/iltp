@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP107+1 : ILTP v1.1.1
+% File     : NLP107+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : Every customer in a restaurant, problem 14
 % Version  : [Bos00b] axioms.

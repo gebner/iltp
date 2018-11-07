@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC166+1 : ILTP v1.1.1
+% File     : SWC166+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_diff_adj1_x_pst_singleton
 % Version  : [Wei00] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO097+1 : ILTP v1.1.1
+% File     : GEO097+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : A subcurves connects any two points on a curve
 % Version  : [EHK99] axioms.

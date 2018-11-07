@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET656+3 : ILTP v1.1.1
+% File     : SET656+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : The intersection of a relation R from X to Y and X x Y is R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

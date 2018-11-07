@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC010+1 : ILTP v1.1.1
+% File     : SWC010+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_filter_some_x_del_max
 % Version  : [Wei00] axioms.

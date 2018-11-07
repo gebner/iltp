@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG040+1 : ILTP v1.1.1
+% File     : ALG040+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Loops 4: CPROPS-SORTED-DISCRIMINANT-PROBLEM-1
 % Version  : Especial.

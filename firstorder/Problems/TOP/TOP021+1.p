@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : TOP021+1 : ILTP v1.1.1
+% File     : TOP021+1 : ILTP v1.1.2
 % Domain   : Topology
 % Problem  : Locally compact tological space
 % Version  : [Shu96] axioms : Especial.

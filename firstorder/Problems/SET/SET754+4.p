@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET754+4 : ILTP v1.1.1
+% File     : SET754+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : C is a subset of the inverse image of the image of C 
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO136+1 : ILTP v1.1.1
+% File     : GEO136+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Underlying curve and one pair of points sufficient for ordering
 % Version  : [EHK99] axioms.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS020+1 : ILTP v1.1.1
+% File     : KRS020+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The union of two classes can be defined using OWL Lite 
 % Version  : Especial.

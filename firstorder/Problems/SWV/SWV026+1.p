@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV026+1 : ILTP v1.1.1
+% File     : SWV026+1 : ILTP v1.1.2
 % Domain   : Software Verification
 % Problem  : Unsimplified proof obligation gauss_init_0017
 % Version  : [DFS04] axioms : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC065+1 : ILTP v1.1.1
+% File     : SWC065+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_id_segment_total1_x_run_eq_front2
 % Version  : [Wei00] axioms.

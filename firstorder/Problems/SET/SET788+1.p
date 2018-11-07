@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET788+1 : ILTP v1.1.1
+% File     : SET788+1 : ILTP v1.1.2
 % Domain   : Set theory
 % Problem  : Symmetry of equality from set membership
 % Version  : Especial.

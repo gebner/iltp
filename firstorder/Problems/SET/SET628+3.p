@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET628+3 : ILTP v1.1.1
+% File     : SET628+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X intersects X iff X is not the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

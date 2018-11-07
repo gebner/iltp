@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET582+3 : ILTP v1.1.1
+% File     : SET582+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If x not in X iff x in Y iff x in Z, then X = Y sym\ Z
 % Version  : [Try89] axioms : Reduced > Incomplete.

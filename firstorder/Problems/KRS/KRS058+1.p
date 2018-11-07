@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS058+1 : ILTP v1.1.1
+% File     : KRS058+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A simple test for infinite loops in imports processing code
 % Version  : Especial.

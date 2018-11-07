@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO087+1 : ILTP v1.1.1
+% File     : GEO087+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : If one curve is part of another curve then they cannot meet
 % Version  : [EHK99] axioms.

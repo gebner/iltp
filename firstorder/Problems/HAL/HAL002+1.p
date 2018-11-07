@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : HAL002+1 : ILTP v1.1.1
+% File     : HAL002+1 : ILTP v1.1.2
 % Domain   : Homological Algebra
 % Problem  : Equivalence of injection axioms
 % Version  : [TPTP] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET670+3 : ILTP v1.1.1
+% File     : SET670+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : R (X to Y) restricted to X1 is (X1 to Y)
 % Version  : [Wor89] axioms : Reduced > Incomplete.

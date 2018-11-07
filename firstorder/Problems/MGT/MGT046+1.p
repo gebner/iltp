@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT046+1 : ILTP v1.1.1
+% File     : MGT046+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Unendowed organization's hazard of mortality declines with age
 % Version  : [Han98] axioms.

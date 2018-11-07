@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET773+4 : ILTP v1.1.1
+% File     : SET773+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Intersection of equivalence relations is an equivalence relation
 % Version  : [Pas99] axioms.

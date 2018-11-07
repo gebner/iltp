@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET734+4 : ILTP v1.1.1
+% File     : SET734+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If GoF is the identity, then G is surjective
 % Version  : [Pas99] axioms.

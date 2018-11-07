@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET706+4 : ILTP v1.1.1
+% File     : SET706+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Property of difference
 % Version  : [Pas99] axioms.

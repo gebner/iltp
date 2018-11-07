@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO081+1 : ILTP v1.1.1
+% File     : GEO081+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Transitivity of part_of
 % Version  : [EHK99] axioms.

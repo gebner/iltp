@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET117+1 : ILTP v1.1.1
+% File     : SET117+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Corollary 1 to every ordered pair being a set
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

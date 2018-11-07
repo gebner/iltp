@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO151+1 : ILTP v1.1.1
+% File     : GEO151+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Object stays still while one moves
 % Version  : [EHK99] axioms.

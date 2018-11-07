@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO101+1 : ILTP v1.1.1
+% File     : GEO101+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Intensification of GEO100+1
 % Version  : [EHK99] axioms.

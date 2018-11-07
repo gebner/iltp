@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT009+1 : ILTP v1.1.1
+% File     : MGT009+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Large organization have higher reproducibility
 % Version  : [PB+94] axioms.

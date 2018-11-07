@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO109+1 : ILTP v1.1.1
+% File     : GEO109+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Every endpoint of an open curve is not between any other points
 % Version  : [EHK99] axioms.

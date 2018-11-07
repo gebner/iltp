@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV125+1 : ILTP v1.1.1
+% File     : SWV125+1 : ILTP v1.1.2
 % Domain   : Software Verification
 % Problem  : Unsimplified proof obligation thruster_array_0001
 % Version  : [DFS04] axioms : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ204+1.013 : ILTP v1.1.1
+% File     : SYJ204+1.013 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : Formulae with normal natural deduction proofs only of exponential size
 % Version  : Especial.

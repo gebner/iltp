@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS137+1 : ILTP v1.1.1
+% File     : KRS137+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A variation of equivalentClass-001
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT035+2 : ILTP v1.1.1
+% File     : MGT035+2 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : EPs outcompete FMs in stable environments
 % Version  : [PM93] axioms.

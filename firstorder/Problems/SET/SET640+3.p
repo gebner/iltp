@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET640+3 : ILTP v1.1.1
+% File     : SET640+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : A a subset of R (X to Y) => A a subset of X x Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.

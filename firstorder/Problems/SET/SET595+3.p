@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET595+3 : ILTP v1.1.1
+% File     : SET595+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y, then Y = X U (Y \ X)
 % Version  : [Try89] axioms : Reduced > Incomplete.

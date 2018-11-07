@@ -90,7 +90,9 @@ output_ft_fof(? [V|L] : A):-
         write(' '),
         output_ft_fof(? L : A), write(' )').
 
+output_ft_fof('$true') :- !, write('(truexxx->truexxx)').
 output_ft_fof($true) :- !, write('(truexxx->truexxx)').
+output_ft_fof('$false') :- !, write('(falsexxx & ~ falsexxx)').
 output_ft_fof($false) :- !, write('(falsexxx & ~ falsexxx)').
 
 output_ft_fof(Term) :- transpred_ft(Term).
@@ -147,7 +149,7 @@ output_ft_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
       (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
        write('('), output_ft_fof(Formula), write(')'),
        (RestOfFormulae == [] -> true;
-        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+        (((RestOfFormulae=[fof(_,conjecture,_)]  ->
            (nl, nl, write('  -> '), nl, nl)); 
            (nl, nl, write('  & '), nl, nl)),
           output_ft_fo_formulae(RestOfFormulae)))).

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG204+1 : ILTP v1.1.1
+% File     : ALG204+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Quasigroups 7 QG5: REPRESENTATIVES-PAIRWISE-NOT-ISO-PROBLEM-1
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET366+4 : ILTP v1.1.1
+% File     : SET366+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : The empty set is in every power set
 % Version  : [Pas99] axioms.

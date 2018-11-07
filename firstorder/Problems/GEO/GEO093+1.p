@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO093+1 : ILTP v1.1.1
+% File     : GEO093+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Sum of meeting open curves is open
 % Version  : [EHK99] axioms.

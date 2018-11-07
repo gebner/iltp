@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC218+1 : ILTP v1.1.1
+% File     : SWC218+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_not_nil_x_insert_some
 % Version  : [Wei00] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET017+1 : ILTP v1.1.1
+% File     : SET017+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Left cancellation for unordered pairs
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

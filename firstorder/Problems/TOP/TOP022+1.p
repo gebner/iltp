@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : TOP022+1 : ILTP v1.1.1
+% File     : TOP022+1 : ILTP v1.1.2
 % Domain   : Topology (Homotopy theory)
 % Problem  : Homotopy groups
 % Version  : [Shu96] axioms : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET074+1 : ILTP v1.1.1
+% File     : SET074+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Corollary to unordered pair axiom
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

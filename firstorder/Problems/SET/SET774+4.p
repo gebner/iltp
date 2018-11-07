@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET774+4 : ILTP v1.1.1
+% File     : SET774+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : The restriction of a pre-order relation is a pre-order relation
 % Version  : [Pas99] axioms.

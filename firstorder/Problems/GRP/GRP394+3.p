@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRP394+3 : ILTP v1.1.1
+% File     : GRP394+3 : ILTP v1.1.2
 % Domain   : Group Theory
 % Problem  : Group theory (equality) axioms
 % Version  : [MOW76] (equality) axioms : 

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT054+1 : ILTP v1.1.1
+% File     : MGT054+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Hazard of mortality increases in a drifting environment
 % Version  : [Han98] axioms.

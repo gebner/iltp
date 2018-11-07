@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM338+1 : ILTP v1.1.1
+% File     : NUM338+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : 5 - 3 = only 2
 % Version  : Especial.

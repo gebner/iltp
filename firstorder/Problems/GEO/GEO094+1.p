@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO094+1 : ILTP v1.1.1
+% File     : GEO094+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Meeting point is not an endpoint of contianing curve
 % Version  : [EHK99] axioms.

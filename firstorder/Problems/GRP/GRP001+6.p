@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : GRP001+6 : ILTP v1.1.1
+% File     : GRP001+6 : ILTP v1.1.2
 % Domain   : Group Theory
 % Problem  : X^2 = identity => commutativity
 % Version  : Especial.

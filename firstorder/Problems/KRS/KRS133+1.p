@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS133+1 : ILTP v1.1.1
+% File     : KRS133+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : How to express mutual disjointness between classes
 % Version  : Especial.

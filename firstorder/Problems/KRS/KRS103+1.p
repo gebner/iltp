@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS103+1 : ILTP v1.1.1
+% File     : KRS103+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A different encoding of description-logic-502
 % Version  : Especial.

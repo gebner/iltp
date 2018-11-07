@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : COM003+3 : ILTP v1.1.1
+% File     : COM003+3 : ILTP v1.1.2
 % Domain   : Computing Theory
 % Problem  : The halting problem is undecidable
 % Version  : [Daf94] axioms.

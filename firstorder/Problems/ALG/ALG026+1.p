@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG026+1 : ILTP v1.1.1
+% File     : ALG026+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Groups 6: CPROPS-ISO-COMPLETE-PROBLEM-1
 % Version  : Especial.

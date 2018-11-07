@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG038+1 : ILTP v1.1.1
+% File     : ALG038+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Loops 4: CPROPS-ISO-COMPLETE-PROBLEM-2
 % Version  : Especial.

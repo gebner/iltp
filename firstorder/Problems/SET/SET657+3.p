@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET657+3 : ILTP v1.1.1
+% File     : SET657+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : The field of a relation R from X to Y is a subset of X unio
 % Version  : [Wor89] axioms : Reduced > Incomplete.

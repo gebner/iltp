@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT023+2 : ILTP v1.1.1
+% File     : MGT023+2 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Stable environments have a critical point.
 % Version  : [PM93] axioms.

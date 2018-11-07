@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ005+1 : ILTP v1.1.1
+% File     : PUZ005+1 : ILTP v1.1.2
 % Domain   : Puzzles
 % Problem  : The Lion and the Unicorn
 % Version  : [OS95] axioms.

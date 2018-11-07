@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET372+4 : ILTP v1.1.1
+% File     : SET372+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Power set distributes over intersection
 % Version  : [Pas99] axioms.

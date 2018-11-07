@@ -47,30 +47,24 @@ output_leancop_literals([FirstLiteral|RestOfLiterals]):-
 %----Print out the clauses in leanCoP format.
 output_leancop_clauses([]).
 %%% for TPTP-v3.1.0 or later
-%%% if clause = $true (or ­($true)), then ignore it,
-%%% if clause = $false (or -($false)), then clause set is valid => add e.g. [truexxx], [-(truexxx)]
+%%% if clause = $true (or ­($false)), then ignore it,
+%%% if clause = $false (or -($true)), then clause set is valid => add e.g. [truexxx], [-(truexxx)]
 %%% for TPTP-v3.2.0: '$true', '$false', for TPTP-v3.1.0: $true, $false
 
-output_leancop_clauses([cnf(Name,Status,[++($true)])|
-RestOfClauses]):- !,
+output_leancop_clauses([cnf(Name,Status,[Literal])|
+RestOfClauses]):- 
+    (Literal = ++('$true'); 
+     Literal = ++($true);
+     Literal = --('$false');
+     Literal = --($false)), !,
     output_leancop_clauses(RestOfClauses).
 
-output_leancop_clauses([cnf(Name,Status,[--($false)])|
-RestOfClauses]):- !,
-    output_leancop_clauses(RestOfClauses).
-
-output_leancop_clauses([cnf(Name,Status,[++($false)])|
-RestOfClauses]):- !,
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('[truexxx], [-(truexxx)]'),
-    (RestOfClauses\==[]  ->
-        (nl, nl, write('  ,'), nl, nl);
-         true),
-    output_leancop_clauses(RestOfClauses).
-
-output_leancop_clauses([cnf(Name,Status,[--($true)])|
-RestOfClauses]):- !,
+output_leancop_clauses([cnf(Name,Status,[Literal])|
+RestOfClauses]) :-
+    (Literal = ++('$false'); 
+     Literal = ++($false);
+     Literal = --('$true');
+     Literal = --($true)), !,
     write('% '), write(Name), write(', '),
     write(Status), write('.'), nl,
     write('[truexxx], [-(truexxx)]'),
@@ -136,8 +130,10 @@ output_leancop_fof((? [] : A)):- !, output_leancop_fof(A).
 output_leancop_fof((? [V|L] : A)):-
     !, write('( ex '), print(V), write(' : '),
     output_leancop_fof(? L : A), write(' )').
-output_leancop_fof($true) :- !, write('(true___=>true___)').
-output_leancop_fof($false) :- !, write('(false___ , ~ false___)').
+output_leancop_fof('$true') :- !, write('(true___=>true___)').
+output_leancop_fof($true) :- !, write('(true___=>true___)'). % TPTP 3.1.0
+output_leancop_fof('$false') :- !, write('(false___ , ~ false___)').
+output_leancop_fof($false) :- !, write('(false___ , ~ false___)'). % TPTP 3.1.0
 output_leancop_fof('$tptp_equal'(X,Y)) :- !, write('equal('), 
                                            write(X), write(' , '), write(Y), write(')').
 output_leancop_fof('$tptp_not_equal'(X,Y)) :- !,  write('(~ ( equal('), 
@@ -155,10 +151,12 @@ output_leancop_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
       (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
        write('('), output_leancop_fof(Formula), write(')'),
        (RestOfFormulae == [] -> true;
-        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+        (((RestOfFormulae=[fof(_,conjecture,_)]  ->
            (nl, nl, write('  =>'), nl, nl)); 
            (nl, nl, write('  ,'), nl, nl)),
           output_leancop_fo_formulae(RestOfFormulae)))).
+
+
 
 
 %%% for TPTP-v2.7.0 or earlier

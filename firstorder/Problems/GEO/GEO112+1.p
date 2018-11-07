@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO112+1 : ILTP v1.1.1
+% File     : GEO112+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Basic property of orderings on linear structures 2
 % Version  : [EHK99] axioms.

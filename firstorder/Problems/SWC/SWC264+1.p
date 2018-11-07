@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC264+1 : ILTP v1.1.1
+% File     : SWC264+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_sorted1_x_pst_strict_sorted1
 % Version  : [Wei00] axioms.

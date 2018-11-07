@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS134+1 : ILTP v1.1.1
+% File     : KRS134+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : This is a typical definition of range from description logic
 % Version  : Especial.

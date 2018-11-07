@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET763+4 : ILTP v1.1.1
+% File     : SET763+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If the image of X is empty then X is empty 
 % Version  : [Pas99] axioms.

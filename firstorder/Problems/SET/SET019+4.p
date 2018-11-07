@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET019+4 : ILTP v1.1.1
+% File     : SET019+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Two sets that contain one another are equal 
 % Version  : [Pas99] axioms.

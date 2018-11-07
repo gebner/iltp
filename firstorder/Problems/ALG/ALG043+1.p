@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG043+1 : ILTP v1.1.1
+% File     : ALG043+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Loops 4: REPRESENTATIVES-SATISFY-PROPS-PROBLEM-1
 % Version  : Especial.

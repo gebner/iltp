@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ205+1.010 : ILTP v1.1.1
+% File     : SYJ205+1.010 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : Formulae of Korn & Kreitz
 % Version  : Especial.

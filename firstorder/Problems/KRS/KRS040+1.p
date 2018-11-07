@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS040+1 : ILTP v1.1.1
+% File     : KRS040+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Example of use
 % Version  : Especial.

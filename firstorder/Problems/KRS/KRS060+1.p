@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS060+1 : ILTP v1.1.1
+% File     : KRS060+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Description cannot be expressed as a multicomponent restriction 
 % Version  : Especial.

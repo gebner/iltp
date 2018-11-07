@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET771+4 : ILTP v1.1.1
+% File     : SET771+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Equality of images defines a equivalence relation 
 % Version  : [Pas99] axioms.

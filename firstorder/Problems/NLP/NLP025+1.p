@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP025+1 : ILTP v1.1.1
+% File     : NLP025+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : Mia wants to dance, problem 3
 % Version  : [Bos00b] axioms.

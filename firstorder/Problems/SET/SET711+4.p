@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET711+4 : ILTP v1.1.1
+% File     : SET711+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : The inverse of a mapping is unique
 % Version  : [Pas99] axioms.

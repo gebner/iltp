@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS065+1 : ILTP v1.1.1
+% File     : KRS065+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The syntax for using the same restriction twice in OWL Lite
 % Version  : Especial.

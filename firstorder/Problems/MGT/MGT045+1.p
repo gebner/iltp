@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT045+1 : ILTP v1.1.1
+% File     : MGT045+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Structural position increases monotonically with age
 % Version  : [Han98] axioms.

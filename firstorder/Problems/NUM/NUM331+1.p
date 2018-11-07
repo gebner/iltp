@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM331+1 : ILTP v1.1.1
+% File     : NUM331+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : 6 + 7 = 7 + 6
 % Version  : Especial.

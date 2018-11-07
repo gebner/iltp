@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET679+3 : ILTP v1.1.1
+% File     : SET679+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : The identity relation on D is not the empty set
 % Version  : [Wor89] axioms : Reduced > Incomplete.

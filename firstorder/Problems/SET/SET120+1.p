@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET120+1 : ILTP v1.1.1
+% File     : SET120+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Corollary 2 to components of equal ordered pairs being equal
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

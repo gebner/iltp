@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG210+1 : ILTP v1.1.1
+% File     : ALG210+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Star-algebras are closed under multiplication
 % Version  : Especial.

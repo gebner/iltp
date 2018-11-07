@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : CSR024+1.009 : ILTP v1.1.1
+% File     : CSR024+1.009 : ILTP v1.1.2
 % Domain   : Commonsense Reasoning
 % Problem  : Multiple trolleys, size 9
 % Version  : [Mue05] axioms : Especial.

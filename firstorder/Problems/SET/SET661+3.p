@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET661+3 : ILTP v1.1.1
+% File     : SET661+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : Domain of R^-1 is range of R, & range of R^-1 is domain of R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

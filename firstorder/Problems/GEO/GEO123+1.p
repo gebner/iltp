@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO123+1 : ILTP v1.1.1
+% File     : GEO123+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Every oriented curve orders all points on it
 % Version  : [EHK99] axioms.

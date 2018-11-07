@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO116+1 : ILTP v1.1.1
+% File     : GEO116+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Open curve betweenness property for three points
 % Version  : [EHK99] axioms.

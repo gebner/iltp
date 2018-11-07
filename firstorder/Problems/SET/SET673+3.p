@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET673+3 : ILTP v1.1.1
+% File     : SET673+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : Y a subset of Y1 => Y1 restricted to R (X to Y) is R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

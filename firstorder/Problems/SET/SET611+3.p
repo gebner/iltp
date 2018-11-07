@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET611+3 : ILTP v1.1.1
+% File     : SET611+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X ^ Y = the empty set iff X \ Y = X
 % Version  : [Try89] axioms : Reduced > Incomplete.

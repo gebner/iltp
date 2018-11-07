@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET093+1 : ILTP v1.1.1
+% File     : SET093+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Corollary to every singleton is a set
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

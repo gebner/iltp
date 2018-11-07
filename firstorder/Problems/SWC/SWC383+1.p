@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC383+1 : ILTP v1.1.1
+% File     : SWC383+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_some2_x_maximal
 % Version  : [Wei00] axioms.

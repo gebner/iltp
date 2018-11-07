@@ -1,26 +1,39 @@
-ILTP-v1.1-prop-statistics
--------------------------
+ILTP-v1.1.2-prop-statistics
+---------------------------
 
 274 propositional problems
-date: Jul 15 2006
-
-Domain Theorems Non-Theorems UnsolvedOpen Intuit. Rating
-                                          0.0   0.01-0.33  0.34-0.66  0.67-0.99  1.00
-LCL    0        2            0       0    2     0          0          0          0       
-SYN    7        13           0       0    19    0          0          1          0    
-SYJ    121      94           37      0    139   23         28         25         37    
-Sum    128      109          37      0    160   23         28         26         37
+date: 1 Mar 2007
 
 
 Rating        0.0        0.01-0.33  0.34-0.66  0.67-0.99  1.00       Sum
 
 Theorem       97         13         16         2          0          128        
-Non-Theorem   63         10         12         24         0          109
-Unsolved      0          0          0          0          37         37         
+Non-Theorem   63         19         14         16         0          112        
+Unsolved      0          0          0          0          34         34         
 Open          0          0          0          0          0          0          
+Sum           160        32         30         18         34         274    
 
-Sum           160        23         28         26         37         274        
- 
+
+Domain Theorem Non-Theorem Unsolved Open Intuit. Rating
+                                         0.0        0.01-0.33  0.34-0.66  0.67-0.99  1.00
+LCL    0       2           0        0    2          0          0          0          0          
+SYN    7       13          0        0    19         0          0          1          0          
+SYJ    121     97          34       0    139        32         30         17         34         
+sum    128     112         34       0    160        32         30         18         34   
+
+
+Domain       LCL SYN SYJ
+
+Theorem      0   7   121 
+Non-Theorem  2   13  97  
+Unsolved     0   0   34  
+Open         0   0   0   
+Rating      
+ int.   0.0  2   19  139 
+       >0.0  0   1   113 
+ class. 0.0  1   12  252 
+       >0.0  1   8   0   
+
 
 problem         intuit. status  intuit. rating
 
@@ -182,8 +195,8 @@ SYJ207+1.001    Non-Theorem     0.00
 SYJ207+1.002    Non-Theorem     0.00
 SYJ207+1.003    Non-Theorem     0.00
 SYJ207+1.004    Non-Theorem     0.25
-SYJ207+1.005    Non-Theorem     0.75
-SYJ207+1.006    Non-Theorem     0.75
+SYJ207+1.005    Non-Theorem     0.50
+SYJ207+1.006    Non-Theorem     0.50
 SYJ207+1.007    Non-Theorem     0.75
 SYJ207+1.008    Unsolved        1.00
 SYJ207+1.009    Unsolved        1.00
@@ -206,18 +219,18 @@ SYJ208+1.005    Non-Theorem     0.00
 SYJ208+1.006    Non-Theorem     0.25
 SYJ208+1.007    Non-Theorem     0.50
 SYJ208+1.008    Non-Theorem     0.50
-SYJ208+1.009    Non-Theorem     0.75
-SYJ208+1.010    Non-Theorem     0.75
-SYJ208+1.011    Non-Theorem     0.75
-SYJ208+1.012    Non-Theorem     0.75
-SYJ208+1.013    Non-Theorem     0.75
-SYJ208+1.014    Non-Theorem     0.75
-SYJ208+1.015    Non-Theorem     0.75
-SYJ208+1.016    Non-Theorem     0.75
-SYJ208+1.017    Non-Theorem     0.75
-SYJ208+1.018    Unsolved        1.00
-SYJ208+1.019    Unsolved        1.00
-SYJ208+1.020    Unsolved        1.00
+SYJ208+1.009    Non-Theorem     0.50
+SYJ208+1.010    Non-Theorem     0.50
+SYJ208+1.011    Non-Theorem     0.50
+SYJ208+1.012    Non-Theorem     0.50
+SYJ208+1.013    Non-Theorem     0.50
+SYJ208+1.014    Non-Theorem     0.50
+SYJ208+1.015    Non-Theorem     0.50
+SYJ208+1.016    Non-Theorem     0.50
+SYJ208+1.017    Non-Theorem     0.50
+SYJ208+1.018    Non-Theorem     0.75
+SYJ208+1.019    Non-Theorem     0.75
+SYJ208+1.020    Non-Theorem     0.75
 SYJ209+1.001    Non-Theorem     0.00
 SYJ209+1.002    Non-Theorem     0.00
 SYJ209+1.003    Non-Theorem     0.00
@@ -289,12 +302,12 @@ SYJ212+1.008    Non-Theorem     0.25
 SYJ212+1.009    Non-Theorem     0.25
 SYJ212+1.010    Non-Theorem     0.25
 SYJ212+1.011    Non-Theorem     0.25
-SYJ212+1.012    Non-Theorem     0.50
-SYJ212+1.013    Non-Theorem     0.50
-SYJ212+1.014    Non-Theorem     0.50
-SYJ212+1.015    Non-Theorem     0.50
-SYJ212+1.016    Non-Theorem     0.50
-SYJ212+1.017    Non-Theorem     0.50
-SYJ212+1.018    Non-Theorem     0.50
-SYJ212+1.019    Non-Theorem     0.50
-SYJ212+1.020    Non-Theorem     0.50
+SYJ212+1.012    Non-Theorem     0.25
+SYJ212+1.013    Non-Theorem     0.25
+SYJ212+1.014    Non-Theorem     0.25
+SYJ212+1.015    Non-Theorem     0.25
+SYJ212+1.016    Non-Theorem     0.25
+SYJ212+1.017    Non-Theorem     0.25
+SYJ212+1.018    Non-Theorem     0.25
+SYJ212+1.019    Non-Theorem     0.25
+SYJ212+1.020    Non-Theorem     0.25

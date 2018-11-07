@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN955+1 : ILTP v1.1.1
+% File     : SYN955+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Syntactic from Shults
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PLA026+1 : ILTP v1.1.1
+% File     : PLA026+1 : ILTP v1.1.2
 % Domain   : Planning
 % Problem  : Blocks 3/2/1, 5/4 => 5/3, 1, 4/2
 % Version  : [Bau99] axioms.

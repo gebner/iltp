@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET071+1 : ILTP v1.1.1
+% File     : SET071+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : If both arguments are proper classes, pair is null
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

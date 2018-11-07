@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET113+1 : ILTP v1.1.1
+% File     : SET113+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Uniqueness of 1st and 2nd when X is not an ordered pair of sets
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

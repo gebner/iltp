@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC094+1 : ILTP v1.1.1
+% File     : SWC094+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_insert_x_copy
 % Version  : [Wei00] axioms.

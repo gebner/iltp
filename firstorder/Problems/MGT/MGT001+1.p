@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT001+1 : ILTP v1.1.1
+% File     : MGT001+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favors organizations with high inertia
 % Version  : [PB+94] axioms.

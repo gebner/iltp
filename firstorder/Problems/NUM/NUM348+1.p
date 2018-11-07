@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM348+1 : ILTP v1.1.1
+% File     : NUM348+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : X (127 + 1 = X)
 % Version  : Especial.

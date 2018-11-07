@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP032+1 : ILTP v1.1.1
+% File     : NLP032+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : Three young guys, problem 7
 % Version  : [Bos00b] axioms.

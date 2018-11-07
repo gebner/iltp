@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS052+1 : ILTP v1.1.1
+% File     : KRS052+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Integer multiplication in OWL DL, interacting with infinity
 % Version  : Especial.

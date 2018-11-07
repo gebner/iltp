@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC005+1 : ILTP v1.1.1
+% File     : SWC005+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_filter_ne_segment_x_tail1
 % Version  : [Wei00] axioms.

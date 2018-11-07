@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS163+1 : ILTP v1.1.1
+% File     : KRS163+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Disjoint classes have different members
 % Version  : Especial.

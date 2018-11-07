@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET727+4 : ILTP v1.1.1
+% File     : SET727+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If GoF and FoH are identities, then inverse(F) = H
 % Version  : [Pas99] axioms.

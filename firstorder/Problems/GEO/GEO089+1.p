@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO089+1 : ILTP v1.1.1
+% File     : GEO089+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Inner points of a sub-curve of a curve are inner points
 % Version  : [EHK99] axioms.

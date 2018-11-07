@@ -89,7 +89,7 @@ output_ljt_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
       (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
        write('('), output_ljt_fof(Formula), write(')'),
        (RestOfFormulae == [] -> true;
-        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+        (((RestOfFormulae=[fof(_,conjecture,_)]  ->
            (nl, nl, write('  -> '), nl, nl)); 
            (nl, nl, write('  & '), nl, nl)),
           output_ljt_fo_formulae(RestOfFormulae)))).

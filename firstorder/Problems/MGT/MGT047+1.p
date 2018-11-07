@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT047+1 : ILTP v1.1.1
+% File     : MGT047+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Conditions for changing hazard of mortality
 % Version  : [Han98] axioms.

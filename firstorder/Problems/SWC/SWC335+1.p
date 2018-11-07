@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC335+1 : ILTP v1.1.1
+% File     : SWC335+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_run_ord_x_minimal
 % Version  : [Wei00] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT012+1 : ILTP v1.1.1
+% File     : MGT012+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Complexity of an organization cannot get smaller by age
 % Version  : [PB+94] axioms.

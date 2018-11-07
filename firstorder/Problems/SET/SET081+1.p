@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET081+1 : ILTP v1.1.1
+% File     : SET081+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Only X can belong to {X}
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

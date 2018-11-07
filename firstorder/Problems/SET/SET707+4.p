@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET707+4 : ILTP v1.1.1
+% File     : SET707+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Components of equal ordered pairs are equal 
 % Version  : [Pas99] axioms.

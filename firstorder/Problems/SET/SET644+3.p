@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET644+3 : ILTP v1.1.1
+% File     : SET644+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : a in R (X to Y) => ? x, y : a is <x,y> & x in X & y in Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.

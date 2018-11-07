@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT041+2 : ILTP v1.1.1
+% File     : MGT041+2 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : There are non-FM and non-EP organisations
 % Version  : [PM93] axioms.

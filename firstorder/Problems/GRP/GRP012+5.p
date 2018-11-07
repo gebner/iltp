@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : GRP012+5 : ILTP v1.1.1
+% File     : GRP012+5 : ILTP v1.1.2
 % Domain   : Group Theory
 % Problem  : Inverse of products = Product of inverses
 % Version  : Especial.

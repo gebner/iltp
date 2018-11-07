@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET641+3 : ILTP v1.1.1
+% File     : SET641+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : If A is a subset of X x Y then A is a relation from X to Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.

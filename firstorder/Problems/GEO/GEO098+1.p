@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO098+1 : ILTP v1.1.1
+% File     : GEO098+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : For closed curves, there are two complementary sub-curves
 % Version  : [EHK99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET084+1 : ILTP v1.1.1
+% File     : SET084+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : A singleton set is determined by its element
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

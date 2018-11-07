@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GPJ003+1 : ILTP v1.1.1
+% File     : GPJ003+1 : ILTP v1.1.2
 % Domain   : Non-Clausal Group Theory
 % Problem  : section 7, Exercise 8
 % Version  : Especial.

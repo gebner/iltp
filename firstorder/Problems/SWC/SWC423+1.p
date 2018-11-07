@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC423+1 : ILTP v1.1.1
+% File     : SWC423+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : List specification
 % Version  : [Wei00] axioms.

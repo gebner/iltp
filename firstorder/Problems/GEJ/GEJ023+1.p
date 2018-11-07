@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ023+1 : ILTP v1.1.1
+% File     : GEJ023+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Lemma 4.9
 % Version  : [P95] axioms.

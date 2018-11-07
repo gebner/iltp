@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET013+4 : ILTP v1.1.1
+% File     : SET013+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Commutativity of intersection
 % Version  : [Pas99] axioms.

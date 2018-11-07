@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ078+1 : ILTP v1.1.1
+% File     : GEJ078+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Theorem 5.7.(i) (Ordered Geometry)
 % Version  : [P98] axioms.

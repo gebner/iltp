@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ047+1 : ILTP v1.1.1
+% File     : PUZ047+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Taking the wolf, goat, and cabbage across river
 % Version  : Especial.

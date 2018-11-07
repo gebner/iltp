@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO159+1 : ILTP v1.1.1
+% File     : GEO159+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Betweenness for simple curves
 % Version  : [EHK99] axioms.

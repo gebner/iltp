@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET594+3 : ILTP v1.1.1
+% File     : SET594+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X ^ Y U X ^ Z = X, then X (= Y U Z
 % Version  : [Try89] axioms : Reduced > Incomplete.

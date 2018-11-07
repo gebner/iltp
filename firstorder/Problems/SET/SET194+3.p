@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET194+3 : ILTP v1.1.1
+% File     : SET194+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X is a subset of the union of X and Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

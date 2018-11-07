@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRA010+2 : ILTP v1.1.1
+% File     : GRA010+2 : ILTP v1.1.2
 % Domain   : Graph Theory
 % Problem  : Maximal shortest path length in terms of triangles
 % Version  : Augmented > Especial.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS102+1 : ILTP v1.1.1
+% File     : KRS102+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : This is the classic 3 SAT problem
 % Version  : Especial.

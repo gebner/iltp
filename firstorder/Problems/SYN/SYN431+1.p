@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN431+1 : ILTP v1.1.1
+% File     : SYN431+1 : ILTP v1.1.2
 % Domain   : Syntactic (Translated)
 % Problem  : ALC, N=4, R=1, L=16, K=3, D=1, P=0, Index=042
 % Version  : Especial.

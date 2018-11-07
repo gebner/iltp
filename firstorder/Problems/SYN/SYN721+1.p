@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN721+1 : ILTP v1.1.1
+% File     : SYN721+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Peter Andrews Problem LX1
 % Version  : Especial.

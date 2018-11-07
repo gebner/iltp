@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ207+1.007 : ILTP v1.1.1
+% File     : SYJ207+1.007 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : de Bruijn's example
 % Version  : Especial.

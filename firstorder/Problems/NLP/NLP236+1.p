@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP236+1 : ILTP v1.1.1
+% File     : NLP236+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : Vincent believes that every man smokes, problem 17
 % Version  : [Bos00b] axioms.

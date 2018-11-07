@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO104+1 : ILTP v1.1.1
+% File     : GEO104+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Subcurves with common endpoint meet or include
 % Version  : [EHK99] axioms.

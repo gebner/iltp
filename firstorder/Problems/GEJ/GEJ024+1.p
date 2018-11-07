@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ024+1 : ILTP v1.1.1
+% File     : GEJ024+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Collary 4.10.i
 % Version  : [P95] axioms.

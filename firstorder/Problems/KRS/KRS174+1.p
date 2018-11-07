@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS174+1 : ILTP v1.1.1
+% File     : KRS174+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Sets with appropriate extensions are related by unionOf
 % Version  : Especial.

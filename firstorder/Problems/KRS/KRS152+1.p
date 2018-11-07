@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS152+1 : ILTP v1.1.1
+% File     : KRS152+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : DL Test: k_ph ABox test from DL98 systems comparison
 % Version  : Especial.

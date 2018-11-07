@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT004+1 : ILTP v1.1.1
+% File     : MGT004+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Attempts at reorganization increase death rates.
 % Version  : [PB+94] axioms.

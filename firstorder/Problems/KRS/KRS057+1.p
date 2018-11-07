@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS057+1 : ILTP v1.1.1
+% File     : KRS057+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A possible mapping of the EquivalentClasses axiom
 % Version  : Especial.

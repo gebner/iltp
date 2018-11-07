@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT051+1 : ILTP v1.1.1
+% File     : MGT051+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Conditions for constant then increasing hazard of mortality
 % Version  : [Han98] axioms.

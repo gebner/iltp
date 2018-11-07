@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET700+4 : ILTP v1.1.1
+% File     : SET700+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Property of intersection and difference 2
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS087+1 : ILTP v1.1.1
+% File     : KRS087+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : DL Test: t7f.2
 % Version  : Especial.

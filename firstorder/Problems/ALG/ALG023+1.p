@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG023+1 : ILTP v1.1.1
+% File     : ALG023+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Groups 4: VERIFY-GEN-SYSES-PROBLEM-1
 % Version  : Especial.

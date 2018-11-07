@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM371+1 : ILTP v1.1.1
+% File     : NUM371+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : if (X - Y) = Z and Z > 0, then X > Y
 % Version  : Especial.

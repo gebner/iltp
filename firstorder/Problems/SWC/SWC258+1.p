@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC258+1 : ILTP v1.1.1
+% File     : SWC258+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_sorted1_x_minimal
 % Version  : [Wei00] axioms.

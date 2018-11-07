@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET065+1 : ILTP v1.1.1
+% File     : SET065+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Null class is a set (follows from axiom of infinity)
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

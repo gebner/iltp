@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN417+1 : ILTP v1.1.1
+% File     : SYN417+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Harrison's cute problem
 % Version  : Especial.

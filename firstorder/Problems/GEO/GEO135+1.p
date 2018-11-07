@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO135+1 : ILTP v1.1.1
+% File     : GEO135+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Ordering can be determined by betweenness and incidence
 % Version  : [EHK99] axioms.

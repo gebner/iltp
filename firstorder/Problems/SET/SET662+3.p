@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET662+3 : ILTP v1.1.1
+% File     : SET662+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : The empty set is a relation from X to Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.

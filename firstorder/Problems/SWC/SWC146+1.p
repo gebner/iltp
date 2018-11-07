@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC146+1 : ILTP v1.1.1
+% File     : SWC146+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pr_works_on_pairs_x_id_segment
 % Version  : [Wei00] axioms.

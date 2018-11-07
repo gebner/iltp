@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM314+1 : ILTP v1.1.1
+% File     : NUM314+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : Show upper boundary
 % Version  : Especial.

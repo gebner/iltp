@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET063+4 : ILTP v1.1.1
+% File     : SET063+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : The intersection of a set and empty set is empty
 % Version  : [Pas99] axioms.

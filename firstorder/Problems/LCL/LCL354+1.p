@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : LCL354+1 : ILTP v1.1.1
+% File     : LCL354+1 : ILTP v1.1.2
 % Domain   : Logic Calculi (Temporal)
 % Problem  : Independence of an Axiom for Temporal Intervals
 % Version  : [Zha98] axioms : Especial.

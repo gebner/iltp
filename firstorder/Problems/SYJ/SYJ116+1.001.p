@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ116+1.001 : ILTP v1.1.1
+% File     : SYJ116+1.001 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : 
 % Version  : Especial.

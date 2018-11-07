@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO107+1 : ILTP v1.1.1
+% File     : GEO107+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Equivalence of betweenness definitions 1 and 2
 % Version  : [EHK99] axioms.

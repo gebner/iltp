@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET591+3 : ILTP v1.1.1
+% File     : SET591+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y \ X, then X = the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

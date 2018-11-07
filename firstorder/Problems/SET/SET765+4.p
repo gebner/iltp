@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET765+4 : ILTP v1.1.1
+% File     : SET765+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : The restriction of an equivalence relation is an equivalence
 % Version  : [Pas99] axioms.

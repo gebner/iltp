@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC144+1 : ILTP v1.1.1
+% File     : SWC144+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pr_works_on_pairs_x_filter_ne_segment
 % Version  : [Wei00] axioms.

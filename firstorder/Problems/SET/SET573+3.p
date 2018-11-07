@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET573+3 : ILTP v1.1.1
+% File     : SET573+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : Trybulec's 12th Boolean property of sets
 % Version  : [Try89] axioms : Reduced > Incomplete.

@@ -1,12 +1,13 @@
 %========================================================================
 %----This outputs TPTP Problem Set clauses and formulae in a format
 %----acceptable to the Gandlaf system.
-%----adapted format.leancop, 
 %----        Written by Jens Otten, November 2000
 %----        extended to handle FOF: JO, June 2004
 %---to Gandalf-syntax by Thomas Raths, June 2006
 %========================================================================
 %%% Thomas Raths November, 2005: changes due to TPTP3.1.0
+
+% ! does not consider that conjecture need not be at the end of the problem file!
 
 % must not contain comments starting with %
 % in order to make tptp2X not writing comments:

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET047+1 : ILTP v1.1.1
+% File     : SET047+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Set equality is symmetric
 % Version  : Especial.

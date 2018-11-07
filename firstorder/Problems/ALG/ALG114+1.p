@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG114+1 : ILTP v1.1.1
+% File     : ALG114+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Quasigroups 4: PROP-ISO-COMPLETE-84
 % Version  : Especial.

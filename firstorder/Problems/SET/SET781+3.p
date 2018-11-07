@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET781+3 : ILTP v1.1.1
+% File     : SET781+3 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Set theory axioms based on NBG set theory
 % Version  : [Quaife, 1992] axioms : Reduced & Augmented > Complete.

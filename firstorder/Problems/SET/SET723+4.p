@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET723+4 : ILTP v1.1.1
+% File     : SET723+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If FoG = FoH and F is injective, then G = H
 % Version  : [Pas99] axioms.

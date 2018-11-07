@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET604+3 : ILTP v1.1.1
+% File     : SET604+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : The difference of the empty set and X is the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

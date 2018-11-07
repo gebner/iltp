@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN549+1 : ILTP v1.1.1
+% File     : SYN549+1 : ILTP v1.1.2
 % Domain   : Syntactic (Translated)
 % Problem  : dia box(dia(p or dia q) <=> (dia p or dia q))
 % Version  : Especial.

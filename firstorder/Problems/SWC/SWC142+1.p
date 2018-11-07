@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC142+1 : ILTP v1.1.1
+% File     : SWC142+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pr_works_on_nonempty_x_rot_r1
 % Version  : [Wei00] axioms.

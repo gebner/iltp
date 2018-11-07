@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET095+1 : ILTP v1.1.1
+% File     : SET095+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Property 2 of singletons
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

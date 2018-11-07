@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET067+1 : ILTP v1.1.1
+% File     : SET067+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : If one argument is a proper class, pair contains only the other
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

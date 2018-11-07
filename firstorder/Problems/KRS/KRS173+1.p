@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS173+1 : ILTP v1.1.1
+% File     : KRS173+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A simple infinite loop for implementors to avoid
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC389+1 : ILTP v1.1.1
+% File     : SWC389+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_some_total3_x_pivot
 % Version  : [Wei00] axioms.

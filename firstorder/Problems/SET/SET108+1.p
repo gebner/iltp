@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET108+1 : ILTP v1.1.1
+% File     : SET108+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : 1st and 2nd make the ordered pair
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC356+1 : ILTP v1.1.1
+% File     : SWC356+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_segment_ne_x_minimal
 % Version  : [Wei00] axioms.

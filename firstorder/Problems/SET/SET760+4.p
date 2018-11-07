@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET760+4 : ILTP v1.1.1
+% File     : SET760+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Composition of images 2
 % Version  : [Pas99] axioms.

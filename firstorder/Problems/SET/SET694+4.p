@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET694+4 : ILTP v1.1.1
+% File     : SET694+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Union of power sets is a subset of the power set of the union
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO133+1 : ILTP v1.1.1
+% File     : GEO133+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Betweenness and precedence property 2
 % Version  : [EHK99] axioms.

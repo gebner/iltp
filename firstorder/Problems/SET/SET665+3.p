@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET665+3 : ILTP v1.1.1
+% File     : SET665+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : The identity relation on X is a subset of X x X
 % Version  : [Wor89] axioms : Reduced > Incomplete.

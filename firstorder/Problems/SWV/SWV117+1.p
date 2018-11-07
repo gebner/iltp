@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV117+1 : ILTP v1.1.1
+% File     : SWV117+1 : ILTP v1.1.2
 % Domain   : Software Verification
 % Problem  : Unsimplified proof obligation quaternion_ds1_symm_0010
 % Version  : [DFS04] axioms : Especial.

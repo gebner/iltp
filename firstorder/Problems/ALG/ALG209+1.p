@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG209+1 : ILTP v1.1.1
+% File     : ALG209+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Quasigroups 7 QG5: REPRESENTATIVES-SATISFY-PROPS-PROBLEM-3
 % Version  : Especial.

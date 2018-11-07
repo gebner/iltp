@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC033+1 : ILTP v1.1.1
+% File     : SWC033+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_id_nil_iff_x_set_min_elems
 % Version  : [Wei00] axioms.

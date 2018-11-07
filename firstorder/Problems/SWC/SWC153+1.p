@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC153+1 : ILTP v1.1.1
+% File     : SWC153+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_cyc_sorted_x_pst_cyc_sorted
 % Version  : [Wei00] axioms.

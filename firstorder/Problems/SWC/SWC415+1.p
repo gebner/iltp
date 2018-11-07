@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC415+1 : ILTP v1.1.1
+% File     : SWC415+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_tail1_x_tail1
 % Version  : [Wei00] axioms.

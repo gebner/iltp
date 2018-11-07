@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT059+1 : ILTP v1.1.1
+% File     : MGT059+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Hazard of mortality is constant during periods of immunity
 % Version  : [Han98] axioms.

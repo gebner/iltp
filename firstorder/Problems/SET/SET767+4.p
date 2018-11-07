@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET767+4 : ILTP v1.1.1
+% File     : SET767+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Equivalence classes on E are power_set E 
 % Version  : [Pas99] axioms.

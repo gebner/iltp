@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET761+4 : ILTP v1.1.1
+% File     : SET761+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Intersection of images
 % Version  : [Pas99] axioms.

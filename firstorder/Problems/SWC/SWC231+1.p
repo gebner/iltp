@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC231+1 : ILTP v1.1.1
+% File     : SWC231+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_pivoted2_x_pst_pivoted1
 % Version  : [Wei00] axioms.

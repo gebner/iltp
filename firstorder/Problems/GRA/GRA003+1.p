@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRA003+1 : ILTP v1.1.1
+% File     : GRA003+1 : ILTP v1.1.2
 % Domain   : Graph Theory
 % Problem  : Parts of paths
 % Version  : Especial.

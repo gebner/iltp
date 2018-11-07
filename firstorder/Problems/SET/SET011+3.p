@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET011+3 : ILTP v1.1.1
+% File     : SET011+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X \ (X \ Y) = X ^ Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

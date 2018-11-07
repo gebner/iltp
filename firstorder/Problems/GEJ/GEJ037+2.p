@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ037+2 : ILTP v1.1.1
+% File     : GEJ037+2 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Theorem 7.1
 % Version  : [D97],[D98] axioms : Especial.

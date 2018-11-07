@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC398+1 : ILTP v1.1.1
+% File     : SWC398+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_subst_x_run_eq_front2
 % Version  : [Wei00] axioms.

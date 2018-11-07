@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC045+1 : ILTP v1.1.1
+% File     : SWC045+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_id_nil_x_set_duplicate_elems
 % Version  : [Wei00] axioms.

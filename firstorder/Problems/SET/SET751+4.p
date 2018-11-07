@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET751+4 : ILTP v1.1.1
+% File     : SET751+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If X is a subset of Y, then the image f(X) is a subset of f(Y)
 % Version  : [Pas99] axioms.

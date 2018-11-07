@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : ALG211+1 : ILTP v1.1.1
+% File     : ALG211+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Vector spaces and bases
 % Version  : [Shu96] axioms : Especial.

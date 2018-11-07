@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET658+3 : ILTP v1.1.1
+% File     : SET658+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : Every R (X to Y) is (domain of R to range of R)
 % Version  : [Wor89] axioms : Reduced > Incomplete.

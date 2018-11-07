@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ202+1.012 : ILTP v1.1.1
+% File     : SYJ202+1.012 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : Cook pigeon-hole problem
 % Version  : Especial.

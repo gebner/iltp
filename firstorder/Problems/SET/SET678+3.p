@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET678+3 : ILTP v1.1.1
+% File     : SET678+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : R o Id on X is R & Id on X o R is R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

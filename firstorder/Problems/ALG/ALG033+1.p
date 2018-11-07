@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG033+1 : ILTP v1.1.1
+% File     : ALG033+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Groups 6: REPRESENTATIVES-SATISFY-PROPS-PROBLEM-2
 % Version  : Especial.

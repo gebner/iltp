@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS162+1 : ILTP v1.1.1
+% File     : KRS162+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Entailment for three natural numbers
 % Version  : Especial.

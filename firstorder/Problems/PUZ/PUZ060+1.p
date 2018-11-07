@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : PUZ060+1 : ILTP v1.1.1
+% File     : PUZ060+1 : ILTP v1.1.2
 % Domain   : Puzzles
 % Problem  : Food problems
 % Version  : Especial.

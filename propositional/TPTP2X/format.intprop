@@ -73,7 +73,9 @@ output_intprop_fof(A => B):-
 output_intprop_fof(A <=> B):-
     !, write('( '), output_intprop_fof(A), write(' eq '),
     output_intprop_fof(B), write(' )').
+output_intprop_fof('$true') :- !, write('(true___ imp true___)').
 output_intprop_fof($true) :- !, write('(true___ imp true___)').
+output_intprop_fof('$false') :- !, write('(false___ and non false___)').
 output_intprop_fof($false) :- !, write('(false___ and non false___)').
 output_intprop_fof(Atom) :-
     write(Atom).
@@ -82,26 +84,18 @@ output_intprop_fof(Atom) :-
 output_intprop_fo_formulae([]).
 
 % for TPTP-v3.1.0 or later
-output_intprop_fo_formulae([fof(Name,Status,Formula)|
-RestOfFormulae]):-
-    write('% '), write(Name), write(', '),
-    write(Status), write('.'), nl,
-    write('('),
-    (Status==conjecture ->
-         output_intprop_fof(Formula);
-         output_intprop_fof(Formula)),
-    write(')'),
-    ( (RestOfFormulae=[fof(_,axiom,_)|_];
-       RestOfFormulae=[fof(_,lemma,_)|_];
-       RestOfFormulae=[fof(_,definition,_)|_];
-       RestOfFormulae=[fof(_,hypothesis,_)|_])  ->
-        (nl, nl,
-         write(' and '), nl, nl);
-         (RestOfFormulae=[fof(_,conjecture,_)|_]  ->
-             (nl, nl,
-              write(' imp '), nl, nl);
-             true)),
-    output_intprop_fo_formulae(RestOfFormulae).
+output_intprop_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
+    ((Status==conjecture, RestOfFormulae \= []) -> 
+      (append(RestOfFormulae,[fof(Name,Status,Formula)],Formulae),
+       output_intprop_fo_formulae(Formulae))) ;
+      (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
+       write('('), output_intprop_fof(Formula), write(')'),
+       (RestOfFormulae == [] -> true;
+        (((RestOfFormulae=[fof(_,conjecture,_)]  ->
+           (nl, nl, write(' imp '), nl, nl)); 
+           (nl, nl, write(' and '), nl, nl)),
+          output_intprop_fo_formulae(RestOfFormulae)))).
+
 
 % for TPTP-v2.7.0 or earlier
 output_intprop_fo_formulae([input_formula(Name,Status,Formula)|

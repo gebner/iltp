@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM344+1 : ILTP v1.1.1
+% File     : NUM344+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : x+1 = z => z > x
 % Version  : Especial.

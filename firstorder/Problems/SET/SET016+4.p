@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET016+4 : ILTP v1.1.1
+% File     : SET016+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : First components of equal ordered pairs are equal 
 % Version  : [Pas99] axioms.

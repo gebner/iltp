@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET693+4 : ILTP v1.1.1
+% File     : SET693+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Property of union
 % Version  : [Pas99] axioms.

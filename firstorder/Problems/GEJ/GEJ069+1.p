@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ069+1 : ILTP v1.1.1
+% File     : GEJ069+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Therorem 5.2 (Ordered Geometry)
 % Version  : [P98] axioms.

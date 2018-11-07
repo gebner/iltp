@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET725+4 : ILTP v1.1.1
+% File     : SET725+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If GoF and FoH are identities, then F is one-to-one
 % Version  : [Pas99] axioms.

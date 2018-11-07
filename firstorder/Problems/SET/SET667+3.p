@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET667+3 : ILTP v1.1.1
+% File     : SET667+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : Id on A subset of R => A subset domain R & A subset range R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

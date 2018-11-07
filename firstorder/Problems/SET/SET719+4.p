@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET719+4 : ILTP v1.1.1
+% File     : SET719+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Inverse of composition 
 % Version  : [Pas99] axioms.

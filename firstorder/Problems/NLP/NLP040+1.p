@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP040+1 : ILTP v1.1.1
+% File     : NLP040+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : Three young guys, problem 15
 % Version  : [Bos00b] axioms.

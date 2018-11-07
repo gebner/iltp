@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET783+1 : ILTP v1.1.1
+% File     : SET783+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Naive set theory axioms based on Goedel's set theory
 % Version  : [Pas99] axioms.

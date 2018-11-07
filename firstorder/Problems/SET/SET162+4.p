@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET162+4 : ILTP v1.1.1
+% File     : SET162+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : The union of a set and empty set is equal to the set 
 % Version  : [Pas99] axioms.

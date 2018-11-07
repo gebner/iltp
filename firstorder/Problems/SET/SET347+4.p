@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET347+4 : ILTP v1.1.1
+% File     : SET347+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Sum of the empty set is the empty set
 % Version  : [Pas99] axioms.

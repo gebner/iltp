@@ -81,7 +81,9 @@ output_ftprolog_fof(? [] : A):- !, output_ftprolog_fof(A).
 output_ftprolog_fof(? [V|L] : A):-
     !, write('( e(x'), print(V), write(','),
     output_ftprolog_fof(? L : A), write(' ))').
+output_ftprolog_fof('$true') :- !, write('(true___ imp true___)').
 output_ftprolog_fof($true) :- !, write('(true___ imp true___)').
+output_ftprolog_fof('$false') :- !, write('(false___ and neg false___)').
 output_ftprolog_fof($false) :- !, write('(false___ and neg false___)').
 output_ftprolog_fof(Atom) :- transpred_ftprolog(Atom).
 
@@ -110,7 +112,7 @@ output_ftprolog_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
       (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
        write('('), output_ftprolog_fof(Formula), write(')'),
        (RestOfFormulae == [] -> true;
-        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+        (((RestOfFormulae=[fof(_,conjecture,_)]  ->
            (nl, nl, write('  imp '), nl, nl)); 
            (nl, nl, write('  and '), nl, nl)),
           output_ftprolog_fo_formulae(RestOfFormulae)))).

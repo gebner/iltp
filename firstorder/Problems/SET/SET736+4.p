@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET736+4 : ILTP v1.1.1
+% File     : SET736+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Problem on composition of mappings 1
 % Version  : [Pas99] axioms.

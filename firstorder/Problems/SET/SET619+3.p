@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET619+3 : ILTP v1.1.1
+% File     : SET619+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X U Y = (X sym\ Y) U X ^ Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

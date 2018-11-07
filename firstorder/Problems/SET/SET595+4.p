@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET595+4 : ILTP v1.1.1
+% File     : SET595+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : If X (= Y, then Y = X U (Y \ X)
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS171+1 : ILTP v1.1.1
+% File     : KRS171+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The inverse entailment of test 002 also holds
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYJ015+1 : ILTP v1.1.1
+% File     : SYJ015+1 : ILTP v1.1.2
 % Domain   : Intuitionistic Syntactic
 % Problem  : Using Existence-quantor
 % Version  : Especial.

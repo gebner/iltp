@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT007+1 : ILTP v1.1.1
+% File     : MGT007+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Reproducibility decreases during reorganization.
 % Version  : [PB+94] axioms.

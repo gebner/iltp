@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET756+4 : ILTP v1.1.1
+% File     : SET756+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : Inverse image of union equals the union of inverse images 
 % Version  : [Pas99] axioms.

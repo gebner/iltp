@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO127+1 : ILTP v1.1.1
+% File     : GEO127+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Incidence on oriented curves can be defined using precedence
 % Version  : [EHK99] axioms.

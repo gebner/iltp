@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET769+4 : ILTP v1.1.1
+% File     : SET769+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Equality of equivalence classes 2
 % Version  : [Pas99] axioms.

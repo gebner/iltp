@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP065+1 : ILTP v1.1.1
+% File     : NLP065+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : A man comes out of the bathroom, problem 7
 % Version  : [Bos00b] axioms.

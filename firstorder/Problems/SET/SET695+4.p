@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET695+4 : ILTP v1.1.1
+% File     : SET695+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Difference of subsets
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET063+3 : ILTP v1.1.1
+% File     : SET063+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X is a subset of the empty set, then X is the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

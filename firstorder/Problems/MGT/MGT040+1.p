@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT040+1 : ILTP v1.1.1
+% File     : MGT040+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favours FMs above EPs if change is not extreme
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.

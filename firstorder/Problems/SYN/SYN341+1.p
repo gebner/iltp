@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN341+1 : ILTP v1.1.1
+% File     : SYN341+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Church problem 46.15 (6)
 % Version  : Especial.

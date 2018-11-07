@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MSC009+1 : ILTP v1.1.1
+% File     : MSC009+1 : ILTP v1.1.2
 % Domain   : Miscellaneous
 % Problem  : Definitions of a family structure
 % Version  : Especial.

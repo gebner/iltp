@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT044+1 : ILTP v1.1.1
+% File     : MGT044+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Capability increases monotonically with age
 % Version  : [Han98] axioms.

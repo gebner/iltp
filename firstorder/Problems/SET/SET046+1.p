@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET046+1 : ILTP v1.1.1
+% File     : SET046+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : No set of non-circular sets
 % Version  : Especial.

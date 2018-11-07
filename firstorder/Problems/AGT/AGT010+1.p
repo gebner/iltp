@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : AGT010+1 : ILTP v1.1.1
+% File     : AGT010+1 : ILTP v1.1.2
 % Domain   : Agents
 % Problem  : Problem for the CPlanT system
 % Version  : [Bar03] axioms : Especial.

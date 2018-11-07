@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : LCL181+1 : ILTP v1.1.1
+% File     : LCL181+1 : ILTP v1.1.2
 % Domain   : Logic Calculi (Propositional)
 % Problem  : Principia Mathematica 2.15
 % Version  : Especial.

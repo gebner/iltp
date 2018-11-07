@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET729+4 : ILTP v1.1.1
+% File     : SET729+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : F is one-to-one and inverse(F)=F iff FoF is the identity
 % Version  : [Pas99] axioms.

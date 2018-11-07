@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : HAL001+2 : ILTP v1.1.1
+% File     : HAL001+2 : ILTP v1.1.2
 % Domain   : Homological Algebra
 % Problem  : Short Five Lemma, Part 1
 % Version  : [TPTP] axioms : Augmented.

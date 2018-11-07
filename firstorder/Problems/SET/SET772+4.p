@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET772+4 : ILTP v1.1.1
+% File     : SET772+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Belonging of the same member of a partition is an equivalence 
 % Version  : [Pas99] axioms.

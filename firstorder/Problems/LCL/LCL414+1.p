@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : LCL414+1 : ILTP v1.1.1
+% File     : LCL414+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Peter Andrews Problem THM147
 % Version  : Especial.

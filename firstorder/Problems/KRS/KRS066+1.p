@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS066+1 : ILTP v1.1.1
+% File     : KRS066+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : The extension of OWL Thing may not be emtpy in OWL Lite
 % Version  : Especial.

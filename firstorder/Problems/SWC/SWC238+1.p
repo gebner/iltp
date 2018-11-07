@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC238+1 : ILTP v1.1.1
+% File     : SWC238+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_pivoted2_x_run_strict_ord_max2
 % Version  : [Wei00] axioms.

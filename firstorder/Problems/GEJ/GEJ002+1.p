@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ002+1 : ILTP v1.1.1
+% File     : GEJ002+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Theorem 3.2. Convergent lines are distinct 
 % Version  : [P95] axioms.

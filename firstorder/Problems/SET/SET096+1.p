@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET096+1 : ILTP v1.1.1
+% File     : SET096+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : There are at most two subsets of a singleton set
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

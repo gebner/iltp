@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT063+1 : ILTP v1.1.1
+% File     : MGT063+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Conditions for increasing then decreasing hazard of mortality
 % Version  : [Han98] axioms.

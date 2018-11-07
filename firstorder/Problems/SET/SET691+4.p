@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET691+4 : ILTP v1.1.1
+% File     : SET691+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : A set is a subset of empty set if and only if it is equal to it 
 % Version  : [Pas99] axioms.

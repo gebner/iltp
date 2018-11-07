@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ075+1 : ILTP v1.1.1
+% File     : GEJ075+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Lemma 5.5.(iv) (Ordered Geometry)
 % Version  : [P98] axioms.

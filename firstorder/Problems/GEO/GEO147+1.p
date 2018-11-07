@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO147+1 : ILTP v1.1.1
+% File     : GEO147+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Meeting is possible only if there is a common position
 % Version  : [EHK99] axioms.

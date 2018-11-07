@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT026+1 : ILTP v1.1.1
+% File     : MGT026+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Selection favors efficient producers past the critical point
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.

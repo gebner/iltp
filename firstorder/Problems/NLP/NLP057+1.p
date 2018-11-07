@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP057+1 : ILTP v1.1.1
+% File     : NLP057+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : Mia ordered a shake, problem 15
 % Version  : [Bos00b] axioms.

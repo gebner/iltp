@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ012+2 : ILTP v1.1.1
+% File     : GEJ012+2 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Theorem 4.4.ii (Triangle axioms)
 % Version  : [D97],[D98] axioms : Especial.

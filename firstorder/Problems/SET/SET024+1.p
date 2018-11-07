@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET024+1 : ILTP v1.1.1
+% File     : SET024+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : A set belongs to its singleton
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS129+1 : ILTP v1.1.1
+% File     : KRS129+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : An example combinging owl:oneOf and owl:inverseOf
 % Version  : Especial.

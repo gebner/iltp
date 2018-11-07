@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO118+1 : ILTP v1.1.1
+% File     : GEO118+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Precedence on oriented curves is asymmetric
 % Version  : [EHK99] axioms.

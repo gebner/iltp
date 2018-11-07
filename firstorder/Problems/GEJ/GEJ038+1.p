@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ038+1 : ILTP v1.1.1
+% File     : GEJ038+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Theorem 7.2. Irreflexivity of line convergence
 % Version  : [P95] axioms.

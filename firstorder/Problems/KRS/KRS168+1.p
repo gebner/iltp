@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS168+1 : ILTP v1.1.1
+% File     : KRS168+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : De Morgan's law
 % Version  : Especial.

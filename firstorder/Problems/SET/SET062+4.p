@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET062+4 : ILTP v1.1.1
+% File     : SET062+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : The empty set is a subset of all sets 
 % Version  : [Pas99] axioms.

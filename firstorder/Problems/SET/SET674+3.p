@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET674+3 : ILTP v1.1.1
+% File     : SET674+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : R (X to Y) o X is the range R & R^-1(Y) is the domain of R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

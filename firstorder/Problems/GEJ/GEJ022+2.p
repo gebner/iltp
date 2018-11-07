@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ022+2 : ILTP v1.1.1
+% File     : GEJ022+2 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Theorem 4.8 (Symmetry of apartness)
 % Version  : [D97],[D98] axioms : Especial.

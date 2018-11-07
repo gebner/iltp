@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET105+1 : ILTP v1.1.1
+% File     : SET105+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Special member 3 of an ordered pair
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET633+3 : ILTP v1.1.1
+% File     : SET633+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X \ Y (= Z and Y \ X (= Z, then X sym\ Y (= Z
 % Version  : [Try89] axioms : Reduced > Incomplete.

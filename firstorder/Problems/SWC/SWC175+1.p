@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC175+1 : ILTP v1.1.1
+% File     : SWC175+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_diff_adj2_x_run_strict_ord_front2
 % Version  : [Wei00] axioms.

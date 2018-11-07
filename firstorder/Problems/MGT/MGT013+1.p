@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT013+1 : ILTP v1.1.1
+% File     : MGT013+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : If organization complexity increases, its size cannot decrease 
 % Version  : [PB+94] axioms.

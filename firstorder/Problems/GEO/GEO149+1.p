@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO149+1 : ILTP v1.1.1
+% File     : GEO149+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Condition for meeting at two points
 % Version  : [EHK99] axioms.

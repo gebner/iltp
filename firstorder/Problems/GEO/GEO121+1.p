@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO121+1 : ILTP v1.1.1
+% File     : GEO121+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Endpoints are either starting or finishing points
 % Version  : [EHK99] axioms.

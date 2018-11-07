@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET683+3 : ILTP v1.1.1
+% File     : SET683+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : !y in E : y in range of R (X to Y) ?x in D : x in domain of R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

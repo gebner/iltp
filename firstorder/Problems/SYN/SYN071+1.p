@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN071+1 : ILTP v1.1.1
+% File     : SYN071+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Pelletier Problem 48
 % Version  : Especial.

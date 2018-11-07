@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO122+1 : ILTP v1.1.1
+% File     : GEO122+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Every curve has a finishing point
 % Version  : [EHK99] axioms.

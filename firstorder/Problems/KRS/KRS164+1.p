@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS164+1 : ILTP v1.1.1
+% File     : KRS164+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Two classes may have the same class extension
 % Version  : Especial.

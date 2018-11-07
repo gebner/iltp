@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET752+4 : ILTP v1.1.1
+% File     : SET752+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : The image of union is equal to the union of images 
 % Version  : [Pas99] axioms.

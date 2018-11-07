@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO148+1 : ILTP v1.1.1
+% File     : GEO148+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : No meeting if someone has already passed
 % Version  : [EHK99] axioms.

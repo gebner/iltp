@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC360+1 : ILTP v1.1.1
+% File     : SWC360+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_segment_ne_x_run_ord_max1
 % Version  : [Wei00] axioms.

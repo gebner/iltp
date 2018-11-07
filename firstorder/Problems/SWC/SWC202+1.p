@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC202+1 : ILTP v1.1.1
+% File     : SWC202+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_equal3_x_run_eq_max2
 % Version  : [Wei00] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET776+4 : ILTP v1.1.1
+% File     : SET776+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Property of pre-order 
 % Version  : [Pas99] axioms.

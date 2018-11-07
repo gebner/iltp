@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO092+1 : ILTP v1.1.1
+% File     : GEO092+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Common point of open sum is the meeting point
 % Version  : [EHK99] axioms.

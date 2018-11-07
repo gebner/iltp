@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM312+1 : ILTP v1.1.1
+% File     : NUM312+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : only 2 + 3 = 5
 % Version  : Especial.

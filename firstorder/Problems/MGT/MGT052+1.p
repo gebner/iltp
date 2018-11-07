@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT052+1 : ILTP v1.1.1
+% File     : MGT052+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : The environment at any time is similar with itself
 % Version  : [Han98] axioms.

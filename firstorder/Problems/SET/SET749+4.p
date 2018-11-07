@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET749+4 : ILTP v1.1.1
+% File     : SET749+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If F and G and decreasing, then GoF is increasing
 % Version  : [Pas99] axioms.

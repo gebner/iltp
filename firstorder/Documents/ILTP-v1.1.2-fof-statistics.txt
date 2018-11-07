@@ -1,11 +1,25 @@
-ILTP-v1.1.1-firstorder-statistics
+ILTP-v1.1.2-firstorder-statistics
 ---------------------------------
 
 2550 problems
 (2480 non-propositional, 70 propositional)
-date: 15 Jul 2006
+date: 1 Dec 2006
 
-Domain Theorem Non-Theorem UnsolvedOpen    Intuit. Rating
+
+Rating        0.0        0.01-0.33  0.34-0.66  0.67-0.99  1.00       Sum
+
+Theorem       199        85         85         298        0          667        
+Non-Theorem   4          0          10         82         0          96         
+Unsolved      0          0          0          0          424        424        
+Open          0          0          0          0          1363       1363       
+
+Propositional 24         6          12         25         3          70         
+First-Order   179        79         83         355        1784       2480       
+
+Sum           203        85         95         380        1787       2550 
+
+
+Domain Theorem Non-Theorem Unsolved Open   Intuit. Rating
                                            0.0       0.01-0.33 0.34-0.66 0.67-0.99 1.00
 AGT    13      0           0       39      0         0         2         11        39     
 ALG    9       0           0       190     0         3         2         4         190    
@@ -25,40 +39,28 @@ PLA    0       1           5       0       0         0         0         1      
 PUZ    4       0           0       2       2         0         0         2         2      
 SET    76      0           5       243     12        1         1         62        248    
 SWC    1       0           1       421     0         1         0         0         422    
-SWV    1       5           4       210     1         0         0         5         214    
+SWV    133     5           4       78      1         24        41        72        82     
 SYN    120     69          75      102     101       9         10        69        177    
 TOP    2       0           1       0       2         0         0         0         1      
 GEJ    71      0           0       22      4         4         10        53        22     
 GPJ    3       0           0       2       0         1         0         2         2      
 SYJ    108     17          3       0       62        21        19        23        3      
-sum    535     96          424     1495    203       61        54        313       1919   
-
-
-Rating        0.0        0.01-0.33  0.34-0.66  0.67-0.99  1.00       Sum
-
-Theorem       199        61         44         231        0          535        
-Non-Theorem   4          0          10         82         0          96         
-Unsolved      0          0          0          0          424        424        
-Open          0          0          0          0          1495       1495       
-
-Propositional 24         6          12         25         3          70         
-First-Order   179        55         42         288        1916       2480       
-
-Sum           203        61         54         313        1919       2550       
+sum    667     96          424     1363    203       85        95        380       1787   
 
 
 Domain       AGT ALG COM CSR GEO GRA GRP HAL KRS LCL MGT MSC NLP NUM PLA PUZ SET SWC SWV SYN TOP GEJ GPJ SYJ
 
-Theorem      13  9   3   1   6   3   1   0   52  1   25  0   11  24  0   4   76  1   1   120 2   71  3   108 
+Theorem      13  9   3   1   6   3   1   0   52  1   25  0   11  24  0   4   76  1   133 120 2   71  3   108 
 Non-Theorem  0   0   0   0   0   0   2   0   0   2   0   0   0   0   1   0   0   0   5   69  0   0   0   17  
 Unsolved     0   0   0   0   5   0   0   3   46  1   11  1   236 27  5   0   5   1   4   75  1   0   0   3   
-Open         39  190 0   28  66  15  2   6   60  0   42  1   11  33  0   2   243 421 210 102 0   22  2   0   
+Open         39  190 0   28  66  15  2   6   60  0   42  1   11  33  0   2   243 421 78  102 0   22  2   0   
 
 Rating      
  int.   0.0  0   0   0   0   0   0   0   0   11  0   5   0   3   0   0   2   12  0   1   101 2   4   0   62  
        >0.0  52  199 3   29  77  18  5   9   147 4   73  2   255 84  6   4   312 423 219 265 1   89  5   66  
  class. 0.0  0   11  0   0   0   0   2   0   121 2   19  1   136 0   1   4   23  30  7   125 2   93  5   380 
        >0.0  52  188 3   29  77  18  3   9   37  2   59  1   122 84  5   2   301 393 213 241 1   0   0   0   
+
 
 
 problem         intuit. status  intuit. rating
@@ -1807,15 +1809,15 @@ SWV015+1        Non-Theorem     0.75
 SWV016+1        Unsolved        1.00
 SWV017+1        Non-Theorem     0.75
 SWV018+1        Unsolved        1.00
-SWV022+1        Open            1.00
-SWV023+1        Open            1.00
+SWV022+1        Theorem         0.75
+SWV023+1        Theorem         0.50
 SWV024+1        Open            1.00
 SWV025+1        Open            1.00
 SWV026+1        Open            1.00
 SWV027+1        Open            1.00
 SWV028+1        Open            1.00
 SWV029+1        Open            1.00
-SWV030+1        Open            1.00
+SWV030+1        Theorem         0.75
 SWV031+1        Open            1.00
 SWV032+1        Open            1.00
 SWV033+1        Open            1.00
@@ -1828,71 +1830,71 @@ SWV039+1        Open            1.00
 SWV040+1        Open            1.00
 SWV041+1        Open            1.00
 SWV042+1        Open            1.00
-SWV043+1        Open            1.00
+SWV043+1        Theorem         0.25
 SWV044+1        Open            1.00
-SWV045+1        Open            1.00
+SWV045+1        Theorem         0.50
 SWV046+1        Open            1.00
-SWV047+1        Open            1.00
+SWV047+1        Theorem         0.50
 SWV048+1        Open            1.00
 SWV049+1        Open            1.00
 SWV050+1        Open            1.00
 SWV051+1        Open            1.00
 SWV052+1        Open            1.00
 SWV053+1        Open            1.00
-SWV054+1        Open            1.00
+SWV054+1        Theorem         0.50
 SWV055+1        Open            1.00
 SWV056+1        Open            1.00
-SWV057+1        Open            1.00
-SWV058+1        Open            1.00
-SWV059+1        Open            1.00
-SWV060+1        Open            1.00
-SWV061+1        Open            1.00
-SWV062+1        Open            1.00
-SWV063+1        Open            1.00
-SWV064+1        Open            1.00
-SWV065+1        Open            1.00
-SWV066+1        Open            1.00
-SWV067+1        Open            1.00
-SWV068+1        Open            1.00
+SWV057+1        Theorem         0.50
+SWV058+1        Theorem         0.50
+SWV059+1        Theorem         0.50
+SWV060+1        Theorem         0.25
+SWV061+1        Theorem         0.25
+SWV062+1        Theorem         0.25
+SWV063+1        Theorem         0.25
+SWV064+1        Theorem         0.75
+SWV065+1        Theorem         0.75
+SWV066+1        Theorem         0.25
+SWV067+1        Theorem         0.75
+SWV068+1        Theorem         0.50
 SWV069+1        Open            1.00
-SWV070+1        Open            1.00
-SWV071+1        Open            1.00
-SWV072+1        Open            1.00
-SWV073+1        Open            1.00
-SWV074+1        Open            1.00
-SWV075+1        Open            1.00
-SWV076+1        Open            1.00
-SWV077+1        Open            1.00
-SWV078+1        Open            1.00
+SWV070+1        Theorem         0.25
+SWV071+1        Theorem         0.25
+SWV072+1        Theorem         0.25
+SWV073+1        Theorem         0.25
+SWV074+1        Theorem         0.25
+SWV075+1        Theorem         0.25
+SWV076+1        Theorem         0.25
+SWV077+1        Theorem         0.50
+SWV078+1        Theorem         0.50
 SWV079+1        Open            1.00
-SWV080+1        Open            1.00
-SWV081+1        Open            1.00
-SWV082+1        Open            1.00
-SWV083+1        Open            1.00
-SWV084+1        Open            1.00
-SWV085+1        Open            1.00
-SWV086+1        Open            1.00
-SWV087+1        Open            1.00
-SWV088+1        Open            1.00
+SWV080+1        Theorem         0.25
+SWV081+1        Theorem         0.25
+SWV082+1        Theorem         0.25
+SWV083+1        Theorem         0.25
+SWV084+1        Theorem         0.25
+SWV085+1        Theorem         0.25
+SWV086+1        Theorem         0.50
+SWV087+1        Theorem         0.50
+SWV088+1        Theorem         0.50
 SWV089+1        Open            1.00
 SWV090+1        Open            1.00
 SWV091+1        Open            1.00
 SWV092+1        Open            1.00
-SWV093+1        Open            1.00
-SWV094+1        Open            1.00
-SWV095+1        Open            1.00
-SWV096+1        Open            1.00
-SWV097+1        Open            1.00
+SWV093+1        Theorem         0.75
+SWV094+1        Theorem         0.75
+SWV095+1        Theorem         0.50
+SWV096+1        Theorem         0.50
+SWV097+1        Theorem         0.75
 SWV098+1        Open            1.00
-SWV099+1        Open            1.00
+SWV099+1        Theorem         0.50
 SWV100+1        Open            1.00
 SWV101+1        Open            1.00
 SWV102+1        Open            1.00
 SWV103+1        Open            1.00
 SWV104+1        Open            1.00
-SWV105+1        Open            1.00
-SWV106+1        Open            1.00
-SWV107+1        Open            1.00
+SWV105+1        Theorem         0.50
+SWV106+1        Theorem         0.50
+SWV107+1        Theorem         0.50
 SWV108+1        Open            1.00
 SWV109+1        Open            1.00
 SWV110+1        Open            1.00
@@ -1901,123 +1903,123 @@ SWV112+1        Open            1.00
 SWV113+1        Open            1.00
 SWV114+1        Open            1.00
 SWV115+1        Open            1.00
-SWV116+1        Open            1.00
+SWV116+1        Theorem         0.75
 SWV117+1        Open            1.00
 SWV118+1        Open            1.00
-SWV119+1        Open            1.00
+SWV119+1        Theorem         0.50
 SWV120+1        Open            1.00
-SWV121+1        Open            1.00
-SWV122+1        Open            1.00
-SWV123+1        Open            1.00
+SWV121+1        Theorem         0.50
+SWV122+1        Theorem         0.75
+SWV123+1        Theorem         0.50
 SWV124+1        Open            1.00
 SWV125+1        Open            1.00
-SWV126+1        Open            1.00
+SWV126+1        Theorem         0.75
 SWV127+1        Open            1.00
-SWV128+1        Open            1.00
+SWV128+1        Theorem         0.50
 SWV129+1        Unsolved        1.00
 SWV130+1        Open            1.00
-SWV131+1        Open            1.00
-SWV132+1        Open            1.00
-SWV133+1        Open            1.00
-SWV134+1        Open            1.00
-SWV135+1        Open            1.00
-SWV136+1        Open            1.00
-SWV137+1        Open            1.00
-SWV138+1        Open            1.00
+SWV131+1        Theorem         0.50
+SWV132+1        Theorem         0.50
+SWV133+1        Theorem         0.75
+SWV134+1        Theorem         0.75
+SWV135+1        Theorem         0.75
+SWV136+1        Theorem         0.75
+SWV137+1        Theorem         0.75
+SWV138+1        Theorem         0.75
 SWV139+1        Open            1.00
 SWV140+1        Open            1.00
 SWV141+1        Open            1.00
 SWV142+1        Open            1.00
 SWV143+1        Open            1.00
 SWV144+1        Open            1.00
-SWV145+1        Open            1.00
-SWV146+1        Open            1.00
-SWV147+1        Open            1.00
-SWV148+1        Open            1.00
-SWV149+1        Open            1.00
-SWV150+1        Open            1.00
-SWV151+1        Open            1.00
-SWV152+1        Open            1.00
+SWV145+1        Theorem         0.75
+SWV146+1        Theorem         0.75
+SWV147+1        Theorem         0.75
+SWV148+1        Theorem         0.75
+SWV149+1        Theorem         0.75
+SWV150+1        Theorem         0.75
+SWV151+1        Theorem         0.75
+SWV152+1        Theorem         0.75
 SWV153+1        Open            1.00
 SWV154+1        Open            1.00
-SWV155+1        Open            1.00
-SWV156+1        Open            1.00
+SWV155+1        Theorem         0.25
+SWV156+1        Theorem         0.75
 SWV157+1        Open            1.00
 SWV158+1        Open            1.00
-SWV159+1        Open            1.00
-SWV160+1        Open            1.00
+SWV159+1        Theorem         0.25
+SWV160+1        Theorem         0.75
 SWV161+1        Open            1.00
 SWV162+1        Open            1.00
-SWV163+1        Open            1.00
-SWV164+1        Open            1.00
-SWV165+1        Open            1.00
-SWV166+1        Open            1.00
+SWV163+1        Theorem         0.75
+SWV164+1        Theorem         0.75
+SWV165+1        Theorem         0.75
+SWV166+1        Theorem         0.75
 SWV167+1        Open            1.00
-SWV168+1        Open            1.00
-SWV169+1        Open            1.00
-SWV170+1        Open            1.00
-SWV171+1        Open            1.00
-SWV172+1        Open            1.00
-SWV173+1        Open            1.00
-SWV174+1        Open            1.00
-SWV175+1        Open            1.00
-SWV176+1        Open            1.00
-SWV177+1        Open            1.00
-SWV178+1        Open            1.00
-SWV179+1        Open            1.00
-SWV180+1        Open            1.00
-SWV181+1        Open            1.00
+SWV168+1        Theorem         0.50
+SWV169+1        Theorem         0.50
+SWV170+1        Theorem         0.75
+SWV171+1        Theorem         0.75
+SWV172+1        Theorem         0.25
+SWV173+1        Theorem         0.75
+SWV174+1        Theorem         0.75
+SWV175+1        Theorem         0.50
+SWV176+1        Theorem         0.75
+SWV177+1        Theorem         0.75
+SWV178+1        Theorem         0.75
+SWV179+1        Theorem         0.50
+SWV180+1        Theorem         0.50
+SWV181+1        Theorem         0.75
 SWV182+1        Open            1.00
-SWV183+1        Open            1.00
-SWV184+1        Open            1.00
-SWV185+1        Open            1.00
-SWV186+1        Open            1.00
-SWV187+1        Open            1.00
-SWV188+1        Open            1.00
-SWV189+1        Open            1.00
-SWV190+1        Open            1.00
-SWV191+1        Open            1.00
-SWV192+1        Open            1.00
-SWV193+1        Open            1.00
-SWV194+1        Open            1.00
-SWV195+1        Open            1.00
-SWV196+1        Open            1.00
-SWV197+1        Open            1.00
+SWV183+1        Theorem         0.25
+SWV184+1        Theorem         0.75
+SWV185+1        Theorem         0.75
+SWV186+1        Theorem         0.25
+SWV187+1        Theorem         0.75
+SWV188+1        Theorem         0.75
+SWV189+1        Theorem         0.75
+SWV190+1        Theorem         0.75
+SWV191+1        Theorem         0.75
+SWV192+1        Theorem         0.50
+SWV193+1        Theorem         0.50
+SWV194+1        Theorem         0.75
+SWV195+1        Theorem         0.75
+SWV196+1        Theorem         0.75
+SWV197+1        Theorem         0.50
 SWV198+1        Open            1.00
 SWV199+1        Open            1.00
-SWV200+1        Open            1.00
-SWV201+1        Open            1.00
+SWV200+1        Theorem         0.50
+SWV201+1        Theorem         0.50
 SWV202+1        Open            1.00
 SWV203+1        Open            1.00
 SWV204+1        Open            1.00
 SWV205+1        Open            1.00
-SWV206+1        Open            1.00
+SWV206+1        Theorem         0.50
 SWV207+1        Unsolved        1.00
 SWV208+1        Open            1.00
 SWV209+1        Open            1.00
-SWV210+1        Open            1.00
-SWV211+1        Open            1.00
-SWV212+1        Open            1.00
-SWV213+1        Open            1.00
-SWV214+1        Open            1.00
-SWV215+1        Open            1.00
-SWV216+1        Open            1.00
-SWV217+1        Open            1.00
-SWV218+1        Open            1.00
-SWV219+1        Open            1.00
-SWV220+1        Open            1.00
-SWV221+1        Open            1.00
-SWV222+1        Open            1.00
-SWV223+1        Open            1.00
-SWV224+1        Open            1.00
-SWV225+1        Open            1.00
-SWV226+1        Open            1.00
-SWV227+1        Open            1.00
-SWV228+1        Open            1.00
-SWV229+1        Open            1.00
-SWV230+1        Open            1.00
-SWV231+1        Open            1.00
-SWV232+1        Open            1.00
+SWV210+1        Theorem         0.50
+SWV211+1        Theorem         0.75
+SWV212+1        Theorem         0.75
+SWV213+1        Theorem         0.75
+SWV214+1        Theorem         0.75
+SWV215+1        Theorem         0.75
+SWV216+1        Theorem         0.75
+SWV217+1        Theorem         0.75
+SWV218+1        Theorem         0.75
+SWV219+1        Theorem         0.50
+SWV220+1        Theorem         0.75
+SWV221+1        Theorem         0.75
+SWV222+1        Theorem         0.75
+SWV223+1        Theorem         0.75
+SWV224+1        Theorem         0.75
+SWV225+1        Theorem         0.75
+SWV226+1        Theorem         0.75
+SWV227+1        Theorem         0.75
+SWV228+1        Theorem         0.75
+SWV229+1        Theorem         0.75
+SWV230+1        Theorem         0.50
+SWV231+1        Theorem         0.50
+SWV232+1        Theorem         0.50
 SYN001+1        Non-Theorem     0.50
 SYN007+1.014    Non-Theorem     0.75
 SYN036+1        Theorem         0.75

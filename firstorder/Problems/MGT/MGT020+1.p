@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT020+1 : ILTP v1.1.1
+% File     : MGT020+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : First movers exceeds efficient producers disbanding rate
 % Version  : [PB+94] axioms.

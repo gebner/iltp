@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO161+1 : ILTP v1.1.1
+% File     : GEO161+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Trajectories
 % Version  : [EHK99] axioms.

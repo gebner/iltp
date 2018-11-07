@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET702+4 : ILTP v1.1.1
+% File     : SET702+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Property of product and intersection
 % Version  : [Pas99] axioms.

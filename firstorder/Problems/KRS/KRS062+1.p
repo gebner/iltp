@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS062+1 : ILTP v1.1.1
+% File     : KRS062+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : dc:creator may be declared as an annotation property
 % Version  : Especial.

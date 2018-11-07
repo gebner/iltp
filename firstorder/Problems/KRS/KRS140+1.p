@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS140+1 : ILTP v1.1.1
+% File     : KRS140+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Test illustrating extensional semantics of owl:TransitiveProperty
 % Version  : Especial.

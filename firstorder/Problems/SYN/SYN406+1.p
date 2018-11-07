@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN406+1 : ILTP v1.1.1
+% File     : SYN406+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Kalish and Montague Problem 240
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET091+1 : ILTP v1.1.1
+% File     : SET091+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Uniqueness of member_of when X is not a singleton of a set
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET066+1 : ILTP v1.1.1
+% File     : SET066+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Unordered pair is commutative
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

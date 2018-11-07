@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : MSC010+1 : ILTP v1.1.1
+% File     : MSC010+1 : ILTP v1.1.2
 % Domain   : Miscellaneous
 % Problem  : Simple, but hard, obligation from proof verification
 % Version  : Especial.

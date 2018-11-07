@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GRP194+1 : ILTP v1.1.1
+% File     : GRP194+1 : ILTP v1.1.2
 % Domain   : Group Theory (Semigroups)
 % Problem  : In semigroups, a surjective homomorphism maps the zero
 % Version  : [Gol93] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET352+4 : ILTP v1.1.1
+% File     : SET352+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : The sum of an unordered pair is the union of the pair
 % Version  : [Pas99] axioms.

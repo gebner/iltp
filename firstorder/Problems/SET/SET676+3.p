@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET676+3 : ILTP v1.1.1
+% File     : SET676+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : X x X is a binary relation on X
 % Version  : [Wor89] axioms : Reduced > Incomplete.

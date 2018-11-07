@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET720+4 : ILTP v1.1.1
+% File     : SET720+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : The inverse of the inverse of a mapping is equal to the mapping
 % Version  : [Pas99] axioms.

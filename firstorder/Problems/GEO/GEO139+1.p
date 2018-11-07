@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO139+1 : ILTP v1.1.1
+% File     : GEO139+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Oppositely oriented curve exists
 % Version  : [EHK99] axioms.

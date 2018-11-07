@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN361+1 : ILTP v1.1.1
+% File     : SYN361+1 : ILTP v1.1.2
 % Domain   : Syntactic
 % Problem  : Peter Andrews Problem X2112
 % Version  : Especial.

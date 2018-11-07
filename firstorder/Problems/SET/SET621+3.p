@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET621+3 : ILTP v1.1.1
+% File     : SET621+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : (X sym\ Y) \ Z = (X \ (Y U Z)) U (Y \ (X U Z))
 % Version  : [Try89] axioms : Reduced > Incomplete.

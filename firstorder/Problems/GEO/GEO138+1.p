@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO138+1 : ILTP v1.1.1
+% File     : GEO138+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Curve and ordered points determine oriented curve
 % Version  : [EHK99] axioms.

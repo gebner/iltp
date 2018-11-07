@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM362+1 : ILTP v1.1.1
+% File     : NUM362+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : !XY (X+Y = 8) => X - Y = 0
 % Version  : Especial.

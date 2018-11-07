@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT058+1 : ILTP v1.1.1
+% File     : MGT058+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : An organization's position cannot be both fragile and robust
 % Version  : [Han98] axioms.

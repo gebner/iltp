@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT029+1 : ILTP v1.1.1
+% File     : MGT029+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : EPs have positive and FMs have negative growth rates
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.

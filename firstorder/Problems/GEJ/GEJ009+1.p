@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEJ009+1 : ILTP v1.1.1
+% File     : GEJ009+1 : ILTP v1.1.2
 % Domain   : Constructive Geometry
 % Problem  : Lemma 4.3.i (Theorems 4: symmetry in apartness and incidence)
 % Version  : [P95] axioms.

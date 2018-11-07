@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG193+1 : ILTP v1.1.1
+% File     : ALG193+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Quasigroups 5 QG4: VERIFY-GEN-SYSES-PROBLEM-4
 % Version  : Especial.

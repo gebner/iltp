@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET199+4 : ILTP v1.1.1
+% File     : SET199+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : If Z (= X and Z (= Y, then Z (= X ^ Y
 % Version  : [Pas99] axioms.

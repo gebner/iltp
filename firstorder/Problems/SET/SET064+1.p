@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET064+1 : ILTP v1.1.1
+% File     : SET064+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Uniqueness of null class
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

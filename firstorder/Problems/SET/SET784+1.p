@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET784+1 : ILTP v1.1.1
+% File     : SET784+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Mapping axioms for the SET006+0 set theory axioms
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN526+1 : ILTP v1.1.1
+% File     : SYN526+1 : ILTP v1.1.2
 % Domain   : Syntactic (Translated)
 % Problem  : ALC, N=5, R=1, L=25, K=3, D=2, P=0, Index=011
 % Version  : Especial.

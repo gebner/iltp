@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET002+4 : ILTP v1.1.1
+% File     : SET002+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : Idempotency of union
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SYN550+1 : ILTP v1.1.1
+% File     : SYN550+1 : ILTP v1.1.2
 % Domain   : Syntactic (Translated)
 % Problem  : dia box p <=> dia box dia box p
 % Version  : Especial.

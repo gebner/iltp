@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV146+1 : ILTP v1.1.1
+% File     : SWV146+1 : ILTP v1.1.2
 % Domain   : Software Verification
 % Problem  : Simplified proof obligation gauss_array_0016
 % Version  : [DFS04] axioms : Especial.

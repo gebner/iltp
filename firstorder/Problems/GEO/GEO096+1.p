@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO096+1 : ILTP v1.1.1
+% File     : GEO096+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Endpoints of curves are endpoints of sum
 % Version  : [EHK99] axioms.

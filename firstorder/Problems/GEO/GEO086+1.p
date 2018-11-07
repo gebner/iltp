@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO086+1 : ILTP v1.1.1
+% File     : GEO086+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Every sub-curve of an open curve is open
 % Version  : [EHK99] axioms.

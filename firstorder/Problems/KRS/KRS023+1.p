@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS023+1 : ILTP v1.1.1
+% File     : KRS023+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : A minimal OWL Lite version of I5.3-005
 % Version  : Especial.

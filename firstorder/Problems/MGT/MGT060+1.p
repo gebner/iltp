@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT060+1 : ILTP v1.1.1
+% File     : MGT060+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Hazard of mortality is lower during periods of immunity
 % Version  : [Han98] axioms.

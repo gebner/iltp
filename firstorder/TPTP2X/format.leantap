@@ -84,8 +84,11 @@ output_leantap_fof(? [] : A):- !, output_leantap_fof(A).
 output_leantap_fof(? [V|L] : A):-
     !, write('( ex('), print(V), write(' , '),
     output_leantap_fof(? L : A), write(' ))').
+output_leantap_fof('$true') :- !, write('(true___=>true___)').
 output_leantap_fof($true) :- !, write('(true___=>true___)').
+output_leantap_fof('$false') :- !, write('(false___ & - false___)').
 output_leantap_fof($false) :- !, write('(false___ & - false___)').
+
 output_leantap_fof(Atom) :-
     print(Atom).
 %----------------------------------------------------------------------
@@ -100,7 +103,7 @@ output_leantap_fo_formulae([fof(Name,Status,Formula)|RestOfFormulae]) :-
       (write('% '), write(Name), write(', '), write(Status), write('.'), nl,
        write('('), output_leantap_fof(Formula), write(')'),
        (RestOfFormulae == [] -> true;
-        (((RestOfFormulae=[fof(_,conjecture,_)|_]  ->
+        (((RestOfFormulae=[fof(_,conjecture,_)]  ->
            (nl, nl, write('  =>'), nl, nl)); 
            (nl, nl, write('  &'), nl, nl)),
           output_leantap_fo_formulae(RestOfFormulae)))).

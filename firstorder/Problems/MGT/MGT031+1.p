@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT031+1 : ILTP v1.1.1
+% File     : MGT031+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : First movers appear first in an environment
 % Version  : [PB+94] axioms : Reduced & Augmented > Complete.

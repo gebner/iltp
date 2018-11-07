@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS055+1 : ILTP v1.1.1
+% File     : KRS055+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : owl:disjointWith edges may be within OWL DL
 % Version  : Especial.

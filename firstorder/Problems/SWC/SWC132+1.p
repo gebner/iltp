@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC132+1 : ILTP v1.1.1
+% File     : SWC132+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pr_works_on_cycles_x_rot_l2
 % Version  : [Wei00] axioms.

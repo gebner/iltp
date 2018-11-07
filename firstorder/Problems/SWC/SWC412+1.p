@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC412+1 : ILTP v1.1.1
+% File     : SWC412+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_swap_ends_x_swap_ends
 % Version  : [Wei00] axioms.

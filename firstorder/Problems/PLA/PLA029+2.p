@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PLA029+2 : ILTP v1.1.1
+% File     : PLA029+2 : ILTP v1.1.2
 % Domain   : Planning (Blocks world)
 % Problem  : Blocks world axioms
 % Version  : [Bau99] axioms.

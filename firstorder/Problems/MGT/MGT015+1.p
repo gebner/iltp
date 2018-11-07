@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT015+1 : ILTP v1.1.1
+% File     : MGT015+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Complexity increases the expected duration of reorganisation.
 % Version  : [PB+94] axioms.

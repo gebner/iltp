@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC305+1 : ILTP v1.1.1
+% File     : SWC305+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_pst_top_sorted_x_run_strict_ord_front1
 % Version  : [Wei00] axioms.

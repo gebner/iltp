@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS022+1 : ILTP v1.1.1
+% File     : KRS022+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : Informal semantics for RDF container are not respected by OWL
 % English  : The informal semantics indicated by comments concerning user 

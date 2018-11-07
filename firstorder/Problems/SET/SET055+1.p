@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET055+1 : ILTP v1.1.1
+% File     : SET055+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Reflexivity of equality
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET766+4 : ILTP v1.1.1
+% File     : SET766+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : A member belongs to its equivalence class 
 % Version  : [Pas99] axioms.

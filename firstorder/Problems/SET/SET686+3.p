@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET686+3 : ILTP v1.1.1
+% File     : SET686+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : x in R^-1(D2) iff ?y in E : <x,y> in R (X to Y) & y in D2
 % Version  : [Wor89] axioms : Reduced > Incomplete.

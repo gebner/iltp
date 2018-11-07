@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET592+3 : ILTP v1.1.1
+% File     : SET592+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y and X (= Z and Y ^ Z = empty set, then X = empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

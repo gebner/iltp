@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET696+4 : ILTP v1.1.1
+% File     : SET696+4 : ILTP v1.1.2
 % Domain   : Set Theory (Naive)
 % Problem  : If A (= E, then (E / A) ^ A = empty set
 % Version  : [Pas99] axioms.

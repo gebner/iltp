@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT053+1 : ILTP v1.1.1
+% File     : MGT053+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : The dissimilarity relation is symmetric
 % Version  : [Han98] axioms.

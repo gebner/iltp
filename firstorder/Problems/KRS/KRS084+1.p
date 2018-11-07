@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS084+1 : ILTP v1.1.1
+% File     : KRS084+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : DL Test: t6f.1 Double blocking example
 % Version  : Especial.

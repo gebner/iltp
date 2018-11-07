@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET669+3 : ILTP v1.1.1
+% File     : SET669+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : Id on Y subset of R  => Y subset of domain R & Y is range R
 % Version  : [Wor89] axioms : Reduced > Incomplete.

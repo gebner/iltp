@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET580+3 : ILTP v1.1.1
+% File     : SET580+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : x is in X sym\ Y iff x is in X iff x is not in Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

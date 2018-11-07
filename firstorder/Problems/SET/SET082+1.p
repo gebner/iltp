@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET082+1 : ILTP v1.1.1
+% File     : SET082+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : If X is not a set, {X} = null class
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

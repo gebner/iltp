@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : PUZ001+1 : ILTP v1.1.1
+% File     : PUZ001+1 : ILTP v1.1.2
 % Domain   : Puzzles
 % Problem  : Dreadbury Mansion
 % Version  : Especial.

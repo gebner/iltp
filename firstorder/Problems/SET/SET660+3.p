@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET660+3 : ILTP v1.1.1
+% File     : SET660+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : For every y in Y ? x : <x,y> in R (X to Y) iff range of R is Y
 % Version  : [Wor89] axioms : Reduced > Incomplete.

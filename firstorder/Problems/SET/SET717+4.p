@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET717+4 : ILTP v1.1.1
+% File     : SET717+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : The composition of surjective mappings is surjective
 % Version  : [Pas99] axioms.

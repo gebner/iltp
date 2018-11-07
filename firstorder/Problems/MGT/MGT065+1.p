@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT065+1 : ILTP v1.1.1
+% File     : MGT065+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Long-run hazard of mortality
 % Version  : [Han98] axioms.

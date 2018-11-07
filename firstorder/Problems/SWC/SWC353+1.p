@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC353+1 : ILTP v1.1.1
+% File     : SWC353+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_segment_front_x_run_ord_front2
 % Version  : [Wei00] axioms.

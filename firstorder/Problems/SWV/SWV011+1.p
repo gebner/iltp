@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWV011+1 : ILTP v1.1.1
+% File     : SWV011+1 : ILTP v1.1.2
 % Domain   : Software Verification
 % Problem  : Fact 2 of the Neumann-Stubblebine analysis
 % Version  : [Wei99] axioms.

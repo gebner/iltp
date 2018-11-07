@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : NLP018+1 : ILTP v1.1.1
+% File     : NLP018+1 : ILTP v1.1.2
 % Domain   : Natural Language Processing
 % Problem  : "The old dirty white Chevy" problem 18
 % Version  : [Bos00] axioms.

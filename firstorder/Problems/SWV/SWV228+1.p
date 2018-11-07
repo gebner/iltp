@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : SWV228+1 : ILTP v1.1.1
+% File     : SWV228+1 : ILTP v1.1.2
 % Domain   : Software Verification
 % Problem  : Simplified proof obligation quaternion_ds1_symm_0681
 % Version  : [DFS04] axioms : Especial.

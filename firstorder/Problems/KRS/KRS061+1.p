@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS061+1 : ILTP v1.1.1
+% File     : KRS061+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : User labels in a variety of languages with ruby annotation
 % Version  : Especial.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET626+3 : ILTP v1.1.1
+% File     : SET626+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X intersects the intersection of Y and Z, then X intersects Y
 % Version  : [Try89] axioms : Reduced > Incomplete.

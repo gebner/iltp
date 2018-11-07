@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET627+3 : ILTP v1.1.1
+% File     : SET627+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : X is disjoint from the empty set
 % Version  : [Try89] axioms : Reduced > Incomplete.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET632+3 : ILTP v1.1.1
+% File     : SET632+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y & X (= Z & Y disjoint from Z, then X = empty set 
 % Version  : [Try89] axioms : Reduced > Incomplete.

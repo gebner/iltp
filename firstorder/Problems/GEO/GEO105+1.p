@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO105+1 : ILTP v1.1.1
+% File     : GEO105+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : If subcurves meet at an endpoint then there's a meeting
 % Version  : [EHK99] axioms.

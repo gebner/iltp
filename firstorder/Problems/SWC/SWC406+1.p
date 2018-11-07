@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC406+1 : ILTP v1.1.1
+% File     : SWC406+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_subst_x_set_min_elems
 % Version  : [Wei00] axioms.

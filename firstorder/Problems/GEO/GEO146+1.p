@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO146+1 : ILTP v1.1.1
+% File     : GEO146+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Symmetry of connect
 % Version  : [EHK99] axioms.

@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG042+1 : ILTP v1.1.1
+% File     : ALG042+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Loops 4: REPRESENTATIVES-PAIRWISE-NOT-ISO-PROBLEM-1
 % Version  : Especial.

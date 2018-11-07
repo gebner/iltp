@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT021+1 : ILTP v1.1.1
+% File     : MGT021+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Difference between disbanding rates does not decrease
 % Version  : [PB+94] axioms.

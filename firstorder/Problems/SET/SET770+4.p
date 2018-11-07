@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET770+4 : ILTP v1.1.1
+% File     : SET770+4 : ILTP v1.1.2
 % Domain   : Set Theory (Equivalence relations)
 % Problem  : Two equivalence classes are equal or disjoint 
 % Version  : [Pas99] axioms.

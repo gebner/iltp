@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO124+1 : ILTP v1.1.1
+% File     : GEO124+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Every oriented curve has at most one starting point
 % Version  : [EHK99] axioms.

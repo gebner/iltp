@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO141+1 : ILTP v1.1.1
+% File     : GEO141+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Unique oppositely oriented curve 2
 % Version  : [EHK99] axioms.

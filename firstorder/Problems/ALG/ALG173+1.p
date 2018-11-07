@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : ALG173+1 : ILTP v1.1.1
+% File     : ALG173+1 : ILTP v1.1.2
 % Domain   : General Algebra
 % Problem  : Quasigroups 5 QG4: CPROPS-PAIRWISE-EXCLUSIVE-PROBLEM-4
 % Version  : Especial.

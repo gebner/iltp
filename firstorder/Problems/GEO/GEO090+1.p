@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO090+1 : ILTP v1.1.1
+% File     : GEO090+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Meeting point of curves on a subcurve
 % Version  : [EHK99] axioms.

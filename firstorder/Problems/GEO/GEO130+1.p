@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO130+1 : ILTP v1.1.1
+% File     : GEO130+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Betweenness and precedence for three points
 % Version  : [EHK99] axioms.

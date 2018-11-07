@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET764+4 : ILTP v1.1.1
+% File     : SET764+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : The inverse image of empty set is empty 
 % Version  : [Pas99] axioms.

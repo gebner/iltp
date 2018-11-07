@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SWC324+1 : ILTP v1.1.1
+% File     : SWC324+1 : ILTP v1.1.2
 % Domain   : Software Creation
 % Problem  : cond_rotate_x_rot_l_total3
 % Version  : [Wei00] axioms.

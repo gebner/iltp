@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET755+4 : ILTP v1.1.1
+% File     : SET755+4 : ILTP v1.1.2
 % Domain   : Set Theory (Mappings)
 % Problem  : If X is a subset of Y, then f-1(X) is a subset of f-1(Y)
 % Version  : [Pas99] axioms.

@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : KRS130+1 : ILTP v1.1.1
+% File     : KRS130+1 : ILTP v1.1.2
 % Domain   : Knowledge Representation (Semantic Web)
 % Problem  : owl:Nothing can be defined using OWL Lite restrictions
 % Version  : Especial.

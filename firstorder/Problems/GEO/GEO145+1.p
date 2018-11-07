@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : GEO145+1 : ILTP v1.1.1
+% File     : GEO145+1 : ILTP v1.1.2
 % Domain   : Geometry (Oriented curves)
 % Problem  : Starting point and precedence
 % Version  : [EHK99] axioms.

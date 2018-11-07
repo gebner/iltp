@@ -1,5 +1,5 @@
 %------------------------------------------------------------------------------
-% File     : NUM350+1 : ILTP v1.1.1
+% File     : NUM350+1 : ILTP v1.1.2
 % Domain   : Number Theory (RDN arithmetic)
 % Problem  : !XY, (X + X) = Y
 % Version  : Especial.

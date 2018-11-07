@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET659+3 : ILTP v1.1.1
+% File     : SET659+3 : ILTP v1.1.2
 % Domain   : Set Theory (Relations)
 % Problem  : For every x in X ? y : <x,y> in R (X to Y) iff domain of R is X
 % Version  : [Wor89] axioms : Reduced > Incomplete.

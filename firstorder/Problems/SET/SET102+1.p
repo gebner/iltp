@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET102+1 : ILTP v1.1.1
+% File     : SET102+1 : ILTP v1.1.2
 % Domain   : Set Theory
 % Problem  : Ordered pair member of ordered pair
 % Version  : [Qua92] axioms : Reduced & Augmented > Complete.

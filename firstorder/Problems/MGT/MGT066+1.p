@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : MGT066+1 : ILTP v1.1.1
+% File     : MGT066+1 : ILTP v1.1.2
 % Domain   : Management (Organisation Theory)
 % Problem  : Inequalities.
 % Version  : [Han98] axioms.

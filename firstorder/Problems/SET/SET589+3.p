@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% File     : SET589+3 : ILTP v1.1.1
+% File     : SET589+3 : ILTP v1.1.2
 % Domain   : Set Theory (Boolean properties)
 % Problem  : If X (= Y and Z (= V, then X \ V (= Y \ Z
 % Version  : [Try89] axioms : Reduced > Incomplete.
